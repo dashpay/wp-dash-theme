@@ -1,0 +1,13 @@
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1271.000000, -614.000000)">
+            <g>
+                <g transform="translate(1271.000000, 614.000000)">
+                    <rect fill="#008DE4" x="0" y="0" width="34" height="34" rx="17"></rect>
+                    <polygon fill="#FFFFFF" points="9 14.6734694 9 23 26 23 26 14.6734694 17.4997431 18.6306825"></polygon>
+                    <polygon fill="#FFFFFF" points="9 11 9 13.2857716 17.4997431 17.3673469 26 13.2857716 26 11"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
