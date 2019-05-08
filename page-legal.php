@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php 
+/* Template Name: Legal Page */ 
+get_header(); ?>
 
 	<main role="main" class="no-banner">
 		<!-- section -->
