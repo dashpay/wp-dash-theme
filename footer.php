@@ -110,7 +110,22 @@
 							</div>
 						</div>
 					</div>
-					
+				</div>
+				<div class="clearfix text-lg-right">
+					<div class="terms">
+						<?php 
+						$posts = get_field('navigation_privacy',$homeid);
+						$post = $posts[0];
+						setup_postdata($post); 
+						?>
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						<span class="divider">|</span>
+						<?php 
+						$post = $posts[1];
+						setup_postdata($post); ?>
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						<?php wp_reset_postdata(); ?>							
+					</div>
 				</div>
 			</div>
 		</div>
