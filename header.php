@@ -21,16 +21,6 @@
 
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700,900i|Open+Sans:400,600,700|Roboto+Condensed" rel="stylesheet">
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118991016-2"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		
-		  gtag('config', 'UA-118991016-2');
-		</script>
-
 
 		<?php wp_head(); ?>
 
