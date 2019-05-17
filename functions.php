@@ -298,6 +298,10 @@ remove_action('wp_head', 'wp_generator'); // Display the XHTML generator that is
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 ); // Display the oEmbed discovery links
+remove_action( 'wp_head', 'wp_oembed_add_host_js' ); // Include link to wp-embed.min.js
+remove_action('rest_api_init', 'wp_oembed_register_route'); // Register REST API
+remove_filter('oembed_dataparse', 'wp_filter_oembed_result', 10);
 
 // Add Filters
 add_filter('avatar_defaults', 'html5blankgravatar'); // Custom Gravatar in Settings > Discussion
