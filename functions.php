@@ -230,7 +230,7 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
     if (function_exists($more_callback)) {
         add_filter('excerpt_more', $more_callback);
     }
-    $output = get_the_excerpt();
+    $output = wp_trim_excerpt();
     $output = apply_filters('wptexturize', $output);
     $output = apply_filters('convert_chars', $output);
     $output = '<p>' . $output . '</p>';
