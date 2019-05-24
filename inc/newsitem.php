@@ -15,8 +15,6 @@
 		</div>
 	</div>
 	<a href="<?php the_permalink(); ?>">
-
-		<!-- http://placehold.it/680x280 -->
 		<div class="image" style="background-image:url(<?php the_post_thumbnail_url('news_item') ?>)"></div>
 	</a>
 	<div class="caption">
