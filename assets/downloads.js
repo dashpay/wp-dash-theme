@@ -20,6 +20,9 @@ $(window).load(function(){
       if (tabId == '#macos')   { $('html, body').animate({scrollTop: $('#desktop').offset().top}, 10); $(macosId).tab('show'); }
       if (tabId == '#android') { $('html, body').animate({scrollTop: $('#mobile').offset().top}, 10);  $(androidId).tab('show'); }
       if (tabId == '#ios')     { $('html, body').animate({scrollTop: $('#mobile').offset().top}, 10);  $(iosId).tab('show'); }
+      if (tabId == '#desktop' && /windows/.test(useros) ) { $(windowsId).tab('show'); }
+      if (tabId == '#desktop' && /os x/.test(useros) )    { $(macosId).tab('show'); }
+      if (tabId == '#desktop' && /linux/.test(useros) )   { $(linuxId).tab('show'); }
     };
 
     var showButton = function(text, href, image) {
