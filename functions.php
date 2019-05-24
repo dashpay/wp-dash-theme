@@ -109,7 +109,7 @@ function theme_scripts()
         if (is_page_template( 'page-downloads.php' )) {
             wp_register_script('platform', get_template_directory_uri() . '/assets/libs/platform.js',[],false,false);
             wp_enqueue_script('platform');
-            wp_register_script('downloads', get_template_directory_uri() . '/assets/downloads.js',[],1.2,false);
+            wp_register_script('downloads', get_template_directory_uri() . '/assets/downloads.js',[],1.21,false);
             wp_enqueue_script('downloads');
             $translation_array = array(
                 'download_windows' => __( 'Download for Windows' ),
