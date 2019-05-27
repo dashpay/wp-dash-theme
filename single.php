@@ -136,7 +136,7 @@ if ($post->post_type=='downloadgroup'){
 						foreach( $recent_posts as $recent ){ ?>
 
 							<div class="item">
-								<span class="title-small date">12 January 2019</span>
+								<span class="title-small date"><?php echo get_the_date('F j, Y', $recent["ID"]); ?></span>
 								<a href="<?php echo get_permalink($recent["ID"])?>"><h4><?php echo $recent["post_title"]?></h4></a>
 							</div>
 
