@@ -14,11 +14,11 @@
 			</div>
 		</div>
 	</div>
-	<a href="<?php the_permalink(); ?>">
+	<a href="<?php echo apply_filters( 'wpml_permalink', get_the_permalink(), 'en' ); ?>">
 		<div class="image" style="background-image:url(<?php the_post_thumbnail_url('news_item') ?>)"></div>
 	</a>
 	<div class="caption">
-		<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+		<h3><a href="<?php echo apply_filters( 'wpml_permalink', get_the_permalink(), 'en' ); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
 		<div class="text-gray"><?php html5wp_excerpt('html5wp_index'); ?></div>
 	</div>
 	<hr/>
