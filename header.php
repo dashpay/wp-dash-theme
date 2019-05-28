@@ -69,13 +69,9 @@
 								</div>
 								<div class="dropdown">
 									<div class="d-block d-lg-none mobile-arrow"></div>
-
 									<?php 
 											do_action('wpml_add_language_selector');
 									?>
-									<!-- <div class="link"><a href="#">EN</a></div>
-									<div class="link"><a href="#">ZH</a></div>
-									<div class="link"><a href="#">?</a></div> -->
 								</div>
 							</div>
 						</div>
@@ -134,14 +130,9 @@
 											</a>
 										</div>
 										<div class="dropdown">
-
 											<?php 
 											do_action('wpml_add_language_selector');
 											?>
-
-											<!-- <div class="link"><a href="#">EN</a></div>
-											<div class="link"><a href="#">ZH</a></div>
-											<div class="link"><a href="#">?</a></div> -->
 										</div>
 									</div>
 
