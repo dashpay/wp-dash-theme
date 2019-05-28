@@ -11,7 +11,7 @@ if ($post->post_type=='downloadgroup'){
 	<div class="container mx-auto">
 
 		<div class="row my-5">
-			<div class="col-12"><a href="/community/news" class="text-gray title-small backlink"><?php _e( 'Back to all articles', 'html5blank' ); ?></a></div>
+			<div class="col-12"><a href="/news/" class="text-gray title-small backlink"><?php _e( 'Back to all articles', 'html5blank' ); ?></a></div>
 		</div>
 
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
