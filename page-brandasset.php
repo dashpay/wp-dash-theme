@@ -41,8 +41,7 @@ get_header(); ?>
 						<div class="thumb" style="background:<?php the_sub_field('hexcolor'); ?>"></div>
 						<div class="text">
 							<h4 class="mb-3"><?php the_sub_field('color_title'); ?></h4>
-							<p?Hex: <?php the_sub_field('hexcolor'); ?><br>
-							<?php echo nl2br(get_sub_field('other_text')); ?></p>
+							<p><?php echo nl2br(get_sub_field('other_text')); ?></p>
 						</div>
 					</div>
 				</div>
