@@ -71,7 +71,7 @@ function theme_scripts()
         wp_register_script('modernizr', get_template_directory_uri() . '/assets/libs/modernizr.js',[],false,true);
         wp_enqueue_script('modernizr'); 
 
-        wp_register_script('bootstrap', get_template_directory_uri() . '/assets/libs/bootstrap.js',[],false,true);
+        wp_register_script('bootstrap', get_template_directory_uri() . '/assets/libs/bootstrap.js',[],'4.3.1-0',true);
         wp_enqueue_script('bootstrap'); 
 
         wp_register_script('fancybox','https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js',[],false,true);
@@ -98,9 +98,9 @@ function theme_scripts()
         wp_register_script('vue','https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js',[],false,true);
         wp_enqueue_script('vue'); 
 
-        wp_register_script('dash', get_template_directory_uri() . '/assets/dash.js',[],1.2,true);
+        wp_register_script('dash', get_template_directory_uri() . '/assets/dash.js',[],'1.2',true);
         wp_enqueue_script('dash');
-        wp_register_script('vue-buyspend', get_template_directory_uri() . '/assets/vue-buyspend.js',[],1.1,true);
+        wp_register_script('vue-buyspend', get_template_directory_uri() . '/assets/vue-buyspend.js',[],'1.1',true);
         wp_enqueue_script('vue-buyspend');
         wp_register_script('vue-proposals', get_template_directory_uri() . '/assets/vue-proposals.js',[],false,true);
         wp_enqueue_script('vue-proposals');
@@ -109,7 +109,7 @@ function theme_scripts()
         if (is_page_template( 'page-downloads.php' )) {
             wp_register_script('platform', get_template_directory_uri() . '/assets/libs/platform.js',[],false,false);
             wp_enqueue_script('platform');
-            wp_register_script('downloads', get_template_directory_uri() . '/assets/downloads.js',[],1.21,false);
+            wp_register_script('downloads', get_template_directory_uri() . '/assets/downloads.js',[],'1.21',false);
             wp_enqueue_script('downloads');
             $translation_array = array(
                 'download_windows' => __( 'Download for Windows' ),
@@ -126,7 +126,7 @@ function theme_scripts()
 // Load HTML5 Blank styles
 function theme_styles()
 {
-    wp_register_style('bootstrapcss', get_template_directory_uri() . '/assets/libs/bootstrap.css', array(), '1.0', 'all');
+    wp_register_style('bootstrapcss', get_template_directory_uri() . '/assets/libs/bootstrap-rtl.css', array(), '4.3.1-0', 'all');
     wp_enqueue_style('bootstrapcss');
 
     wp_register_style('slick', get_template_directory_uri() . '/assets/libs/slick.css', array(), '1.0', 'all');
@@ -140,7 +140,7 @@ function theme_styles()
     wp_enqueue_style('fancyboxcss');
     
     // Remove time() and replace with static version number after strophy finishes fixing CSS
-    wp_register_style('dashcss', get_template_directory_uri() . '/assets/dash.css', array(), 1.22, 'all');
+    wp_register_style('dashcss', get_template_directory_uri() . '/assets/dash.css', array(), '1.22', 'all');
     wp_enqueue_style('dashcss');
 
 }
