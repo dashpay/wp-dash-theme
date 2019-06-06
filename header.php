@@ -18,7 +18,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700,900i|Open+Sans:400,600,700|Roboto+Condensed" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700,900i%7COpen+Sans:400,600,700%7CRoboto+Condensed" rel="stylesheet">
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118991016-2"></script>
