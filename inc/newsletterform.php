@@ -21,7 +21,7 @@
     <div class="position-relative">
         <input name="8650261" type="text" maxlength="4000" id="8650261" class="form-control email" contactattributeid="8650261" placeholder="you@email.com">
 
-        <button class="btn">
+        <button type="submit" class="btn">
             <i class="icon-inline">
                 <svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
