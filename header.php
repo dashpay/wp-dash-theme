@@ -3,19 +3,17 @@
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
 		<title><?php wp_title(''); ?></title>
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
-
 		<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon/favicon-96x96.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon/favicon-16x16.png">
 		<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon/manifest.json">
+
 		<meta name="msapplication-TileColor" content="#0A2B69">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/img/icons/favicon/ms-icon-144x144.png">
 		<meta name="theme-color" content="#0A2B69">
-
-
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700,900i%7COpen+Sans:400,600,700%7CRoboto+Condensed" rel="stylesheet">
