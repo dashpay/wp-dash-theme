@@ -106,9 +106,11 @@ function theme_scripts()
         wp_enqueue_script('vue-proposals');
         wp_register_script('vue-team', get_template_directory_uri() . '/assets/vue-team.js',[],false,true);
         wp_enqueue_script('vue-team');
-        if (is_page_template( 'page-downloads.php' )) {
+        if (is_page_template( 'page-downloads.php' ||  'page-lg.php' )) {
             wp_register_script('platform', get_template_directory_uri() . '/assets/libs/platform.js',[],false,false);
             wp_enqueue_script('platform');
+        }
+        if (is_page_template( 'page-downloads.php' )) {
             wp_register_script('downloads', get_template_directory_uri() . '/assets/downloads.js',[],'1.21',false);
             wp_enqueue_script('downloads');
             $translation_array = array(
