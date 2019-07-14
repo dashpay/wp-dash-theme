@@ -170,7 +170,7 @@ get_header(); ?>
 						<div class="container">
 							<div class="row">
 								<div class="col-lg-3 col-6" v-for="item in items" v-if="item.vendor_type!='broker'">
-									<a :href="item.vendor_website" target="_blank" class="btn btn-vendor btn-white">
+									<a :href="item.vendor_website" target="_blank" class="btn btn-vendor" v-bind:class="{ 'btn-is': item.instantsend, 'btn-white': !item.instantsend }">
 										<div class="icon">
 											<img v-if="item.vendor_logo.length" :src="item.vendor_logo" alt>
 											<span v-if="!item.vendor_logo.length" class="icon-placeholder"></span>
