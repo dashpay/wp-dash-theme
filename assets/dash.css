@@ -1707,7 +1707,7 @@ footer {
         position: absolute;
         right: -5px;
         top: 50px;
-        width: 200px;
+        width: auto;
         padding: 10px;
         text-align: left;
         background: #fff;
@@ -1718,6 +1718,8 @@ footer {
           float: left;
           display: block;
           width: 45%; }
+        header .lang-mobile .dropdown .wpml-ls-legacy-list-horizontal .wpml-ls-item {
+          display: block; }
   .banner .caption {
     padding: 15px; }
     .banner .caption h1 {
