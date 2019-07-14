@@ -147,6 +147,20 @@ function theme_styles()
 
 }
 
+// Sort exchange list page in alphabetical order: https://www.advancedcustomfields.com/resources/how-to-sorting-a-repeater-field/
+
+function my_acf_load_value( $value, $post_id, $field ) {
+    $order = array();
+    if( empty($value) ) {    
+        return $value;
+    }
+    foreach( $value as $i => $row ) {    
+        $order[ $i ] = $row['field_5bd68218140e4'];
+    }
+    array_multisort( $order, SORT_ASC, $value );
+    return $value;
+}
+add_filter('acf/load_value/name=full_list_vendors', 'my_acf_load_value', 10, 3);
 
 // Remove the <div> surrounding the dynamic navigation to cleanup markup
 function my_wp_nav_menu_args($args = '')
