@@ -178,6 +178,20 @@ h1, h2, h3 {
       background: #fff;
       border-color: #fff;
       box-shadow: 0 10px 15px rgba(0, 141, 228, 0.3); }
+  .btn.btn-is {
+    background: #fff url(img/is-logo-blue.svg);
+    background-size: 40px;
+    background-position: right 10px top 10px;
+    background-repeat: no-repeat;
+    border-color: #fff;
+    color: #278EE0; }
+    .btn.btn-is:hover {
+      background: #fff url(img/is-logo-blue.svg);
+      background-size: 40px;
+      background-position: right 10px top 10px;
+      background-repeat: no-repeat;
+      border-color: #fff;
+      box-shadow: 0 10px 15px rgba(0, 141, 228, 0.3); }
   .btn.btn-hovershadow {
     font-size: 14px;
     background: transparent;
