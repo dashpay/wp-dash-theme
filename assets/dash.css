@@ -179,19 +179,26 @@ h1, h2, h3 {
       border-color: #fff;
       box-shadow: 0 10px 15px rgba(0, 141, 228, 0.3); }
   .btn.btn-is {
-    background: #fff url(img/is-logo-blue.svg);
+    background: #278EE0 url(img/is-logo-white.svg);
     background-size: 40px;
-    background-position: right 10px top 10px;
+    background-position: right 2px top 6px;
     background-repeat: no-repeat;
-    border-color: #fff;
-    color: #278EE0; }
+    border-color: #278EE0;
+    color: #fff; }
     .btn.btn-is:hover {
-      background: #fff url(img/is-logo-blue.svg);
+      background: #278EE0 url(img/is-logo-white.svg);
       background-size: 40px;
-      background-position: right 10px top 10px;
+      background-position: right 2px top 6px;
       background-repeat: no-repeat;
-      border-color: #fff;
+      border-color: #278EE0;
       box-shadow: 0 10px 15px rgba(0, 141, 228, 0.3); }
+  .btn.btn-is .icon {
+    background: radial-gradient(#fff 50%, transparent 80%);
+    border-radius: 50%;
+    padding: 7px;
+    margin-right: 6px !important;
+    position: relative;
+    left: -7px; }
   .btn.btn-hovershadow {
     font-size: 14px;
     background: transparent;
