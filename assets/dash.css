@@ -638,12 +638,7 @@ header .lang .dropdown .wpml-ls a {
   .halfbanner .container, .halfbanner .row {
     height: 100%; }
   .halfbanner img.main {
-    display: block;
-    position: absolute;
-    right: 10%;
-    top: 80px;
-    max-height: calc(100% - 80px);
-    max-width: 50%; }
+    max-height: 340px; }
   .halfbanner .caption {
     position: relative;
     z-index: 2;
@@ -1760,13 +1755,6 @@ footer {
       background-image: none !important; }
     .halfbanner .caption {
       padding: 15px; }
-    .halfbanner img.main {
-      position: relative;
-      width: 370px;
-      max-width: 90%;
-      margin: 10px auto;
-      right: 0;
-      top: 0; }
     .halfbanner .carousel .slide {
       padding: 0;
       height: auto; }
@@ -1851,3 +1839,32 @@ footer {
       border-bottom: 1px solid rgba(200, 200, 255, 0.15);
       padding-top: 30px;
       padding-bottom: 30px; } }
+
+/* RTL CSS */
+@font-face {
+  font-family: Samim; 
+  src: url('Samim.woff') format('woff2'), 
+    url('Samim.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Samim;
+  src: url('Samim-Bold.woff') format('woff2'), 
+    url('Samim-Bold.woff') format('woff');
+  font-weight: bold;
+}
+
+html *:lang(fa-IR) {
+  font-family: Samim !important;
+}
+
+html[dir="rtl"] .banner-shape .icon-inline {
+  transform: rotate(180deg); }
+html[dir="rtl"] .block-vendors .btn-vendor {
+  direction: ltr; }
+html[dir="rtl"] .banner-shape > .row > div {
+  border-left: 1px solid rgba(200, 200, 255, 0.15); 
+  border-right: 0; }
+html[dir="rtl"] .banner-shape > .row > div:last-child {
+  border: 0; }
