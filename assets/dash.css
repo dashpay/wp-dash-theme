@@ -1873,3 +1873,5 @@ html *:lang(fa-IR) {
 
 html[dir="rtl"] .banner-shape .icon-inline {
   transform: rotate(180deg); }
+html[dir="rtl"] .block-vendors .btn-vendor {
+  direction: ltr; }
