@@ -16,18 +16,18 @@
 						}; ?>
 					</div>
 				</div>
+				<div class="col-lg-6 ml-auto">
+					<?php if(get_field( "half_banner_display" )=='image' && get_field( "download_image_1" ) && get_field( "download_image_2" )) { ?>
+						<img src='<?php echo get_field( "download_image_1" )?>' alt class="main img-fluid" id="dlimg1" style="display: none;">
+						<img src='<?php echo get_field( "download_image_2" )?>' alt class="main img-fluid" id="dlimg2" style="display: none;">
+					<?php } else { ?> 
+			
+					<?php if(get_field( "half_banner_display" )=='image'){ ?>
+						<img src='<?php echo get_field( "half_banner_image" )?>' alt class="main img-fluid">
+					<?php }} ?> 
+				</div>
 			</div>
 		</div>
-		<?php if(get_field( "half_banner_display" )=='image' && get_field( "download_image_1" ) && get_field( "download_image_2" )) { ?>
-			<img src='<?php echo get_field( "download_image_1" )?>' alt class="main img-fluid" id="dlimg1" style="display: none;">
-			<img src='<?php echo get_field( "download_image_2" )?>' alt class="main img-fluid" id="dlimg2" style="display: none;">
-		<?php } else { ?> 
-
-		<?php if(get_field( "half_banner_display" )=='image'){ ?>
-			<img src='<?php echo get_field( "half_banner_image" )?>' alt class="main img-fluid">
-		<?php }} ?> 
-
-
 </div>
 
 <?php 
