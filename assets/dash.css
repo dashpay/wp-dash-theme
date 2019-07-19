@@ -1871,3 +1871,5 @@ html *:lang(fa-IR) {
   font-family: Samim !important;
 }
 
+html[dir="rtl"] .banner-shape .icon-inline {
+  transform: rotate(180deg); }
