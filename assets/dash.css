@@ -1851,3 +1851,23 @@ footer {
       border-bottom: 1px solid rgba(200, 200, 255, 0.15);
       padding-top: 30px;
       padding-bottom: 30px; } }
+
+/* RTL CSS */
+@font-face {
+  font-family: Samim; 
+  src: url('Samim.woff') format('woff2'), 
+    url('Samim.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Samim;
+  src: url('Samim-Bold.woff') format('woff2'), 
+    url('Samim-Bold.woff') format('woff');
+  font-weight: bold;
+}
+
+html *:lang(fa-IR) {
+  font-family: Samim !important;
+}
+
