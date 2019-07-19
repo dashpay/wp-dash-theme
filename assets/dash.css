@@ -883,7 +883,9 @@ header .lang .dropdown .wpml-ls a {
     line-height: 1.2em;
     min-height: 390px;
     overflow: auto;
-    border-radius: 0; }
+    border-radius: 0; 
+    direction: ltr;
+    text-align: left; }
     .terminal-item .textarea * {
       font-family: monospace;
       word-break: break-word; }
