@@ -1860,6 +1860,8 @@ footer {
 html *:lang(fa-IR) {
   font-family: Samim !important;
 }
+#navbar-main .navbar-item.lang a span, header .lang-mobile .dropdown a span {
+  font-family: "Open Sans", sans-serif !important; }
 
 html[dir="rtl"] .banner-shape .icon-inline {
   transform: rotate(180deg); }
@@ -1870,3 +1872,21 @@ html[dir="rtl"] .banner-shape > .row > div {
   border-right: 0; }
 html[dir="rtl"] .banner-shape > .row > div:last-child {
   border: 0; }
+
+html[dir=rtl] #navbar-main .navbar-item .dropdown {
+  text-align: right;
+  left: 0%;
+  right: -20%;
+}
+
+@media only screen and (max-width: 990px) { 
+  html[dir=rtl] header .lang-mobile .dropdown {
+    text-align: right;
+    right: auto;
+    left: -5px; 
+  }
+  html[dir=rtl] header .lang-mobile .mobile-arrow {
+    left: 10px;
+    right: auto;
+  }
+}
