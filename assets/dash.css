@@ -1843,6 +1843,7 @@ footer {
       padding-bottom: 30px; } }
 
 /* RTL CSS */
+/* Register Farsi fonts */
 @font-face {
   font-family: Samim; 
   src: url('Samim.woff') format('woff2'), 
@@ -1857,10 +1858,15 @@ footer {
   font-weight: bold;
 }
 
+/* Change Farsi font */
 html *:lang(fa-IR) {
   font-family: Samim !important;
 }
+/* Except in the language menu */
+#navbar-main .navbar-item.lang a span, header .lang-mobile .dropdown a span {
+  font-family: "Open Sans", sans-serif !important; }
 
+/* Reverse a few things */
 html[dir="rtl"] .banner-shape .icon-inline {
   transform: rotate(180deg); }
 html[dir="rtl"] .block-vendors .btn-vendor {
@@ -1870,3 +1876,23 @@ html[dir="rtl"] .banner-shape > .row > div {
   border-right: 0; }
 html[dir="rtl"] .banner-shape > .row > div:last-child {
   border: 0; }
+
+/* Adjust menu calculation */
+html[dir=rtl] #navbar-main .navbar-item .dropdown {
+  text-align: right;
+  left: 0%;
+  right: -20%;
+}
+
+/* Mobile menu adjustments */
+@media only screen and (max-width: 990px) { 
+  html[dir=rtl] header .lang-mobile .dropdown {
+    text-align: right;
+    right: auto;
+    left: -5px; 
+  }
+  html[dir=rtl] header .lang-mobile .mobile-arrow {
+    left: 10px;
+    right: auto;
+  }
+}
