@@ -1876,6 +1876,20 @@ html[dir="rtl"] .banner-shape > .row > div {
   border-right: 0; }
 html[dir="rtl"] .banner-shape > .row > div:last-child {
   border: 0; }
+html[dir="rtl"] .roadmap-item.info .arrow {
+  transform: rotate(180deg);
+  right: auto;
+  left: 10px;
+}
+html[dir="rtl"] .block-brand .brandasset-item a .icon-el {
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+/* Hide non-flippable background on Brand Guidelines page */
+html[dir=rtl] .halfbanner.bg.bg-lightgray.with-bgimg {
+    background-image: none !important;
+}
 
 /* Adjust menu calculation */
 html[dir=rtl] #navbar-main .navbar-item .dropdown {

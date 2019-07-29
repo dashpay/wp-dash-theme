@@ -35,8 +35,7 @@ get_header(); ?>
 						 data-toggle="tab" 
 						 href="#group<?php echo $post_id?>-tab<?php echo $panel?>" 
 						 role="tab" 
-						 aria-controls="nav-home"
-						 style="padding-right: 75px;">
+						 aria-controls="nav-home">
 							<?php the_sub_field('tab_title'); ?>
 						</a>
 						<?php endwhile; ?>
