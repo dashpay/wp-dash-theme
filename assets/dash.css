@@ -1887,6 +1887,9 @@ html[dir="rtl"] .block-brand .brandasset-item a .icon-el {
   margin-right: inherit;
   margin-left: 10px;
 }
+html[dir="rtl"] .icon-el.caret.blue {
+  transform: rotate(180deg);
+}
 
 /* Hide non-flippable background on Brand Guidelines page */
 html[dir=rtl] .halfbanner.bg.bg-lightgray.with-bgimg {
