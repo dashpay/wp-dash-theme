@@ -1869,7 +1869,7 @@ html *:lang(fa-IR) {
 /* Reverse a few things */
 html[dir="rtl"] .banner-shape .icon-inline {
   transform: rotate(180deg); }
-html[dir="rtl"] .block-vendors .btn-vendor {
+html[dir="rtl"] .btn-vendor {
   direction: ltr; }
 html[dir="rtl"] .banner-shape > .row > div {
   border-left: 1px solid rgba(200, 200, 255, 0.15); 
