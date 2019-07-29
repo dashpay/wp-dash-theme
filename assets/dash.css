@@ -1209,6 +1209,8 @@ header .lang .dropdown .wpml-ls a {
   .accordion .card-header .icon-inline {
     float: right; 
     transition: .3s transform ease-in-out; }
+  .accordion .card-header a .icon-inline {
+     margin: 0 10px; }
   .accordion .card-header a[aria-expanded="false"] .icon-inline {
     transform: rotate(90deg); }
   .accordion .card-header a[aria-expanded="true"] .icon-inline {
