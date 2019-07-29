@@ -1882,7 +1882,7 @@ html[dir="rtl"] .roadmap-item.info .arrow {
   left: 10px;
 }
 html[dir="rtl"] .block-brand .brandasset-item a .icon-el {
-  margin-right: auto;
+  margin-right: inherit;
   margin-left: 10px;
 }
 
