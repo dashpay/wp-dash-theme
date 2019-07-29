@@ -1909,4 +1909,7 @@ html[dir=rtl] #navbar-main .navbar-item .dropdown {
     left: 10px;
     right: auto;
   }
+  html[dir=rtl] header #navbar-main .navbar-item {
+    text-align: right;
+  }
 }
