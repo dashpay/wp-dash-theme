@@ -1882,7 +1882,7 @@ html[dir="rtl"] .roadmap-item.info .arrow {
   left: 10px;
 }
 html[dir="rtl"] .block-brand .brandasset-item a .icon-el {
-  margin-right: auto;
+  margin-right: inherit;
   margin-left: 10px;
 }
 
@@ -1908,5 +1908,8 @@ html[dir=rtl] #navbar-main .navbar-item .dropdown {
   html[dir=rtl] header .lang-mobile .mobile-arrow {
     left: 10px;
     right: auto;
+  }
+  html[dir=rtl] header #navbar-main .navbar-item {
+    text-align: right;
   }
 }
