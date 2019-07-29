@@ -1876,6 +1876,11 @@ html[dir="rtl"] .banner-shape > .row > div {
   border-right: 0; }
 html[dir="rtl"] .banner-shape > .row > div:last-child {
   border: 0; }
+html[dir="rtl"] .roadmap-item.info .arrow {
+  transform: rotate(180deg);
+  right: auto;
+  left: 10px;
+}
 
 /* Adjust menu calculation */
 html[dir=rtl] #navbar-main .navbar-item .dropdown {
