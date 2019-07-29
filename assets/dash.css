@@ -1881,6 +1881,10 @@ html[dir="rtl"] .roadmap-item.info .arrow {
   right: auto;
   left: 10px;
 }
+html[dir="rtl"] .block-brand .brandasset-item a .icon-el {
+  margin-right: auto;
+  margin-left: 10px;
+}
 
 /* Adjust menu calculation */
 html[dir=rtl] #navbar-main .navbar-item .dropdown {
