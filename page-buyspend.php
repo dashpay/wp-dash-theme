@@ -128,7 +128,7 @@ get_header(); ?>
 								<div class="d-md-flex d-block">
 									<div>
 										<span class="logo">
-											<img :src="'/wp-content/uploads/'+item.image" class="img-fluid">
+											<img :src="item.image" class="img-fluid">
 										</span>
 									</div>
 									<div>
