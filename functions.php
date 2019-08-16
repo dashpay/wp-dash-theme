@@ -149,7 +149,7 @@ function theme_styles()
 
 // Sort exchange list page in alphabetical order: https://www.advancedcustomfields.com/resources/how-to-sorting-a-repeater-field/
 
-function my_acf_load_value( $value, $post_id, $field ) {
+function my_acf_load_exchanges_value( $value, $post_id, $field ) {
     $order = array();
     if( empty($value) ) {    
         return $value;
@@ -160,7 +160,26 @@ function my_acf_load_value( $value, $post_id, $field ) {
     array_multisort( $order, SORT_ASC, $value );
     return $value;
 }
-add_filter('acf/load_value/name=full_list_vendors', 'my_acf_load_value', 10, 3);
+add_filter('acf/load_value/name=full_list_vendors', 'my_acf_load_exchanges_value', 10, 3);
+
+// Sort versions list page in reverse alphabetical order
+
+function my_acf_load_lg_content_value( $value, $post_id, $field ) {
+    $order = array();
+    if( empty($value) ) {    
+        return $value;
+    }
+    if (get_field('reverse_sort_order')) {
+        foreach( $value as $i => $row ) {    
+            $order[ $i ] = $row['field_5bc58abeada0a'];
+        }
+        array_multisort( $order, SORT_DESC, $value );
+        return $value;
+    } else {
+        return $value;
+    }
+}
+add_filter('acf/load_value/name=content_sections', 'my_acf_load_lg_content_value', 10, 3);
 
 // Remove the <div> surrounding the dynamic navigation to cleanup markup
 function my_wp_nav_menu_args($args = '')
