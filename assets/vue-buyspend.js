@@ -18,7 +18,7 @@ Vue.component('dash-buyspend', {
       items_all: [],
 
       // 'capApi':'https://www.coincap.io/front/',
-      'buyApi':'https://www.dash.org/api/v1/exchange/'
+      'buyApi':'https://exchapi.dashevo.org/exchange/'
 
     }
   },

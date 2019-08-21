@@ -100,7 +100,7 @@ function theme_scripts()
 
         wp_register_script('dash', get_template_directory_uri() . '/assets/dash.js',[],'1.2',true);
         wp_enqueue_script('dash');
-        wp_register_script('vue-buyspend', get_template_directory_uri() . '/assets/vue-buyspend.js',[],'1.1',true);
+        wp_register_script('vue-buyspend', get_template_directory_uri() . '/assets/vue-buyspend.js',[],'1.2',true);
         wp_enqueue_script('vue-buyspend');
         wp_register_script('vue-proposals', get_template_directory_uri() . '/assets/vue-proposals.js',[],false,true);
         wp_enqueue_script('vue-proposals');
