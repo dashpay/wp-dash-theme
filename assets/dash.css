@@ -1647,7 +1647,17 @@ footer {
       margin: 0 auto 10px;
       text-align: center; }
       .btn.btn-vendor .icon {
-        margin: 0; }
+        margin: 5px 0; 
+      }
+      .btn.btn-is .icon {
+        margin: 0px auto !important;
+        left: 0;
+        padding: 0;
+        max-width:50px;
+      }
+      .btn.btn-is .icon {
+        padding-top:10px;
+      }
       .btn.btn-vendor img, .btn.btn-vendor .icon-placeholder {
         margin: 0 auto 10px; }
       .btn.btn-vendor .link {
