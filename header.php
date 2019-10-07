@@ -22,6 +22,7 @@
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/img/icons/favicon/ms-icon-144x144.png">
 		<meta name="theme-color" content="#0A2B69">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="apple-itunes-app" content="app-id=1206647026">
 
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700,900i%7COpen+Sans:400,600,700%7CRoboto+Condensed" rel="stylesheet">
 
