@@ -120,7 +120,7 @@ while( have_rows('content_sections') ): the_row();
 						</div>
 						<?php
 						 $links = get_sub_field('2_col_links');
-						 if (count($links)){ ?>
+						 if (isset($links[0])){ ?>
 						 	<div class="link-list">
 								<?php foreach ( $links as $link) { ?>
 								<a href="<?php echo $link['link_url']; ?>" target="_blank">
@@ -135,7 +135,7 @@ while( have_rows('content_sections') ): the_row();
 					</div>
 					<?php
 					 $links = get_sub_field('block_buttons');
-					 if (count($links)){ ?>
+					 if (isset($links[0])){ ?>
 					 	<div class="container-xs">
 							<div class="pt-md-5 pt-3 buttons">
 								<?php foreach ( $links as $link) {
@@ -326,7 +326,7 @@ while( have_rows('content_sections') ): the_row();
 				<div class="text-center py-4">
 					<?php
 					 $links = get_sub_field('block_buttons');
-					 if (count($links)){ ?>
+					 if (isset($links[0])){ ?>
 								<?php foreach ( $links as $link) {
 									$class = 'btn-ghost blue';
 									if ($link['button_style']=='solid') {
@@ -354,7 +354,7 @@ while( have_rows('content_sections') ): the_row();
 								<div class="pt-md-5 pt-3 buttons">
 									<?php
 									 $links = get_sub_field('block_buttons');
-									 if (count($links)){ ?>
+									 if (isset($links[0])){ ?>
 												<?php foreach ( $links as $link) {
 													$class = 'btn-ghost blue';
 													if ($link['button_style']=='solid') {
@@ -541,7 +541,7 @@ while( have_rows('content_sections') ): the_row();
 							</div>
 							<?php
 							 $links = get_sub_field('block_buttons');
-							 if (count($links)){ ?>
+							 if (isset($links[0])){ ?>
 							 	<div class="container-xs">
 									<div class="pt-md-5 pt-3 buttons">
 										<?php foreach ( $links as $link) {
