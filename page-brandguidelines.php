@@ -18,9 +18,9 @@ get_header(); ?>
 	<?php }?>
 
 	<div class="container">
-		<section class="block block-tabs" <?php if ($section_id!=''){echo "id=\"$section_id\"";} ?> style="padding-top: 50px;">
-			<div class="container">
 
+		<section class="block block-tabs" style="padding-top: 50px;">
+			<div class="container">
 				<nav>
 					<div class="nav nav-tabs" role="tablist">
 						<?php 
@@ -31,11 +31,12 @@ get_header(); ?>
 						?>
 						<a 
 						class="nav-item nav-link <?php echo $panel==1?'active':'' ?>"
-						 id="group<?php echo $post_id?>-label<?php echo $panel?>" 
+						 id="group-label<?php echo $panel?>" 
 						 data-toggle="tab" 
-						 href="#group<?php echo $post_id?>-tab<?php echo $panel?>" 
+						 href="#group-tab<?php echo $panel?>" 
 						 role="tab" 
-						 aria-controls="nav-home">
+						 aria-controls="nav-home"
+						 style="padding-right: 75px;">
 							<?php the_sub_field('tab_title'); ?>
 						</a>
 						<?php endwhile; ?>
@@ -53,9 +54,9 @@ get_header(); ?>
 					?>
 					<div 
 					class="tab-pane fade show <?php echo $panel==1?'active':'' ?>" 
-					id="group<?php echo $post_id?>-tab<?php echo $panel?>" 
+					id="group-tab<?php echo $panel?>" 
 					role="tabpanel" 
-					aria-labelledby="group<?php echo $post_id?>-label<?php echo $panel?>">
+					aria-labelledby="group-label<?php echo $panel?>">
 						<div class="py-4">
 
 							<?php
@@ -221,6 +222,7 @@ get_header(); ?>
 				</div>
 			</div>
 		</section>
+
 	</div>
 </div>
 
