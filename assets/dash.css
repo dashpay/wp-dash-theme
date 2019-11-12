@@ -483,6 +483,8 @@ header .lang .dropdown .wpml-ls a {
           padding: 5px 20px; }
         #navbar-main .navbar-item .dropdown .link a:hover {
           color: #031841; }
+        #navbar-main .navbar-item .dropdown .wpml-ls-item a:hover {
+          color: #031841; }
     #navbar-main .navbar-item.lang {
       width: 100px; }
       #navbar-main .navbar-item.lang a {
