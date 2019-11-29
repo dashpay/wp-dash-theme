@@ -48,7 +48,7 @@ get_header(); ?>
 
 									<p v-if="person.email.length"><?php _e( 'Email', 'html5blank' ); ?>: {{person.email}}</p>
 									<p v-if="person.keybase.length">Keybase: <a :href="'https://keybase.io/'+person.keybase" target="_blank">{{person.keybase}}</a></p>
-									<p v-if="person.dashforum.length">Dashforum: <a :href="'https://www.dash.org/forum/members/'+person.dashforum" target="_blank">{{person.dashforum}}</a></p>
+									<p v-if="person.dashforum.length">Dash Forum: <a :href="'https://www.dash.org/forum/members/'+person.dashforum" target="_blank">{{person.dashforum}}</a></p>
 								</div>
 							</div>							
 						</div>
