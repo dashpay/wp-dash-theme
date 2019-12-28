@@ -112,7 +112,14 @@ while( have_rows('content_sections') ): the_row();
 			// ACF true/false fields are bugged and always return false. using dropdown values 'yes' and 'no'
 			?>
 			<div class="row align-items-center">
-				<div class="<?php echo get_sub_field('2_col_expand_column')=='yes'?'col-lg-4':'col-lg-6'; ?> <?php echo get_sub_field('2_col_swap_columns')=='yes'?'col-right order-lg-2':''; ?>">
+				<div class="<?php 
+				$expand = get_sub_field('2_col_expand_column');
+				switch($expand) {
+					case 'yes':    echo 'col-lg-4'; break; 
+					case 'narrow': echo 'col-lg-7'; break; 
+					default:       echo 'col-lg-6'; break; 
+				} ?>
+				<?php echo get_sub_field('2_col_swap_columns')=='yes'?'col-right order-lg-2':''; ?>">
 
 					<div class="container-xs <?php echo get_sub_field('2_col_swap_columns')=='yes'?'fade-in-right':'fade-in-left'; ?>">
 						<div class="richtext">
@@ -154,7 +161,11 @@ while( have_rows('content_sections') ): the_row();
 					 <?php } ?>
 				</div>
 				<?php 
-					$colclass = get_sub_field('2_col_expand_column')=='yes'?'col-lg-8':'col-lg-6';
+					switch($expand) {
+						case 'yes':    $colclass = 'col-lg-8'; break; 
+						case 'narrow': $colclass = 'col-lg-5'; break; 
+						default:       $colclass = 'col-lg-6'; break; 
+					}
 					if ( get_sub_field('2_col_swap_columns')=='yes' ){
 						$colclass .= ' col-right';
 					}
