@@ -1856,6 +1856,10 @@ footer {
       padding-top: 30px;
       padding-bottom: 30px; } }
 
+.card-img-top {
+  style="height: 18vh;
+}
+
 /* RTL CSS */
 /* Register Farsi fonts */
 @font-face {
