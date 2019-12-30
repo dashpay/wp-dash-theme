@@ -142,7 +142,7 @@ function theme_styles()
     wp_enqueue_style('fancyboxcss');
     
     // Remove time() and replace with static version number after strophy finishes fixing CSS
-    wp_register_style('dashcss', get_template_directory_uri() . '/assets/dash.css', array(), '1.30', 'all');
+    wp_register_style('dashcss', get_template_directory_uri() . '/assets/dash.css', array(), '1.31', 'all');
     wp_enqueue_style('dashcss');
 
 }
