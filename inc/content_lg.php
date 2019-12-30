@@ -69,39 +69,38 @@ while( have_rows('content_sections') ): the_row();
 			if ( get_sub_field('callout_desktop_only_image')!='' ) {
 				$largeimg = get_sub_field('callout_desktop_only_image');
 			}
-			 if ( $largeimg ){ ?>
-			<div class="image d-none d-lg-block"><img src="<?php echo $largeimg;?>" alt class="large img-fluid"></div>
+			if ( $largeimg ){ ?>
+			    <div class="image d-none d-lg-block"><img src="<?php echo $largeimg;?>" alt class="large img-fluid"></div>
 			<?php }  ?>
 
 
-			<div class="row">
+			<div class="card-deck">
 				<?php
 					$links = get_sub_field('block_list');
 
-					$class = "col-lg";
-					if ( count($links)==4 ) {
-						$class = "col-lg-3";
-					}
+					$class = "card border-0 text-center bg-transparent";
 					foreach ( $links as $link) { ?>
 						<div class="<?php echo $class;?>">
-							<div class="callout-item text-center">
 
 								<?php if ($largeimg){ ?>
 									<div class="d-lg-none"><img src="<?php echo $link['block_item_image']['url'] ?>" alt="<?php echo $link['block_item_image']['alt'] ?>" class="img-fluid"></div>
-									<h3 class="title-small"><?php echo $link['block_item_title'] ?></h3>
+									<div class="card-body">
+									<h3 class="title-small card-title"><?php echo $link['block_item_title'] ?></h3>
 								<?php } else { ?>
-									<div class="image"><img src="<?php echo $link['block_item_image']['url'] ?>" alt="<?php echo $link['block_item_image']['alt'] ?>" class="img-fluid"></div>
-									<h3 class="title-italic"><?php echo $link['block_item_title'] ?></h3>
-								<?php }?>
+									<img src="<?php echo $link['block_item_image']['url'] ?>" alt="<?php echo $link['block_item_image']['alt'] ?>" class="card-img-top">
+									<div class="card-body">
+										<h3 class="title-italic card-title"><?php echo $link['block_item_title'] ?></h3>
+								<?php } ?>
 
-								<p><?php echo $link['block_item_description'] ?></p>
+										<p class="card-text"><?php echo $link['block_item_description'] ?></p>
+									</div>
 								<?php if ( $link['block_link']!='' ){?>
+									<div class="card-footer bg-transparent border-0">
 									<a href="<?php echo $link['block_link'] ?>">
 										<strong><?php _e( 'Read more', 'html5blank' ); ?></strong>
-									</a>
+									</a></div>
 								<?php }  ?>
 								
-							</div>
 						</div>
 				 <?php } ?>
 				
