@@ -28,6 +28,9 @@ function cc_mime_types($mimes) {
     $mimes['exe'] = 'application/exe';
     $mimes['ai']  = 'application/postscript';
     $mimes['eps'] = 'application/postscript';
+    // Override WP incorrect MIME type for PGP keys in ASC format
+    unset( $mimes['txt|asc|c|cc|h|srt'] );
+    $mimes['txt|c|cc|h|srt'] = 'text/plain';
     $mimes['asc'] = 'application/pgp-keys';
     return $mimes;
 }
