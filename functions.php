@@ -28,6 +28,7 @@ function cc_mime_types($mimes) {
     $mimes['exe'] = 'application/exe';
     $mimes['ai']  = 'application/postscript';
     $mimes['eps'] = 'application/postscript';
+    $mimes['asc'] = 'text/plain';
     return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
