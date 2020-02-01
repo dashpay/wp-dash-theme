@@ -86,6 +86,8 @@ h1, h2, h3 {
     background-image: url(img/icon-github.svg); }
   .icon-el.discord {
     background-image: url(img/icon-discord-1.svg); }
+  .icon-el.telegram {
+    background-image: url(img/icon-telegram.svg); }
   .icon-el.dashforum {
     background-image: url(img/icon-dashforum-2.svg); 
     min-width: 45px; }
