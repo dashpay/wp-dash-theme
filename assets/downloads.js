@@ -10,9 +10,9 @@ $(window).load(function(){
     // Go to the correct section and tab
     var showTab = function() {
       var tabId     = window.location.hash;
-      var linuxId   = '#' + $('#desktop a:eq(3)').attr('id');
+      var linuxId   = '#' + $('#desktop a:eq(4)').attr('id');
       var windowsId = '#' + $('#desktop a:eq(0)').attr('id');
-      var macosId   = '#' + $('#desktop a:eq(2)').attr('id');
+      var macosId   = '#' + $('#desktop a:eq(3)').attr('id');
       var androidId = '#' + $('#mobile  a:eq(0)').attr('id');
       var iosId     = '#' + $('#mobile  a:eq(1)').attr('id');
       if (tabId == '#linux')   { $('html, body').animate({scrollTop: $('#desktop').offset().top}, 10); $(linuxId).tab('show'); }
