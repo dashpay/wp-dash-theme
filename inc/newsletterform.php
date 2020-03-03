@@ -1,4 +1,4 @@
-<form name="dash-nlform" class="form-newsletter" method="post" action="https://secure.campaigner.com/CSB/Public/ProcessHostedForm.aspx" id="dash-nlform" enctype="multipart/form-data" target="_blank">
+<form name="dash-nlform" class="form-newsletter" method="post" action="https://www.aweber.com/scripts/addlead.pl" id="dash-nlform">
     <script type="text/javascript">
     //<![cdata[
     var theForm = document.forms['dash-nlform'];
@@ -15,11 +15,13 @@
     //]]>
     </script>
 
-    <input type="hidden" name="FormInfo" id="FormInfo" value="7015c67c-5344-4f33-9d5b-1a0ede24d988">
-    <input type="hidden" name="AccId" id="AccId" value="fxzm">
+    <input type="hidden" name="listname" value="awlist5551576" />
+    <input type="hidden" name="redirect" value="https://www.dash.org/thank-you/" />
+    <input type="hidden" name="meta_message" value="1" /> 
+    <input type="hidden" name="meta_required" value="email" /> 
 
     <div class="position-relative">
-        <input name="8650261" type="text" maxlength="4000" id="8650261" class="form-control email" contactattributeid="8650261" placeholder="you@email.com">
+        <input name="email" type="text" maxlength="4000" class="form-control email" placeholder="you@email.com">
 
         <button type="submit" class="btn">
             <i class="icon-inline">
@@ -38,26 +40,5 @@
             </svg>
             </i>
         </button>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <span class="form-check">
-                <input id="15448933" type="checkbox" class="form-check-input" name="15448933" checked>
-                <label for="15448933"><?php echo get_field('newsletter_updates','option');?></label>
-            </span>
-        </div>
-        <div class="col">
-            <span class="form-check">
-                <input id="15449020" type="checkbox" class="form-check-input" name="15449020">
-                <label for="15449020"><?php echo get_field('newsletter_monthly','option');?></label>
-            </span>
-        </div>
-        <div class="col">
-            <span class="form-check">
-                <input id="15449021" type="checkbox" class="form-check-input" name="15449021">
-                <label for="15449021"><?php echo get_field('newsletter_weekly','option');?></label>
-            </span>
-        </div>
     </div>
 </form>
