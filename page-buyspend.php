@@ -48,12 +48,6 @@ get_header(); ?>
 									<option v-for="opt in currencies" :value="opt">{{opt.length?opt:'Any'}}</option>
 								</select>
 							</div>
-							<div class="col-lg-auto col-6"><?php _e( 'using', 'html5blank' ); ?></div>
-							<div class="col-lg-3 col-6">
-								<select class="select-custom" name="method_c" v-model="method_c">
-									<option v-for="opt in methods" :value="opt">{{opt.length?opt:'Any'}}</option>
-								</select>
-							</div>
 						</div>
 						<div class="row align-items-center" v-if="type=='fulllist'">
 							<div class="offset-lg-8 col-lg-2 col-6 col-lg-offset-6 text-right">sort by</div>
@@ -104,58 +98,66 @@ get_header(); ?>
 				<!-- Buyers -->
 				<div class="buyspend-items container" v-if="type=='buy'">
 					<div class="buyspend-header d-none d-lg-block">
-						<div class="row">
-							<div class="col-lg-3">
+						<div class="row font-weight-bold">
+							<div class="col-lg-2">
 								<?php _e( 'Exchange name', 'html5blank' ); ?>
 							</div>
-							<div class="col-lg-3">
+							<div class="col-lg-2">
+								<?php _e( 'Features', 'html5blank' ); ?>
+							</div>
+							<div class="col-lg-2">
+								<?php _e( 'Deposit speed', 'html5blank' ); ?>
+							</div>
+							<div class="col-lg-2">
 								<?php _e( 'Exchange rate', 'html5blank' ); ?>
 							</div>
-							<div class="col-lg-3">
-								<?php _e( 'Payment Method', 'html5blank' ); ?>
+							<div class="col-lg-2">
+								<?php _e( 'Trading pairs', 'html5blank' ); ?>
 							</div>
-							<div class="col-lg-3">
+							<div class="col-lg-2">
 								<?php _e( 'Buy Dash', 'html5blank' ); ?>
 							</div>
 						</div>
 					</div>
 					<div class="buyspend-item buy" v-for="item in items">
 						<div class="row">
-							<div class="col-lg-3">
+							<div class="col-lg-2">
 								<span class="label-mobile d-block d-lg-none">
 									<?php _e( 'Exchange', 'html5blank' ); ?>
 								</span>
 								<div class="d-md-flex d-block">
-									<div>
-										<span class="logo">
-											<img :src="item.image" class="img-fluid">
-										</span>
-									</div>
-									<div>
-										<a :href="item.url"><h4 class="title">{{item.name}}</h4></a>
-										<span><a :href="item.url" target="_blank" class="readmore"><?php _e( 'More information', 'html5blank' ); ?></a></span>
-									</div>
+									<div class="mx-auto">
+									<a :href="item.url">
+										<img :src="item.image" class="img-buy mx-auto d-block mb-2">
+										<h3 class="title">{{item.name}}</h3>
+									</a>
+								</div>
 								</div>
 							</div>
-
-							<div class="col-lg-3">
+							<div class="col-lg-2">
+								<a href="https://bti.live/" target="_blank"><img src="https://media.dash.org/wp-content/uploads/bti.svg" alt="BTI Verified" class="img-buy" v-if="item.bti"></a>
+								<img src="https://staging-www2019.dash.org/wp-content/themes/dash-theme/assets/img/is-logo-blue-text.svg" class="img-buy" v-if="item.instantsend">
+								<img src="https://staging-www2019.dash.org/wp-content/themes/dash-theme/assets/img/cl-logo-blue-text.svg" class="img-buy" v-if="item.chainlocks">
+							</div>
+							<div class="col-lg-2">
+								<span class="confirmations">{{item.confirmations * 2.5}} <?php _e( 'minutes', 'html5blank' ); ?></span>
+							</div>							
+							<div class="col-lg-2">
 								<span class="label-mobile d-block d-lg-none">
 									<?php _e( 'Exchange rate', 'html5blank' ); ?>
 								</span>
 								<h4 class="rate" v-if="item.price">${{item.price.toFixed(2)}}</h4>
 								<p>{{typeof item.volume == 'undefined' ? "" : "Vol.: $" + item.volume.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}}</p>
 							</div>
-							<div class="col-lg-3">
+							<div class="col-lg-2">
 								<span class="label-mobile d-block d-lg-none">
-									<?php _e( 'Payment method', 'html5blank' ); ?>
+									<?php _e( 'Trading pairs', 'html5blank' ); ?>
 								</span>
-								<span>
-									<span class="currency" v-for="method in item.methods">{{method}}</span>
-								</span>
+								<span class="pair" v-for="currency in item.currency"> {{currency}} </span>
 							</div>
-							<div class="col-lg-3">
+							<div class="col-lg-2">
 								<a :href="item.url" target="_blank" class="btn btn-download">
-									<i class="icon-el offsite"></i> <?php _e( 'Buy online', 'html5blank' ); ?>
+									<i class="icon-el offsite"></i> <?php _e( 'Buy now', 'html5blank' ); ?>
 								</a>
 							</div>
 						</div>
