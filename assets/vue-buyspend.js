@@ -33,6 +33,7 @@ Vue.component('dash-buyspend', {
     if (this.vendors.length){
       this.items_all = JSON.parse(this.vendors);
       if (this.type=='buy'){
+/*
         that.currencyFilter = that.items_all[0].currencies;
         // setup currency filter and buy method filter
         for (var curr in that.currencyFilter) {
@@ -43,7 +44,16 @@ Vue.component('dash-buyspend', {
             }
           })
         }
-        this.items_all.shift();
+*/
+        for (var exchange in that.items_all) {
+          for (var currencies in that.items_all[exchange].currency) {
+            var currency = that.items_all[exchange].currency[currencies];
+            if (that.currencies.indexOf(currency)<0) {
+              that.currencies.push(currency);
+            }
+          }
+        }
+        //this.items_all.shift();
         that.filter();
 
         // get the prices from API, later
