@@ -94,6 +94,8 @@ h1, h2, h3 {
     min-width: 45px; }
   .icon-el.reddit {
     background-image: url(img/icon-reddit-1.svg); }
+  .icon-el.telegram {
+    background-image: url(img/icon-telegram.svg); }
 
 .icon-placeholder {
   width: 30px;
