@@ -136,8 +136,8 @@ get_header(); ?>
 							</div>
 							<div class="col-lg-2">
 								<a href="https://bti.live/" target="_blank"><img src="https://media.dash.org/wp-content/uploads/bti.svg" alt="BTI Verified" class="img-buy" v-if="item.bti"></a>
-								<img src="https://staging-www2019.dash.org/wp-content/themes/dash-theme/assets/img/is-logo-blue-text.svg" class="img-buy" v-if="item.instantsend">
-								<img src="https://staging-www2019.dash.org/wp-content/themes/dash-theme/assets/img/cl-logo-blue-text.svg" class="img-buy" v-if="item.chainlocks">
+								<img src="https://media.dash.org/wp-content/uploads/is-logo-blue-text.svg" class="img-buy" v-if="item.instantsend">
+								<img src="https://media.dash.org/wp-content/uploads/cl-logo-blue-text.svg" class="img-buy" v-if="item.chainlocks">
 							</div>
 							<div class="col-lg-2">
 								<span class="confirmations">{{item.confirmations * 2.5}} <?php _e( 'minutes', 'html5blank' ); ?></span>
