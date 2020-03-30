@@ -104,7 +104,7 @@
 							<div class="link-container d-flex justify-content-between">
 								<a href="https://reddit.com/r/dashpay/"><div class="icon-el reddit"></div></a>
 								<a href="https://twitter.com/Dashpay"><div class="icon-el twitter"></div></a>
-								<a href="https://www.youtube.com/channel/UCAzD2v9Yx4a4iS2_-unODkA"><div class="icon-el youtube"></div></a>
+								<a href="https://www.youtube.com/c/DashOrg"><div class="icon-el youtube"></div></a>
 								<a href="https://www.linkedin.com/company/10424093"><div class="icon-el linkedin"></div></a>
 								<a href="https://www.facebook.com/DashPay"><div class="icon-el facebook"></div></a>
 								<a href="https://www.instagram.com/dashpay/"><div class="icon-el instagram"></div></a>
