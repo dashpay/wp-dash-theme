@@ -1076,6 +1076,10 @@ header .lang .dropdown .wpml-ls a {
   border-top: 2px solid #eee; }
   .buyspend-header a, .buyspend-header button {
     color: #787878; }
+  .buyspend-header .sorted {
+    background-image: url(img/caret-down.svg);
+    background-position: center right 30px;
+    background-repeat: no-repeat; }
 
 .buyspend-items.fullist .richtext {
   font-size: 14px; }

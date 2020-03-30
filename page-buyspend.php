@@ -99,13 +99,13 @@ get_header(); ?>
 				<div class="buyspend-items container" v-if="type=='buy'">
 					<div class="buyspend-header d-none d-lg-block">
 						<div class="row font-weight-bold">
-							<div class="col-lg-2">
+							<div class="col-lg-2" v-on:click="sortListBy('name')" v-bind:class="isSorted('name')">
 								<?php _e( 'Exchange name', 'html5blank' ); ?>
 							</div>
-							<div class="col-lg-2">
+							<div class="col-lg-2" v-on:click="sortListBy('bti')" v-bind:class="isSorted('bti')">
 								<?php _e( 'Features', 'html5blank' ); ?>
 							</div>
-							<div class="col-lg-2">
+							<div class="col-lg-2" v-on:click="sortListBy('confirmations')" v-bind:class="isSorted('confirmations')">
 								<?php _e( 'Deposit speed', 'html5blank' ); ?>
 							</div>
 							<div class="col-lg-2">

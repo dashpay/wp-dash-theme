@@ -13,6 +13,7 @@ Vue.component('dash-buyspend', {
       currency_c:'',
       method_c:'',
       category_c:'',
+      sortedBy:'',
 
       items: [],
       items_all: [],
@@ -190,6 +191,21 @@ Vue.component('dash-buyspend', {
           return 0;
       })
       return s;
+    },
+    sortListBy: function(sortBy){
+      if (sortBy === 'bti') {
+        var r = this.items.sort((a, b) => (a[sortBy] > b[sortBy]) ? -1 : 1);
+      }
+      else {
+        var r = this.items.sort((a, b) => (a[sortBy] > b[sortBy]) ? 1 : -1);
+      }
+      this.sortedBy = sortBy;
+      this.items = r;
+    },
+    isSorted: function(heading) {
+      return {
+        sorted: heading === this.sortedBy
+      }
     }
   }
 })
