@@ -1,6 +1,6 @@
 <?php while( have_rows('simple_content_sections') ): the_row(); ?>
 
-<section class="block bg-light">
+<section class="block bg-light" <?php $section_id = get_sub_field('section_id'); if ($section_id!=''){echo "id=\"$section_id\"";} ?>>
 	<div class="container block-pad-v">
 
 		<div class="richtext">
