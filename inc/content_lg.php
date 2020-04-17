@@ -635,7 +635,7 @@ while( have_rows('content_sections') ): the_row();
 						</div>
 						<div>
 							<span class="title"><?php echo $link['foot_vendor_name'];?></span>
-							<span class="link"><?php echo $link['foot_vendor_link'];?></span>
+							<span class="link"><?php echo parse_url($link['foot_vendor_link'], PHP_URL_HOST);?></span>
 						</div>
 					</a>					
 				</div>
