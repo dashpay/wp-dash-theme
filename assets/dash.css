@@ -1941,3 +1941,152 @@ html[dir=rtl] #navbar-main .navbar-item .dropdown {
     text-align: right;
   }
 }
+
+
+/* ITB CSS */
+.widget-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.itb-charts-container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.itb-charts-container .itb-widget {
+  width: 49.5%;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .itb-charts-container .itb-widget {
+      width: 100%;
+  }
+}
+
+/* FONT OVERRIDES */
+.widget-container .itb-widget * {
+  font-family: 'Montserrat' !important;
+}
+
+/* TOKEN SUMMARY OVERRIDES */
+.widget-container .itb-widget .summary .legend .value {
+  font-size: 17px;
+  font-weight: bold;
+}
+.widget-container .itb-widget .summary #holders-making-money-at-current-price {
+  display: none;
+}
+.widget-container .itb-widget .summary #price-correlation-with-bitcoin .highcharts-plot-band:nth-child(3)   {
+  fill: #008de4;
+}
+.widget-container .itb-widget .summary #price-correlation-with-bitcoin .highcharts-data-label > span > div   {
+  color: #008de4 !important;
+}
+.widget-container .itb-widget .summary #holders-composition-by-time-held .bg-red {
+  background-color: #eba845
+}
+.widget-container .itb-widget .summary #holders-composition-by-time-held .red {
+  color: #eba845;
+}
+.widget-container .itb-widget .summary #transaction-demographics .bg-dark-blue {
+  background-color: #5d00d3
+}
+.widget-container .itb-widget .summary #transaction-demographics .dark-blue {
+  color: #5d00d3;
+}
+.widget-container .itb-widget .summary .telegram-members-change .highcharts-graph {
+  stroke: #008de4;
+}
+
+/* COLOR OVERRIDES */
+.widget-container .itb-widget .bg-green {
+  background-color: #8fc564;
+}
+.widget-container .itb-widget .green {
+  color: #8fc564;
+}
+.widget-container .itb-widget .bg-red {
+  background-color: #de4545;
+}
+.widget-container .itb-widget .red {
+  color: #de4545;
+}
+.widget-container .itb-widget .bg-blue {
+  background-color: #008de4;
+}
+.widget-container .itb-widget .blue {
+  color: #008de4;
+}
+.widget-container .itb-widget .bg-gray {
+  background-color: #dcdfe8;
+}
+.widget-container .itb-widget .gray {
+  color: #dcdfe8;
+}
+.widget-container .itb-widget .bg-yellow {
+  background-color: #a04bd3;
+}
+.widget-container .itb-widget .yellow {
+  color: #a04bd3;
+}
+.widget-container .itb-widget .bg-dark-blue {
+  background-color: #008de4;
+}
+.widget-container .itb-widget .dark-blue {
+  color: #008de4;
+}
+.widget-container .itb-widget #transactions-greater-than-100k .highcharts-graph {
+  stroke: #008de4;
+}
+
+/* CARD STYLES OVERRIDES */
+.widget-container .itb-widget .card-chart {
+  border: 2px solid #ebebeb;
+  border-radius: 0px;
+}
+.widget-container .itb-widget .card-chart .tab {
+  display: none;
+}
+.widget-container .itb-widget[data-type="average-transaction-size"] .card-chart .tab {
+  display: block;
+}
+.widget-container .itb-widget .card-chart .divider {
+  display: none;
+}
+.widget-container .itb-widget .card-chart .chart-title .inner-title {
+  font-size: 14px;
+  font-weight: 500;
+}
+.widget-container .itb-widget .card {
+  border: 2px solid #ebebeb;
+  border-radius: 0px;
+}
+.widget-container .highlight-container .text-container {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* BUTTON OVERRIDES */
+.widget-container .itb-widget .button {
+  background-color: #008de4;
+}
+.widget-container .itb-widget .button:hover {
+  background-color: #0674b7;
+}
+.widget-container .itb-widget .button:active {
+  background-color: #0674b7;
+}
+.widget-container .itb-widget .see-more-link a.call-to-action {
+  background: #008de4;
+}
+.widget-container .itb-widget .see-more-link a.call-to-action:hover {
+  background: #0674b7;
+}
+.widget-container .itb-widget .see-more-link a.call-to-action:active {
+  background: #0674b7;
+}
