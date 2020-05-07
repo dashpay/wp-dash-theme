@@ -2090,3 +2090,22 @@ html[dir=rtl] #navbar-main .navbar-item .dropdown {
 .widget-container .itb-widget .see-more-link a.call-to-action:active {
   background: #0674b7;
 }
+
+/* Alignment fixes */
+.widget-container .itb-widget .powered-by .logo {
+  background-image: url(https://media.dash.org/wp-content/uploads/itb_logo.png);
+}
+
+.widget-container .itb-widget .powered-by-container {
+position: absolute;
+right: 0px;
+}
+@media(max-width: 768px) {
+.widget-container .itb-widget .powered-by-container {
+position: static;
+right: unset;
+float: none;
+} 
+.widget-container .itb-widget .powered-by-container .powered-by {
+justify-content: center;
+}
