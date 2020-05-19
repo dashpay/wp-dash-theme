@@ -231,6 +231,22 @@ while( have_rows('content_sections') ): the_row();
 									</div>
 								<?php }?>
 
+								<?php if ($subtype=='feature'){ ?>
+									<div class="col-lg-6 col-6">
+										<a <?php if ( $link['block_link']!=''){ ?>href="<?php echo $link['block_link']?>" target="_blank"<?php } ?> class="btn btn-hover">
+											<div class="image">
+												<img src="<?php echo $link['block_item_image']['url'] ?>" alt="<?php echo $link['block_item_image']['alt'] ?>" class="img-fluid socialicons">
+											</div>
+											<?php if ( $link['block_item_title']!=''){ ?>
+												<span><?php echo $link['block_item_title']?></span>
+											<?php } ?>
+											<?php if ( $link['block_item_description']!=''){ ?>
+												<small><?php echo $link['block_item_description'] ?></small>
+											<?php } ?>
+										</a>
+									</div>
+								<?php }?>
+
 						 	<?php } ?>
 						</div>
 					</div>
