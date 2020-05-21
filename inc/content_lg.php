@@ -232,7 +232,7 @@ while( have_rows('content_sections') ): the_row();
 								<?php }?>
 
 								<?php if ($subtype=='feature'){ ?>
-									<div class="col-lg-6 col-6 feature-panel">
+									<div class="col-lg-6 col-12 feature-panel">
 										<a <?php if ( $link['block_link']!=''){ ?>href="<?php echo $link['block_link']?>" target="_blank"<?php } ?> class="btn btn-hover">
 											<div class="image">
 												<img src="<?php echo $link['block_item_image']['url'] ?>" alt="<?php echo $link['block_item_image']['alt'] ?>" class="img-fluid socialicons">
