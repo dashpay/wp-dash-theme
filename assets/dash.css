@@ -149,7 +149,7 @@ h1, h2, h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   min-width: 200px;
-  padding: 12px 30px;
+  padding: 12px 30px;
   border-radius: 8px;
   border: 1px solid #fff;
   color: #fff; }
@@ -222,7 +222,10 @@ h1, h2, h3 {
       margin: 5px auto 8px; }
     .btn.btn-hover span {
       opacity: 0.6;
-      display: block; }
+      display: block; 
+      padding: 0.3rem 0px; }
+    .btn.btn-hover.feature-panel:hover {
+        color: #fff; }
     .btn.btn-hover:hover {
       background: rgba(39, 142, 224, 0.5); }
       .btn.btn-hover:hover span {
