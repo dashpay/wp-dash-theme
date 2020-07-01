@@ -90,7 +90,6 @@
 								<a href="https://github.com/dashpay"><div class="icon-el github"></div></a>
 								<a href="https://github.com/dashevo"><div class="icon-el github"></div></a>
 								<a href="https://discordapp.com/invite/PXbUxJB"><div class="icon-el discord"></div></a>
-								<a href="https://discordapp.com/invite/DU6ZZW8"><div class="icon-el discord"></div></a>
 								<a href="https://t.me/dash_chat"><div class="icon-el telegram"></div></a>
 								<a href="https://www.dash.org/forum/"><div class="icon-el dashforum"></div></a>
 								<a href="https://blog.dash.org/"><div class="icon-el dashblog"></div></a>
