@@ -255,7 +255,11 @@ while( have_rows('content_sections') ): the_row();
 				<?php if ($type=='2col_image'){ ?>
 					<div class="<?php echo $colclass; ?> d-lg-block d-none">
 						<div class="image">
-							<img src="<?php echo get_sub_field('2_col_large_image') ?>" alt class="img-fluid">
+							<?php if ( get_sub_field('2_col_large_image')!='' ) { ?>
+								<img src="<?php echo get_sub_field('2_col_large_image') ?>" alt class="img-fluid">
+							<?php } else {
+								echo get_sub_field('2_col_large_video');
+							} ?>
 						</div>
 					</div>
 				<?php } ?>
