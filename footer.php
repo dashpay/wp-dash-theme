@@ -74,15 +74,15 @@
 		<div class="footer-bottom bg-dark">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-4 order-lg-3">
+					<?php /*<div class="col-lg-4 order-lg-3">
 						<div class="row newsletter">
 							<div class="col-12">
 								<strong><?php echo get_field('newsletter_text',$homeid);?></strong>
 								<?php get_template_part('inc/newsletterform'); ?>
 							</div>
 						</div>
-					</div>
-					<div class="col-lg-4 has-border">
+					</div>*/ ?>
+					<div class="col-lg-6 has-border">
 						<div class="container-xs">
 							<strong><?php echo get_field('discussion_text',$homeid);?></strong>
 
@@ -97,7 +97,7 @@
 
 						</div>
 					</div>
-					<div class="col-lg-4 has-border">
+					<div class="col-lg-6">
 						<div class="container-xs">
 							<strong><?php echo get_field('social_text',$homeid);?></strong>
 							<div class="link-container d-flex justify-content-between">
