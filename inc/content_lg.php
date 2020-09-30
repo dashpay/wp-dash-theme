@@ -88,7 +88,7 @@ while( have_rows('content_sections') ): the_row();
 									<h3 class="title-small card-title"><?php echo $link['block_item_title'] ?></h3>
 								<?php } else { ?>
 									<img src="<?php echo $link['block_item_image']['url'] ?>" alt="<?php echo $link['block_item_image']['alt'] ?>" class="card-img-top">
-									<div class="card-body">
+									<div class="card-body px-2">
 										<h3 class="title-italic card-title"><?php echo $link['block_item_title'] ?></h3>
 								<?php } ?>
 
