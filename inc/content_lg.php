@@ -4,10 +4,11 @@ $count = 0;
 while( have_rows('content_sections') ): the_row(); 
 
 	// CONTENT BLOCKS
-	// 	text : Text
+	// text : Text
 	// callouts : Callouts
 	// 2col_grid : 2 Column Grid
 	// 2col_image : 2 Column Image
+	// 2col_app : 2 Column App
 	// stats : Stats
 	// vendors : Vendors [buy and spend pages]
 	// news : Latest News
@@ -33,6 +34,12 @@ while( have_rows('content_sections') ): the_row();
 	 	$padding = 'block-pad-none';
 		$classes[] = 'block-text';
 	}
+
+	if ( $type=='2col_app' ){
+		$padding = 'block-pad-none';
+		$classes[] = 'block-text';
+    }
+
 	if ( $type=='speed' ){
 		$bg = 'bg-gradient-dark-v';
 	}
@@ -107,17 +114,19 @@ while( have_rows('content_sections') ): the_row();
 			</div>
 		<?php } ?>
 
-		<?php if ($type=='2col_grid' || $type=='2col_image' || $type=='2col_terminal'){ 
+		<?php if ($type=='2col_grid' || $type=='2col_image' || $type=='2col_terminal' || $type=='2col_app'){ 
 			// ACF true/false fields are bugged and always return false. using dropdown values 'yes' and 'no'
 			?>
-			<div class="row align-items-center">
+			<div class="row <?php if ($type!='2col_app') { echo('align-items-center'); } ?>">
 				<div class="<?php 
 				$expand = get_sub_field('2_col_expand_column');
 				switch($expand) {
 					case 'yes':    echo 'col-lg-4'; break; 
 					case 'narrow': echo 'col-lg-7'; break; 
 					default:       echo 'col-lg-6'; break; 
-				} ?>
+				} 
+				if ($type=='2col_app') { echo(' block-pad-v'); }
+				?>
 				<?php echo get_sub_field('2_col_swap_columns')=='yes'?'col-right order-lg-2':''; ?>">
 
 					<div class="container-xs <?php echo get_sub_field('2_col_swap_columns')=='yes'?'fade-in-right':'fade-in-left'; ?>">
@@ -260,6 +269,16 @@ while( have_rows('content_sections') ): the_row();
 							<?php } else {
 								echo get_sub_field('2_col_large_video');
 							} ?>
+						</div>
+					</div>
+				<?php } ?>
+
+				<?php if ($type=='2col_app'){ ?>
+					<div class="<?php echo $colclass; ?> block-pad-top">
+						<div class="image image-float bottom right">
+							<?php if ( get_sub_field('2_col_large_image')!='' ) { ?>
+								<img src="<?php echo get_sub_field('2_col_large_image') ?>" alt class="img-fluid">
+							<?php } ?>
 						</div>
 					</div>
 				<?php } ?>

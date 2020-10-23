@@ -777,6 +777,9 @@ header .lang .dropdown .wpml-ls a {
   .block.block-walkthrough .callout-item {
     font-size: 14px; }
 
+.block-2col_app {
+  overflow: hidden; }
+
 .block-app {
   overflow: hidden; }
   .block-app .btn-hovershadow {
