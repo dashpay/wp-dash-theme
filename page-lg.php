@@ -27,8 +27,19 @@ get_header(); ?>
 	</div>
 	<?php } ?>
 
+	<?php if(get_field('title_banner')==true){ ?>
+	<div class="banner-shape container pull-up">
+		<div class="bg bg-gradient-v"></div>
+		<div class="row flex-lg-wrap">
+			<div class="d-block col-6 mx-auto">
+				<img src="<?php echo get_field('title_image'); ?>" alt class="img-fluid d-block">
+				<p class="d-block text-center mt-2"><?php echo get_field('title_text'); ?></p>
+			</div>
+		</div>
+	</div>
 
-	<?php if( have_rows('callout_items') ): ?>
+	<?php } else { 
+	if( have_rows('callout_items') ): ?>
 	<div class="banner-shape container pull-up">
 		<div class="bg bg-gradient-v"></div>
 		<div class="row flex-lg-nowrap">
@@ -57,7 +68,8 @@ get_header(); ?>
 			
 		</div>
 	</div>
-	<?php endif; ?>
+	<?php endif; 
+	} ?>
 
 	<!-- section type: plain richtext -->
 	<?php if ( !empty( get_the_content() ) ){ ?>
