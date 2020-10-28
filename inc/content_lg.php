@@ -43,6 +43,7 @@ while( have_rows('content_sections') ): the_row();
 	if ( $type=='speed' ){
 		$bg = 'bg-gradient-dark-v';
 	}
+	
 	if ( $type=='proposals' ){
 		$bg = 'bg-lightgray';
 	}
