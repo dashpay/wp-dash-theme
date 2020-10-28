@@ -47,6 +47,10 @@ while( have_rows('content_sections') ): the_row();
 		$bg = 'bg-lightgray';
 	}
 
+	if ( $type=='text' && $padding=='my-5'){
+		$padding = 'block-pad-v my-5';
+	}
+
 	if ( get_sub_field('callout_desktop_only_image')!='' ){
 		$classes[] = 'walkthrough';
 	}
