@@ -5,34 +5,7 @@ get_header(); ?>
 
 <div id="main" class="page-roadmap">
 
-<div class="halfbanner bg-gradient-h">
-	<div class="container d-flex align-items-center">
-		<div class="caption text-center">
-		<?php 
-			if ( empty( get_the_content() ) ){  
-				the_title();
-			}
-			else {
-				the_content();
-			}
-		?>
-		</div>
-	</div>
-</div>
-<style type="text/css">
-	.halfbanner .caption h1 {
-		color: #fff;
-	}
-	header .lang path, header .lang polygon,
-	header .logo path, header .logo polygon {
-		fill: #fff!important;
-	}
-	header a, header a:hover {
-		color: #fff;
-	}
-</style>
-
-
+<?php get_template_part('inc/content_lg'); ?>
 	
 <section class="block block-roadmap bg-light">
 	<div class="container">
