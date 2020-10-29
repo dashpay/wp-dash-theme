@@ -65,6 +65,11 @@
 								<?php echo get_field('support_page_button',$homeid);?>
 							</a>
 						</div>
+						<div class="status d-flex justify-content-center mt-3">
+							<a href="https://statuspage.freshping.io/1446-Dash">
+								<img src="https://statuspage.freshping.io/badge/6bd13996-45b7-47b0-aaa4-5762412982a7?0.8091951318490984"/>
+							</a>
+						</div>
 					</div>
 
 				</div>
