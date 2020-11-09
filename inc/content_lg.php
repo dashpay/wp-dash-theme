@@ -118,7 +118,7 @@ while( have_rows('content_sections') ): the_row();
 		<?php if ($type=='2col_grid' || $type=='2col_image' || $type=='2col_terminal' || $type=='2col_app'){ 
 			// ACF true/false fields are bugged and always return false. using dropdown values 'yes' and 'no'
 			?>
-			<div class="row <?php if ($type!='2col_app') { echo('align-items-center'); } ?>">
+			<div class="row align-items-center">
 				<div class="<?php 
 				$expand = get_sub_field('2_col_expand_column');
 				switch($expand) {
@@ -276,7 +276,7 @@ while( have_rows('content_sections') ): the_row();
 
 				<?php if ($type=='2col_app'){ ?>
 					<div class="<?php echo $colclass; ?> block-pad-top">
-						<div class="image image-float bottom right">
+						<div class="image">
 							<?php if ( get_sub_field('2_col_large_image')!='' ) { ?>
 								<img src="<?php echo get_sub_field('2_col_large_image') ?>" alt class="img-fluid">
 							<?php } ?>
