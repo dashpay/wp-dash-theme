@@ -58,7 +58,7 @@ get_header(); ?>
 
 		<div class="row news-list">
 			<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-			$args = array( 'post_type' => 'post', 'posts_per_page' => 12, 'paged' => $paged );
+			$args = array( 'post_type' => 'post', 'posts_per_page' => 12, 'paged' => $paged, 'cat' => implode(', ', get_field('news_category')) );
 			$wp_query = new WP_Query($args);
 			while ( have_posts() ) : the_post(); ?>
 				<div class="col-lg-4 col-md-6">
