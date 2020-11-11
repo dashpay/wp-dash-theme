@@ -5,7 +5,15 @@ get_header(); ?>
 <div id="main" class="page-largebanner">
 
 	<?php if (get_field( "hide_large_banner" )!='yes') { ?>
-	<div class="banner <?php if ( get_field( "large_banner_embed" )!='' ){echo 'has-embed';}?>" style="background-image:url(<?php echo get_field( "large_banner_image" ); ?>)">
+	<div class="<?php 
+		if (get_field( "hide_large_banner" )=='no-overlay') {
+			echo('banner-no-overlay ');
+		} else {
+			echo('banner ');
+		}  
+		if (get_field( "large_banner_embed" )!=''){
+			echo 'has-embed';
+		}?>" style="background-image:url(<?php echo get_field( "large_banner_image" ); ?>)">
 		<?php if ( get_field( "large_banner_embed" )=='' ){?>
 		<div class="caption-container">
 			<div class="caption">
