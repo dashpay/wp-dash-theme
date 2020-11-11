@@ -591,6 +591,15 @@ header .lang .dropdown .wpml-ls a {
   .banner iframe {
     height: 100%; }
 
+.banner-no-overlay {
+  background-color: #031841;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  height: 75vh;
+  min-height: 650px;
+  padding-top: 80px; }
+
 .banner-shape {
   color: #fff;
   position: relative;
