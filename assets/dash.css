@@ -1314,6 +1314,15 @@ textarea.is-copied, input.is-copied {
 .page-newsdetail .sidebar .news-related h4 {
   font-size: 16px; }
 
+.page-newsdetail img {
+  max-width: 100%;
+  height: auto; }
+
+.page-newsdetail img.aligncenter {
+  display: block !important;
+  margin-right: auto !important;
+  margin-left: auto !important; }
+
 .page-newsdetail .news-author {
   font-size: 14px; }
   .page-newsdetail .news-author svg {
