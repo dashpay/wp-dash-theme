@@ -135,7 +135,7 @@ get_header(); ?>
 								</div>
 							</div>
 							<div class="col-lg-2">
-								<a href="https://bti.live/" target="_blank"><img src="https://media.dash.org/wp-content/uploads/bti-1.svg" alt="BTI Verified" class="img-buy" v-if="item.bti"></a>
+								<a href="https://btiverified.com/" target="_blank"><img src="https://media.dash.org/wp-content/uploads/bti-1.svg" alt="BTI Verified" class="img-buy" v-if="item.bti"></a>
 								<img src="https://media.dash.org/wp-content/uploads/is-logo-blue-text.svg" class="img-buy" v-if="item.instantsend">
 								<img src="https://media.dash.org/wp-content/uploads/cl-logo-blue-text.svg" class="img-buy" v-if="item.chainlocks">
 							</div>
