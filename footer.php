@@ -65,13 +65,13 @@
 								<?php echo get_field('support_page_button',$homeid);?>
 							</a>
 						</div>
-						<div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b757fa0340045cd0c938" data-businessunit-id="5fff59ee8b18380001bce801" data-style-height="25px" data-style-width="100%">
-  						<a href="https://www.trustpilot.com/review/www.dash.org" target="_blank" rel="noopener">Trustpilot</a>
-						</div>
 						<div class="status d-flex justify-content-center mt-3">
 							<a href="https://statuspage.freshping.io/1446-Dash">
 								<img src="https://statuspage.freshping.io/badge/6bd13996-45b7-47b0-aaa4-5762412982a7?0.8091951318490984"/>
 							</a>
+						</div>
+						<div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b757fa0340045cd0c938" data-businessunit-id="5fff59ee8b18380001bce801" data-style-height="25px" data-style-width="100%" style="margin-top: 1em">
+  						<a href="https://www.trustpilot.com/review/www.dash.org" target="_blank" rel="noopener">Trustpilot</a>
 						</div>
 					</div>
 
