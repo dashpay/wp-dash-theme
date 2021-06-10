@@ -2135,3 +2135,56 @@ float: none;
 justify-content: center;
 }
 }
+
+
+/* Sara's corner of the Dash Stylesheet :) */
+
+/* esports design tweaks */
+.page-id-67894 .btn.btn-white{
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.page-id-67894 .container-sm{
+  width: 100%;
+}
+
+#why-dash-esports .image{
+  text-align: center;
+}
+
+.page-id-67894 .container-xs {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+.page-id-67894 .container-xs .richtext{
+  max-width: 480px;
+}
+
+.page-id-67894 .card-item{
+  text-align: left;
+  padding: 40px;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.page-id-67894 .card-item h4{
+  min-height: 70px;
+}
+
+.page-id-67894 .card-item img{
+  max-width: 100%;
+}
+
+.page-id-67894 .banner .caption {
+  width: auto!important;  
+}
+
+@media(max-width: 420px){
+  .page-id-67894 .col-6{
+    flex: 0 0 100%;
+    max-width: 100%;
+    }
+}
