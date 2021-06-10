@@ -2183,11 +2183,8 @@ justify-content: center;
 }
 
 @media(max-width: 420px){
-  .page-id-67894{
-    .col-6{
+  .page-id-67894 .col-6{
     flex: 0 0 100%;
     max-width: 100%;
     }
-  
-  }
 }
