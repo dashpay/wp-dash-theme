@@ -2182,9 +2182,44 @@ justify-content: center;
   width: auto!important;  
 }
 
+.page-id-67894 .banner{
+	max-height: 490px;
+	min-height: auto!important;
+}
+
+.page-id-67894 .banner .caption h1{
+	font-style: normal;
+}
+
+.page-id-67894 .banner .caption p{
+	font-size: 2.3em;
+	font-weight: 300;
+}
+
+.page-id-67894 .banner .caption p::after{
+	content: url(https://wp.dash.org/wp-content/uploads/esports-arrow.png);
+	width: 36px;
+	height: 21px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	top: 30px;
+}
+
 @media(max-width: 420px){
   .page-id-67894 .col-6{
     flex: 0 0 100%;
     max-width: 100%;
-    }
+  }
+}
+
+@media(max-width: 960px){
+	.page-id-67894 .banner .caption p{
+		font-size: 1.6em;
+		line-height: 1.2;
+		padding-top: 30px;
+	}
+	.page-id-67894 .banner .caption p::after{
+		top: 45px;
+	}
 }
