@@ -2170,61 +2170,130 @@ justify-content: center;
   padding-bottom: 30px;
 }
 
-.page-id-67894 .card-item h4{
-  min-height: 70px;
-}
-
 .page-id-67894 .card-item img{
   max-width: 100%;
+  max-height: 100%;
+}
+
+.page-id-67894 .card-item h4{
+  min-height: 60px;
+}
+
+.page-id-67894 .card-item h4 img{
+  max-height: 70px;
+}
+
+.page-id-67894 .card-item div img{
+  padding-bottom: 25px;
+  opacity: .9;
+}
+
+.page-id-67894 .card-item .btn.btn-ghost.blue:hover{
+  color: #012060;
+  border-color: #012060;
 }
 
 .page-id-67894 .banner .caption {
   width: auto!important;  
 }
 
-.page-id-67894 .banner{
-  max-height: 490px;
-  min-height: auto!important;
-}
-
-.page-id-67894 .banner .caption h1{
-  font-style: normal;
-}
-
-.page-id-67894 .banner .caption p{
-  font-size: 2.3em;
-  font-weight: 300;
-}
-
-.page-id-67894 .banner .caption p::after{
-  content: url(https://wp.dash.org/wp-content/uploads/esports-arrow.png);
-  width: 36px;
-  height: 21px;
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  top: 30px;
-}
-
-@media(max-width: 960px){
-  .page-id-67894 .banner .caption h1{
-    margin-top: 30px;
-  }
-	
-  .page-id-67894 .banner .caption p{
-    font-size: 1.7em;
-    line-height: 1.2;
-    position: relative;
-    top: 20px;
-  }
-  .page-id-67894 .banner .caption p::after{
-    display: none;
-  }
-}
-
 @media(max-width: 420px){
   .page-id-67894 .col-6{
     flex: 0 0 100%;
     max-width: 100%;
+    }
+}
+
+/* News Main Page Design Tweaks */
+.page-news .halfbanner{
+  background: linear-gradient(to right, #1492e5 0%, #1550a2 100%);
+  margin-top:105px;
+}
+
+.page-news .halfbanner{
+  padding-top: 20px;
+}
+
+.page-news .halfbanner .slick-dots {
+  position: absolute;
+  bottom: -20px;
+}
+
+.page-news .halfbanner, .page-news .halfbanner a{
+  color: #fff;
+}
+
+.page-news .halfbanner h1 a{
+  color: #fff;
+}
+
+.page-news .btn.btn-ghost.blue:hover, .page-news .halfbanner h1 a:hover{
+  opacity:.6;
+}
+
+.page-news .icon-inline.blue path, .page-news .icon-inline.blue polygon{
+  fill: #fff;
+}
+
+.page-news .halfbanner .carousel .btn {
+  margin-top: 37px;
+}
+
+@media(max-width: 575px){
+  .page-news .halfbanner{
+    padding-top: 0;
   }
+  .page-news .halfbanner .caption{
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  .page-news .halfbanner .caption .btn{
+    width: 100%;
+  }
+}
+
+/* News blog post design tweaks */
+.page-newsdetail{
+padding-top: 200px;
+}
+
+.news-back-btn a{
+  color:#fff;
+  background:rgba(39, 142, 224, 0.5);
+  padding: 12px 25px;
+  display: inline;
+  border-radius: 4px;
+}
+
+.news-back-btn a:hover{
+  background:#008de4;
+}
+
+/* Where To Spend DashDirect Style Tweaks */
+#dash-direct-section p a{
+margin-right: 25px;
+}
+
+#dash-direct-section .dashdirect-logo{
+margin-bottom: 35px;
+}
+#dash-direct-section .dashdirect-logo img{
+  max-width: 100%;
+}
+
+#dash-direct-section .link-list{
+  margin-top: 35px;
+}
+
+@media(max-width: 990px){
+#dash-direct-section{
+  padding-top: 40px;
+  padding-bottom: 40px
+}
+}
+
+/* Adding contrast to bottom footer – It needed to be done. ;) */
+footer .footer-bottom{
+  background: #1f1f1f!important;
 }
