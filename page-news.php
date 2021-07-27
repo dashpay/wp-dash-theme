@@ -36,7 +36,7 @@ get_header(); ?>
 									<div class="caption">
 										<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 										<p><?php html5wp_excerpt('html5wp_index'); ?></p>
-										<a class="btn btn-ghost blue" target="_blank" href="<?php the_permalink(); ?>">
+										<a class="btn btn-ghost white" href="<?php the_permalink(); ?>">
 											<?php _e( 'Read Article', 'html5blank' ); ?>
 										</a>
 									</div>
