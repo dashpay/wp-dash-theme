@@ -46,16 +46,12 @@ if ($post->post_type=='downloadgroup'){
 				// _e( 'Categorised in: ', 'html5blank' ); the_category(', '); 
 				?>
 				<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-
 				<?php 
 				// comments_template(); 
 				?>
-				
 				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c94c2f7ea8463de"></script>
                 <div class="addthis_inline_share_toolbox"></div>
-
 				<hr>
-
 				<?php $author_id=$post->post_author; ?>
 				<div class="news-author mb-5">
 					<div class="row">
@@ -79,8 +75,10 @@ if ($post->post_type=='downloadgroup'){
 					</div>
 				</div>
 				<div class="row my-5">
-			<div class="col-12 news-back-btn"><a href="/news/" class="text-gray title-small backlink"><?php _e( 'Back to all articles', 'html5blank' ); ?></a></div>
-		</div>
+					<div class="col-12 news-back-btn">
+						<a href="/news/" class="text-gray title-small backlink"><?php _e( 'Back to all articles', 'html5blank' ); ?></a>
+					</div>
+				</div>
 		</div>
 		<div class="col-lg-4 offset-lg-1">
 			<div class="sidebar">
