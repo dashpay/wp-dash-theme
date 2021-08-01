@@ -10,10 +10,6 @@ if ($post->post_type=='downloadgroup'){
 <div id="main" class="no-banner page-newsdetail">
 	<div class="container mx-auto">
 
-		<div class="row my-5">
-			<div class="col-12"><a href="/news/" class="text-gray title-small backlink"><?php _e( 'Back to all articles', 'html5blank' ); ?></a></div>
-		</div>
-
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 	<div class="row mb-5">
 		<div class="col-lg-7">
@@ -50,16 +46,12 @@ if ($post->post_type=='downloadgroup'){
 				// _e( 'Categorised in: ', 'html5blank' ); the_category(', '); 
 				?>
 				<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-
 				<?php 
 				// comments_template(); 
 				?>
-
 				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c94c2f7ea8463de"></script>
                 <div class="addthis_inline_share_toolbox"></div>
-
 				<hr>
-
 				<?php $author_id=$post->post_author; ?>
 				<div class="news-author mb-5">
 					<div class="row">
@@ -80,6 +72,11 @@ if ($post->post_type=='downloadgroup'){
 							<p><?php the_field('positionspecialty', 'user_'.$author_id); ?></p>
 							<p><?php echo nl2br(get_the_author_meta('description')); ?></p>
 						</div>
+					</div>
+				</div>
+				<div class="row my-5">
+					<div class="col-12 news-back-btn">
+						<a href="/news/" class="text-gray title-small backlink"><?php _e( 'Back to all articles', 'html5blank' ); ?></a>
 					</div>
 				</div>
 		</div>
@@ -127,7 +124,7 @@ if ($post->post_type=='downloadgroup'){
 					</div>
 					<hr>
 				</div>
-
+							
 				<div class="news-related">
 
 					<?php
