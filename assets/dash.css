@@ -2141,27 +2141,27 @@ justify-content: center;
 
 /* esports design tweaks */
 .page-id-67894 .banner{
-	max-height: 490px;
-	min-height: auto!important;
+  max-height: 490px;
+  min-height: auto!important;
 }
 
 .page-id-67894 .banner .caption h1{
-	font-style: normal;
+  font-style: normal;
 }
 
 .page-id-67894 .banner .caption p{
-	font-size: 2.3em;
-	font-weight: 300;
+  font-size: 2.3em;
+  font-weight: 300;
 }
 
 .page-id-67894 .banner .caption p::after{
-	content: url(https://wp.dash.org/wp-content/uploads/esports-arrow.png);
-	width: 36px;
-	height: 21px;
-	display: block;
-	margin: 0 auto;
-	position: relative;
-	top: 30px;
+  content: url(https://wp.dash.org/wp-content/uploads/esports-arrow.png);
+  width: 36px;
+  height: 21px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 30px;
 }
 
 .page-id-67894 .btn.btn-white{
@@ -2222,27 +2222,25 @@ justify-content: center;
 }
 
 @media(max-width: 960px){
-	.page-id-67894 .banner .caption h1{
-		margin-top: 30px;
-	}
-	
-	.page-id-67894 .banner .caption p{
-		font-size: 1.7em;
-		line-height: 1.2;
-		position: relative;
-		top: 20px;
-	}
-	.page-id-67894 .banner .caption p::after{
-
-		display: none;
-	}
+  .page-id-67894 .banner .caption h1{
+    margin-top: 30px;
+  }
+  .page-id-67894 .banner .caption p{
+    font-size: 1.7em;
+    line-height: 1.2;
+    position: relative;
+    top: 20px;
+  }
+  .page-id-67894 .banner .caption p::after{
+    display: none;
+  }
 }
 
 @media(max-width: 420px){
   .page-id-67894 .col-6{
     flex: 0 0 100%;
     max-width: 100%;
-    }
+  }
 }
 
 /* News Main Page Design Tweaks */
@@ -2296,7 +2294,7 @@ justify-content: center;
 
 /* News blog post design tweaks */
 .page-newsdetail{
-padding-top: 200px;
+  padding-top: 200px;
 }
 
 .news-back-btn a{
@@ -2313,11 +2311,11 @@ padding-top: 200px;
 
 /* Where To Spend DashDirect Style Tweaks */
 #dash-direct-section p a{
-margin-right: 25px;
+  margin-right: 25px;
 }
 
 #dash-direct-section .dashdirect-logo{
-margin-bottom: 35px;
+  margin-bottom: 35px;
 }
 #dash-direct-section .dashdirect-logo img{
   max-width: 100%;
