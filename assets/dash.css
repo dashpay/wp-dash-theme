@@ -2140,6 +2140,30 @@ justify-content: center;
 /* Sara's corner of the Dash Stylesheet :) */
 
 /* esports design tweaks */
+.page-id-67894 .banner{
+	max-height: 490px;
+	min-height: auto!important;
+}
+
+.page-id-67894 .banner .caption h1{
+	font-style: normal;
+}
+
+.page-id-67894 .banner .caption p{
+	font-size: 2.3em;
+	font-weight: 300;
+}
+
+.page-id-67894 .banner .caption p::after{
+	content: url(https://wp.dash.org/wp-content/uploads/esports-arrow.png);
+	width: 36px;
+	height: 21px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	top: 30px;
+}
+
 .page-id-67894 .btn.btn-white{
   background: #f8f9fa;
   border-radius: 4px;
@@ -2195,6 +2219,23 @@ justify-content: center;
 
 .page-id-67894 .banner .caption {
   width: auto!important;  
+}
+
+@media(max-width: 960px){
+	.page-id-67894 .banner .caption h1{
+		margin-top: 30px;
+	}
+
+	.page-id-67894 .banner .caption p{
+		font-size: 1.7em;
+		line-height: 1.2;
+		position: relative;
+		top: 20px;
+	}
+	.page-id-67894 .banner .caption p::after{
+
+		display: none;
+	}
 }
 
 @media(max-width: 420px){
@@ -2287,10 +2328,10 @@ margin-bottom: 35px;
 }
 
 @media(max-width: 990px){
-#dash-direct-section{
+  #dash-direct-section{
   padding-top: 40px;
   padding-bottom: 40px
-}
+  }
 }
 
 /* Adding contrast to bottom footer – It needed to be done. ;) */
