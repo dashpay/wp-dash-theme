@@ -2340,14 +2340,14 @@ footer .footer-bottom{
 }
 
 /* DashDirect Homepage Banner */
-.home-banner-btn{
+.home .banner-btn{
   border-color: #008de4;
   margin-top: 45px;
   font-size: 1.1em;
   box-shadow: 5px 5px 32px 5px rgba(0,0,0,0.37);
 }
 
-.dash-direct-homehero{
+.home .caption p{
   max-width: 600px;
   margin: 0 auto;
   font-size: 1.1em;
@@ -2358,7 +2358,7 @@ footer .footer-bottom{
     background-position-x: -100px;
     background-position-y: -120px;
   }
-  .home-banner-btn{
+  .home .banner-btn{
     margin-top: 10px;
     max-width: 290px;
   }
