@@ -2338,3 +2338,31 @@ margin-bottom: 35px;
 footer .footer-bottom{
   background: #1f1f1f!important;
 }
+
+/* DashDirect Homepage Banner */
+.home .banner-btn{
+  border-color: #008de4;
+  margin-top: 45px;
+  font-size: 1.1em;
+  box-shadow: 5px 5px 32px 5px rgba(0,0,0,0.37);
+}
+
+.home .caption p{
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1em;
+}
+
+@media(max-width: 700px){
+  .home .banner{
+    background-position-x: -100px;
+    background-position-y: -120px;
+  }
+  .home .banner-btn{
+    margin-top: 10px;
+    max-width: 290px;
+  }
+  .banner .caption h1{
+    padding: 0 40px;
+}
+}
