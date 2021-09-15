@@ -681,8 +681,8 @@ header .lang .dropdown .wpml-ls a {
   .halfbanner .carousel .image {
     background-size: cover;
     background-position: center;
-    height: 285px;
-    width: 100%;
+    height: 340px;
+    width: 95%;
     display: block;
     margin: 10px auto; }
   .halfbanner .slick-dots {
