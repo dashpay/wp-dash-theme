@@ -1,5 +1,5 @@
-<?php 
-/* Template Name: News Landing */ 
+<?php
+/* Template Name: News Landing */
 get_header(); ?>
 
 
@@ -21,7 +21,7 @@ get_header(); ?>
 
 			<div class="carousel">
 
-				<?php 
+				<?php
 				$posts = get_field('news_featured_posts');
 				if( $posts ): ?>
 				    <?php foreach( $posts as $post): ?>
@@ -36,8 +36,8 @@ get_header(); ?>
 									<div class="caption">
 										<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 										<p><?php html5wp_excerpt('html5wp_index'); ?></p>
-										<a class="btn btn-ghost white" href="<?php the_permalink(); ?>">
-											<?php _e( 'Read Article', 'html5blank' ); ?>
+										<a class="btn btn-ghost blue" target="_blank" href="<?php the_permalink(); ?>">
+											Read Article
 										</a>
 									</div>
 								</div>
@@ -58,10 +58,10 @@ get_header(); ?>
 
 		<div class="row news-list">
 			<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-			$args = array( 'post_type' => 'post', 'posts_per_page' => 12, 'paged' => $paged, 'cat' => implode(', ', get_field('news_category')) );
+			$args = array( 'post_type' => 'post', 'posts_per_page' => 12, 'paged' => $paged );
 			$wp_query = new WP_Query($args);
 			while ( have_posts() ) : the_post(); ?>
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6">Test
 					<?php get_template_part('inc/newsitem'); ?>
 				</div>
 			<?php endwhile; ?>
@@ -71,7 +71,7 @@ get_header(); ?>
 
 		<div class="pagination">
 			<?php the_posts_pagination( array(
-				'screen_reader_text' => ' ', 
+				'screen_reader_text' => ' ',
 				'mid_size'  => 6,
 				'prev_text' => __( '<i class="icon-el caret left blue"></i>', 'textdomain' ),
 				'next_text' => __( '<i class="icon-el caret right blue"></i>', 'textdomain' ),
@@ -80,7 +80,6 @@ get_header(); ?>
 
 
 	</div>
-	
 
 </div>
 

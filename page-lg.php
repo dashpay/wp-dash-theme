@@ -20,6 +20,15 @@ get_header(); ?>
 				<h1><?php echo get_field( "large_banner_title" ); ?></h1>
 				<p><?php echo get_field( "large_banner_subtitle" ); ?></p>
 
+				<?php if ( get_field( "large_banner_button" )!=''){
+					?>
+					<br><a href="<?php echo get_field( "large_banner_button_link" )?>"
+					class="banner-btn btn btn-blue"
+					target="<?php if ( get_field( "large_banner_button_new_tab" ) ) { echo "_blank"; }?>">
+					<?php echo get_field( "large_banner_button" )?></a>
+				<?php
+				}; ?>
+
 				<?php if ( get_field( "large_banner_video" )!='' ){
 					?>
 					<a class="playvideo-js" href="<?php echo get_field( "large_banner_video" )?>" data-fancybox>
