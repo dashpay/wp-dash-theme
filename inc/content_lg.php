@@ -15,6 +15,7 @@ while( have_rows('content_sections') ): the_row();
 	// proposals : Latest Proposals
 	// app : App Callout
 	// speed : Speed Table [business]
+	// cta_with_background_image: CTA with Background Image
 
 	$count++;
 
@@ -652,6 +653,31 @@ while( have_rows('content_sections') ): the_row();
 		<?php } ?>
 
 	</div>
+
+	<?php if ($type=='cta_with_background_image'){ ?>
+			<div class="cta-background-image" 
+			style="background-image:url(<?php echo get_sub_field( "cta_background_image" ); ?>)">
+				<div class="cta-wrap <?php if ( get_sub_field( 'cta-text-white') ) { echo 'cta-text-white'; }?>">
+					<div class="cta-content">
+						<h3><strong><?php echo get_sub_field( "cta_background_image_heading" ); ?></strong></h3>
+						
+						<?php if ( get_sub_field ( "cta_background_image_paragraph")!=''){
+						?>
+						<p><?php echo get_sub_field('cta_background_image_paragraph'); ?></p>
+						<?php } ?>
+
+						<?php if ( get_sub_field( "cta_background_image_button" )!=''){
+						?>
+						<br><a href="<?php echo get_sub_field( "cta_background_image_button_link" )?>" 
+						class="banner-btn btn btn-blue"
+						target="<?php if ( get_sub_field( "cta_background_image_button_new_tab" ) ) { echo "_blank"; }?>">
+						<?php echo get_sub_field( "cta_background_image_button" )?></a>
+						<?php
+						}; ?>
+					</div>
+				</div>
+			</div>
+		<?php } ?>
 
 	<?php
 
