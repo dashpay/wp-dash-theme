@@ -600,6 +600,23 @@ header .lang .dropdown .wpml-ls a {
   min-height: 650px;
   padding-top: 80px; }
 
+.banner-short{
+  height: auto;
+  min-height: 530px;
+  max-height: 530px; }
+  .banner-short .caption{
+    width: 1100px; } 
+    .banner-short .caption h1{
+      margin-bottom: 1rem; }
+    .banner-short .caption p::after{
+      content: url(https://media.dash.org/wp-content/uploads/white-arrow.png);
+      width: 36px;
+      height: 21px;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      top: 60px; }   
+
 .banner-shape {
   color: #fff;
   position: relative;
@@ -2338,6 +2355,11 @@ margin-bottom: 35px;
 footer .footer-bottom{
   background: #1f1f1f!important;
 }
+@media(max-width: 990px){
+  footer .footer-bottom .container-xs{
+    padding-top: 50px;
+  }
+}
 
 /* DashDirect Homepage Banner */
 .home .banner-btn{
@@ -2364,7 +2386,11 @@ footer .footer-bottom{
   }
   .banner .caption h1{
     padding: 0 40px;
-}
+  }
+  .home .banner .caption{
+    position: relative;
+    bottom: 30px;
+  }
 }
 
 /* CTA Image Background Banner Styles */

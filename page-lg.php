@@ -13,6 +13,9 @@ get_header(); ?>
 		}  
 		if (get_field( "large_banner_embed" )!=''){
 			echo 'has-embed';
+		}
+		if (get_field( "shorten_large_banner") ){
+			echo 'banner-short ';
 		}?>" style="background-image:url(<?php echo get_field( "large_banner_image" ); ?>)">
 		<?php if ( get_field( "large_banner_embed" )=='' ){?>
 		<div class="caption-container">
