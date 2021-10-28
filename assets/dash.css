@@ -2595,3 +2595,13 @@ footer .footer-bottom{
     margin-bottom: 15px;
   }
 }
+
+/* fix: logo and background color value issues on regulatory page */
+#kyc .container .col-lg-6 .grid-item-container a.btn{
+  color: #454545;
+  transition: none;
+}
+
+#kyc .container .col-lg-6 .grid-item-container a.btn:hover{
+  color: #fff;
+}
