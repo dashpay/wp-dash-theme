@@ -685,7 +685,7 @@ header .lang .dropdown .wpml-ls a {
     .halfbanner .caption .btn {
       margin-top: 20px; }
   .halfbanner .carousel .slide {
-    height: 45vh;
+    height: auto;
     padding: 0 15px; }
   .halfbanner .carousel.carousel-prev {
     left: 15px; }
