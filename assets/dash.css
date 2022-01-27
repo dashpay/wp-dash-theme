@@ -1561,7 +1561,7 @@ footer {
     footer .brand p {
       color: #fff;
       font-size: 18px; }
-  footer .footer-top {
+  footer .footer-bottom {
     padding: 70px 0;
     margin-bottom: -1px;
     background: #134393;
@@ -1569,54 +1569,55 @@ footer {
     background: -webkit-radial-gradient(center, ellipse cover, #134393 0%, #0a2b69 100%);
     background: radial-gradient(ellipse at center, #134393 0%, #0a2b69 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#134393', endColorstr='#0a2b69',GradientType=1 ); }
-    footer .footer-top a {
+    footer .footer-bottom a {
       display: block; }
-    footer .footer-top h4, footer .footer-top .about a {
+    footer .footer-bottom h4, footer .footer-bottom .about a {
       font-size: 18px;
       font-family: "Open Sans", sans-serif;
       font-weight: 600;
       margin-bottom: 10px; }
-    footer .footer-top .sitemap a {
+    footer .footer-bottom .sitemap a {
       font-family: "Open Sans", sans-serif;
       color: #cdcdcd;
       margin-bottom: 10px; }
-      footer .footer-top .sitemap a:hover {
+      footer .footer-bottom .sitemap a:hover {
         color: #008de4; }
-    footer .footer-top .sitemap h4 a {
+    footer .footer-bottom .sitemap h4 a {
       color: #fff; }
-    footer .footer-top .about {
+    footer .footer-bottom .about {
       padding: 0 15px; }
-      footer .footer-top .about a {
+      footer .footer-bottom .about a {
         font-weight: 600;
         margin-bottom: 18px; }
   footer .support {
     padding: 0 15px; }
     footer .support p {
       margin-bottom: 30px; }
-  footer .footer-bottom {
+  footer .footer-top {
     padding: 35px 0; }
-    footer .footer-bottom strong {
+    footer .footer-top strong {
       font-size: 12px;
       text-transform: uppercase;
       display: block;
       margin-bottom: 15px; }
-    footer .footer-bottom .container-xs {
+    footer .footer-top .container-xs {
       width: 310px;
       max-width: 100%;
       margin: 0 auto 10px; }
-    footer .footer-bottom .icon-el {
+    footer .footer-top .icon-el {
       opacity: 0.8;
       width: 30px;
       height: 30px;
       background-position: center; }
-      footer .footer-bottom .icon-el:hover {
+      footer .footer-top .icon-el:hover {
         opacity: 1; }
   footer .terms {
     padding: 30px 0 10px;
     font-size: 12px; }
     footer .terms a {
       color: #cdcdcd;
-      margin: 0 10px; }
+      margin: 0 10px;
+      display: inline; }
 
 .form-newsletter {
   position: relative; }
@@ -1642,6 +1643,9 @@ footer {
     .form-newsletter .btn svg {
       width: 30px;
       height: 30px; }
+.footer-terms{
+  background: #1f1f1f;
+  padding-bottom: 17px;}
 
 @media only screen and (max-width: 1200px) and (min-width: 991px) {
   .banner-shape {
@@ -1894,7 +1898,7 @@ footer {
       text-align: center; }
       footer .support p {
         margin-bottom: 30px; }
-    footer .footer-bottom {
+    footer .footer-top {
       text-align: center; }
     footer .newsletter {
       padding: 30px;
@@ -2351,13 +2355,16 @@ margin-bottom: 35px;
   }
 }
 
-/* Adding contrast to bottom footer – It needed to be done. ;) */
-footer .footer-bottom{
+/* Adding contrast to top footer – It needed to be done. ;) Fixing alignment issue in footer */
+footer .footer-top{
   background: #1f1f1f!important;
 }
+footer .support p {
+  margin: 0;
+}
 @media(max-width: 990px){
-  footer .footer-bottom .container-xs{
-    padding-top: 50px;
+  footer .footer-top .container-xs{
+    padding-top: 0px;
   }
 }
 
