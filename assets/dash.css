@@ -2641,3 +2641,72 @@ footer .support p {
     padding-right: 35px;
   }
 }
+
+/* Valkyrie Page Styles */
+
+#vdash-trust .img-fluid{
+  position: relative;
+  bottom: 30px;
+}
+
+#vdash-hero .block-pad-bottom{
+  padding-bottom: 0;
+}
+
+#vdash-hero .cta-content h3 strong{
+  font-size: 2em;
+}
+
+#vdash-hero .cta-content p{
+  font-size: 1.6em;
+  color: #fff;
+}
+
+#benefits-vdash .card-img-top{
+  height: 8vh;
+}
+
+#benefits-vdash .title-italic{
+  font-size: 1.2em;
+}
+
+#benefits-vdash .card-text{
+  line-height: 1.5;
+}
+
+#valkyrie-learn-more .image{
+  position: relative;
+  bottom: 15px;
+}
+
+#valkyrie-blog-post .image img{
+  border-radius: 8px;
+}
+
+#valkyrie-invest-now .block-pad-v{
+  padding: 0;
+}
+
+#vdash-trust .container-xs, #valkyrie-blog-post .container-xs, #valkyrie-learn-more .container-xs{
+  margin: 0 auto;
+}
+
+#benefits-vdash .card-deck .card{
+  flex: 1 0 0%;
+}
+
+/* Fix: extra padding to account for feedback button */
+@media(max-width: 465px){
+  .container, .cta-wrap, .container-sm{
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+}
+
+@media (max-width: 990px){
+  #benefits-vdash .card-deck .card{
+    margin-right: 30px;
+    margin-left: 30px;
+    flex: 1 0 30%;
+  }
+}
