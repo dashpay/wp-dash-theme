@@ -231,15 +231,15 @@ while( have_rows('content_sections') ): the_row();
 								<?php if ($subtype=='default'){ ?>
 									<div class="col-lg-4 col-6">
 										<div class="grid-item">
-											<div class="image">
-												<?php if ( $link['block_link']!=''){ ?>
-												<a href="<?php echo $link['block_link']?>" target="_blank">
-													<img src="<?php echo $link['block_item_image'];?>" alt class="img-fluid">
-												</a>
-											<?php } else { ?>
-												<img src="<?php echo $link['block_item_image']['url'] ?>" alt="<?php echo $link['block_item_image']['alt'] ?>" class="img-fluid">
-											<?php } ?>
-											</div>
+												<div class="image">
+													<?php if ( $link['block_link']!=''){ ?>
+													<a href="<?php echo $link['block_link']?>" target="<?php if ( get_sub_field( "grid_link_open_new_tab" ) ) { echo "_blank"; }?>">
+														<img src="<?php echo $link['block_item_image']['url'] ?>" alt="<?php echo $link['block_item_image']['alt'] ?>" class="img-fluid">
+													</a>
+												<?php } else { ?>
+													<img src="<?php echo $link['block_item_image']['url'] ?>" alt="<?php echo $link['block_item_image']['alt'] ?>" class="img-fluid">
+												<?php } ?>
+												</div>
 											<?php if ( $link['block_item_title']!=''){ ?>
 												<p><?php echo $link['block_item_title']?></p>
 											<?php } ?>
