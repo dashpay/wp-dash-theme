@@ -2710,3 +2710,30 @@ footer .support p {
     flex: 1 0 30%;
   }
 }
+
+/* Feat: new heading and subheading for text area and callouts sections on large banner template */
+.text-section-header-wrap{
+  text-align: center;
+}
+
+.text-section-header-wrap h4{
+  font-weight: bold;
+  margin-bottom: 50px;
+  font-size: 1rem;
+  color: #454545;
+}
+
+.callouts-title{
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.callouts-title h3{
+  font-size: 1.4rem;
+}
+
+@media (max-width: 990px){
+  .callouts-title{
+    margin-bottom: 2.5rem;
+  }
+}
