@@ -91,6 +91,11 @@ while( have_rows('content_sections') ): the_row();
 			    <div class="image d-none d-lg-block"><img src="<?php echo $largeimg;?>" alt class="large img-fluid"></div>
 			<?php }  ?>
 
+			<div class="callouts-title">
+				<?php if ( get_sub_field ( "section_title")!=''){ ?>
+					<h3><strong><?php echo get_sub_field('section_title'); ?></strong></h3>
+					<?php } ?>
+			</div>
 
 			<div class="card-deck">
 				<?php
