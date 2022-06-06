@@ -114,7 +114,7 @@ while( have_rows('content_sections') ): the_row();
 									</div>
 								<?php if ( $link['block_link']!='' ){?>
 									<div class="card-footer bg-transparent border-0">
-									<a href="<?php echo $link['block_link'] ?>">
+									<a href="<?php echo $link['block_link'] ?>" target="<?php if ( get_sub_field( "callout_open_new_tab" ) ) { echo "_blank"; }?>" class="btn btn-ghost <?php echo get_field( "background_style" )=='bg-gradient-h'?'white':'blue'; ?>">
 										<strong><?php _e( 'Read more', 'html5blank' ); ?></strong>
 									</a></div>
 								<?php }  ?>
