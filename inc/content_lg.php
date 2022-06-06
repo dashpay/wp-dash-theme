@@ -119,9 +119,10 @@ while( have_rows('content_sections') ): the_row();
 									</div>
 								<?php if ( $link['block_link']!='' ){?>
 									<div class="card-footer bg-transparent border-0">
-									<a href="<?php echo $link['block_link'] ?>" target="<?php if ( get_sub_field( "callout_open_new_tab" ) ) { echo "_blank"; }?>" class="btn btn-ghost <?php echo get_field( "background_style" )=='bg-gradient-h'?'white':'blue'; ?>">
+										<a href="<?php echo $link['block_link'] ?>" target="<?php if ( get_sub_field( "callout_open_new_tab" ) ) { echo "_blank"; }?>" class="btn btn-ghost <?php echo get_field( "background_style" )=='bg-gradient-h'?'white':'blue'; ?>">
 										<strong><?php _e( 'Read more', 'html5blank' ); ?></strong>
-									</a></div>
+										</a>
+									</div>
 								<?php }  ?>
 								
 						</div>
@@ -241,9 +242,9 @@ while( have_rows('content_sections') ): the_row();
 													<a href="<?php echo $link['block_link']?>" target="<?php if ( get_sub_field( "grid_link_open_new_tab" ) ) { echo "_blank"; }?>">
 														<img src="<?php echo $link['block_item_image']['url'] ?>" alt="<?php echo $link['block_item_image']['alt'] ?>" class="img-fluid">
 													</a>
-												<?php } else { ?>
-													<img src="<?php echo $link['block_item_image']['url'] ?>" alt="<?php echo $link['block_item_image']['alt'] ?>" class="img-fluid">
-												<?php } ?>
+													<?php } else { ?>
+														<img src="<?php echo $link['block_item_image']['url'] ?>" alt="<?php echo $link['block_item_image']['alt'] ?>" class="img-fluid">
+													<?php } ?>
 												</div>
 											<?php if ( $link['block_item_title']!=''){ ?>
 												<p><?php echo $link['block_item_title']?></p>
