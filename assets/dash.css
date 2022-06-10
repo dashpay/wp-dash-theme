@@ -2928,6 +2928,8 @@ footer .support p {
   padding: 50px 80px 60px 80px;
   max-width: 780px;
   margin: 0 auto;
+  -webkit-box-shadow: 0px -5px 27px -7px rgba(0,0,0,0.41); 
+  box-shadow: 0px -5px 27px -7px rgba(0,0,0,0.10);  
 }
 
 /* DashDirect CTA  */
@@ -2939,6 +2941,10 @@ footer .support p {
 	margin: 0 auto;
 	position: relative;
   bottom: 50px;
+}
+
+#merchant-kit-dashdirect, #merchant-kit-exchange-content-2, #merchant-kit-pos-5{
+  border-bottom: 5px #e8ebed solid;
 }
 
 #merchant-kit-dashdirect .block-pad-bottom{
@@ -2966,7 +2972,7 @@ footer .support p {
 
 /* Exchange  */
 #merchant-kit-exchange-content-2::before{
-  content: url(https://media.dash.org/wp-content/uploads/arrow-down-blue.png);
+  content: url(https://media.dash.org/wp-content/uploads/black-down-arrow.svg);
 	width: 36px;
 	height: 21px;
 	display: block;
@@ -3053,7 +3059,7 @@ padding-bottom: 120px;
 }
 
 #merchant-kit-pos-3 .text-section-header-wrap::after{
-  content: url(https://media.dash.org/wp-content/uploads/arrow-down-blue.png);
+  content: url(https://media.dash.org/wp-content/uploads/black-down-arrow.svg);
 	width: 36px;
 	height: 21px;
 	display: block;
@@ -3148,6 +3154,11 @@ padding-bottom: 120px;
 
 #merchant-kit-thankyou .cta-background-image{
   background-position-y: center;
+}
+
+#merchant-kit-dashdirect{
+  -webkit-box-shadow: 0px 22px 27px -7px rgba(0,0,0,0.27); 
+  box-shadow: 0px 22px 27px -7px rgba(0,0,0,0.27);
 }
 
 
@@ -3280,6 +3291,21 @@ padding-bottom: 120px;
   #merchant-kit-why-crypto .container{
     display: block;
   }
+  #merchant-kit-intro .cta-content{
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  #merchant-kit-intro .cta-content p, #merchant-kit-form-cta .cta-background-image .cta-content p,
+  #merchant-kit-dashdirect .cta-content p{
+    font-size: 1.1em;
+  }
+  #merchant-kit-why-crypto-image .cta-content, #merchant-kit-form-cta .cta-background-image .cta-content{
+    max-width: 540px;
+  }
+  #merchant-kit-what-sets-dash-apart .cta-content {
+    margin: 0 15px;
+}
 }
 
 @media(max-width: 735px){
@@ -3341,7 +3367,8 @@ padding-bottom: 120px;
     padding-top: 5px;
   }
   #merchant-kit-dashdirect .cta-background-image .cta-wrap, 
-  #merchant-kit-intro .cta-background-image .cta-wrap{
+  #merchant-kit-intro .cta-background-image .cta-wrap,
+  #merchant-kit-why-crypto-image .cta-wrap, #merchant-kit-form-cta .cta-background-image .cta-wrap{
     position: relative;
   }
   #merchant-kit-dashdirect h3::before{
@@ -3351,7 +3378,7 @@ padding-bottom: 120px;
   }
   #merchant-kit-dashdirect .cta-content {
     padding: 0px;
-    padding-top: 93px;
+    padding-top: 45px;
   }
   #merchant-kit-exchange .richtext, #merchant-kit-pos-3 .richtext, 
   #merchant-kit-wallet .richtext, #merchant-kit-glossary .richtext{
@@ -3390,5 +3417,19 @@ padding-bottom: 120px;
   }
   #merchant-kit-why-crypto-image .cta-background-image .cta-content{
     margin: 0;
+  }
+  #merchant-kit-why-crypto-image .cta-content, #merchant-kit-dashdirect .cta-content,
+  #merchant-kit-form-cta .cta-content{
+    padding: 65px 0px;
+  }
+  #merchant-kit-exchange-content-2 .grid-item .image{
+    height: 95px;
+  }
+  #merchant-kit-exchange-content-2 .grid-item-container{
+    top: 10px;
+    padding: 0;
+  }
+  #merchant-kit-exchange-content-2 .col-right{
+    padding-top: 30px;
   }
 }
