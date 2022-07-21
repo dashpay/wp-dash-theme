@@ -27,6 +27,27 @@ strong {
 h1, h2, h3 {
   font-family: "Montserrat", sans-serif; }
 
+/** SHARE ICONS **/
+.social-share {
+    display: flex;
+}
+.social-share ul li {
+    list-style: none;
+}
+.social-share ul {
+    display: flex;
+    padding-left: 0;
+}
+.social-share ul li a svg path {
+    fill: gray;
+}
+.social-share ul li a svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+
 [v-cloak] {
   display: none; }
 
