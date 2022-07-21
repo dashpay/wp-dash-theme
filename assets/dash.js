@@ -265,3 +265,62 @@ $(window).load(function(){
 $(window).resize(function(){
 	Layout.resize();
 })
+
+
+
+
+
+/* NEWSLETTER FORM SCRIPT SENDGRID */
+const myForm = document.getElementById('dash-nl');
+	const alertContainer = document.getElementById('warningDiv')
+	const successContainer = document.getElementById('successDiv')
+	const API_KEY = process.env.SENDGRID_API_KEY;
+	
+	myForm.addEventListener('submit', async function(e) {
+		
+		e.preventDefault();
+
+		const formData = new FormData(this)
+
+		function handleResponse(response) {
+			if (!response.ok) {
+				throw Error(alertContainer.innerHTML = response.statusText + " - " + response.status)
+			} else {
+				successContainer.style.display = 'block'
+				alertContainer.style.display = 'none'
+				
+			}
+			return response.json()
+		}
+		async function handleFetch(data) {
+			const request = {
+				method: 'PUT',
+				headers: {
+					'Content-Type': 'application/json',
+					'Authorization': `Bearer ${API_KEY}`,
+				},
+				body: JSON.stringify(data)
+			}
+			await fetch("https://api.sendgrid.com/v3/marketing/contacts", request)
+				.then(handleResponse)
+				.then(result => console.log(result, "result"))
+				.catch(error => console.log(error, "error"))
+		}
+		function handleSubmit() {
+			const inputValues = Object.fromEntries(formData.entries());
+			const data = {
+				"list_ids": inputValues.list_ids = formData.getAll("list_ids"),
+				"contacts": [{
+					"email": inputValues.contacts = formData.get("contacts")
+				}]
+			}
+			
+			if (data.list_ids.length == 0) {
+				alertContainer.innerHTML = "please choose a subscription type";
+			} else {
+				handleFetch(data)
+				myForm.reset()
+			}
+		}
+	await handleSubmit()
+	});
