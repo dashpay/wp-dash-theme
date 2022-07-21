@@ -9,11 +9,9 @@ if ($post->post_type=='downloadgroup'){
 
 <div id="main" class="no-banner page-newsdetail">
 	<div class="container mx-auto">
-
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 	<div class="row mb-5">
 		<div class="col-lg-7">
-			
 				<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
 					<!--<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">-->
 						<img src="<?php the_post_thumbnail_url('news_thumb'); // Fullsize image for the single post ?>" class="img-fluid mb-4" alt>
@@ -27,7 +25,40 @@ if ($post->post_type=='downloadgroup'){
 						<strong><?php the_title(); ?></strong>
 					</a>
 				</h2>
-
+				<div class="social-share">
+					<?php
+					$postURL = urlencode(get_the_permalink());
+					$postTitle = get_the_title();
+					$postIMG = urlencode(get_the_post_thumbnail_url());
+					$facebookURL = 'https://www.facebook.com/sharer.php?u=';
+					$twitterURL = 'https://twitter.com/share?url=';
+					$linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=";
+					$pinterestURL = "https://pinterest.com/pin/create/bookmarklet/?media=";
+					$telegramURL = "https://telegram.me/share/url?url="
+				    ?>
+				<ul class="social-share-container">
+					<li>
+						<a target="_blank" href="<?php echo $facebookURL . $postURL; ?>" class="sharebtn facebook-btn">
+							<?php get_template_part('inc/fb.svg'); ?>	
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="<?php echo $twitterURL . $postURL . '&text' . '=' . $postTitle; ?>" class="sharebtn twitter-btn">
+							<?php get_template_part('inc/twitter.svg'); ?>	
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="<?php echo $linkedinURL . $postURL?>" class="sharebtn linkedin-btn">
+							<?php get_template_part('inc/linkedin.svg'); ?>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="<?php echo $telegramURL . $postIMG . '&url=' . $postURL . '&description=' . $postTitle; ?>" class="sharebtn telegram-btn">
+							<?php get_template_part('inc/telegram.svg'); ?>
+						</a>
+					</li>
+				</ul>
+			</div>
 				<div class="richtext text-sm mb-5" id="test">
 					<?php the_content(); // Dynamic Content ?>
 					<p>
@@ -39,6 +70,7 @@ if ($post->post_type=='downloadgroup'){
 						<?php endif; ?>
 					</p>
 				</div>
+				
 				<?php 
 					// the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); 
 				?>
@@ -49,8 +81,6 @@ if ($post->post_type=='downloadgroup'){
 				<?php 
 				// comments_template(); 
 				?>
-				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c94c2f7ea8463de"></script>
-                <div class="addthis_inline_share_toolbox"></div>
 				<hr>
 				<?php $author_id=$post->post_author; ?>
 				<div class="news-author mb-5">
@@ -63,7 +93,7 @@ if ($post->post_type=='downloadgroup'){
 						<?php 
 							$img = get_field('author_image', 'user_'.$author_id); 
 							if ( $img!='' ){
-								echo '<div class="col-lg-auto col-3"><img src="'.$img.'" class="img-fluid"></div>';
+								echo '<div class="col-3"><img src="'.$img.'" class="img-fluid"></div>';
 							}
 						?>
 						
@@ -102,7 +132,9 @@ if ($post->post_type=='downloadgroup'){
 					
 						<?php 
 							$fb = get_field('facebook_link', 'user_'.$author_id); 
-							$tw = get_field('twitter_link', 'user_'.$author_id); 
+							$tw = get_field('twitter_link', 'user_'.$author_id);
+							$ld = get_field('linked_in', 'user_'.$author_id);
+							$dl = get_field('discord_link', 'user_'.$author_id);  
 							$wa = get_field('whatsapp', 'user_'.$author_id); 
 							$other = get_field('other_link', 'user_'.$author_id); 
 						?>
@@ -112,6 +144,12 @@ if ($post->post_type=='downloadgroup'){
 						<?php }?>
 						<?php if ($tw!=''){?>
 							<a href="<?php echo $tw?>" class="twitter" target="_blank"><?php get_template_part('inc/twitter.svg'); ?></a>
+						<?php }?>
+						<?php if ($ld!=''){?>
+							<a href="<?php echo $ld?>" class="twitter" target="_blank"><?php get_template_part('inc/linkedin.svg'); ?></a>
+						<?php }?>
+						<?php if ($dl!=''){?>
+							<a href="<?php echo $ld?>" class="twitter" target="_blank"><?php get_template_part('inc/discord.svg'); ?></a>
 						<?php }?>
 						<?php if ($wa!=''){?>
 							<a href="<?php echo $wa?>" class="whatsapp" target="_blank"><?php get_template_part('inc/whatsapp.svg'); ?></a>
@@ -165,6 +203,5 @@ if ($post->post_type=='downloadgroup'){
 
 	</div>
 </div>
-
 
 <?php get_footer(); ?>
