@@ -26,49 +26,39 @@ if ($post->post_type=='downloadgroup'){
 					</a>
 				</h2>
 				<div class="social-share">
-					<?php 
-$postURL = urlencode(get_the_permalink());
-$postTitle = get_the_title();
-$postIMG = urlencode(get_the_post_thumbnail_url());
-$facebookURL = 'https://www.facebook.com/sharer.php?u=';
-$twitterURL = 'https://twitter.com/share?url=';
-$linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=";
-$pinterestURL = "https://pinterest.com/pin/create/bookmarklet/?media=";
-$telegramURL = "https://telegram.me/share/url?url="
-?>
-<ul class="social-share-container">
-    <li>
-        <a target="_blank" href="<?php echo $facebookURL . $postURL; ?>" class="sharebtn facebook-btn">
-        	<?php get_template_part('inc/fb.svg'); ?>
-        </a>
-    </li>
-    <li>
-        <a target="_blank" href="<?php echo $twitterURL . $postURL . '&text' . '=' . $postTitle; ?>"
-            class="sharebtn twitter-btn">
-            <?php get_template_part('inc/twitter.svg'); ?>
-        </a>
-    </li>
-    <li>
-        <a target="_blank" href="<?php echo $linkedinURL . $postURL?>" class="sharebtn linkedin-btn">
-            <?php get_template_part('inc/linkedin.svg'); ?>
-        </a>
-    </li>
-     <li>
-        <a target="_blank"
-            href="<?php echo $telegramURL . $postIMG . '&url=' . $postURL . '&description=' . $postTitle; ?>"
-            class="sharebtn telegram-btn">
-            <?php get_template_part('inc/telegram.svg'); ?>
-        </a>
-    </li>
-    <!--<li>
-        <a target="_blank"
-            href="<?php echo $pinterestURL . $postIMG . '&url=' . $postURL . '&description=' . $postTitle; ?>"
-            class="sharebtn pinterest-btn">
-            <?php get_template_part('inc/pinterest.svg'); ?>
-        </a>
-    </li>-->
-</ul>
-				</div>
+					<?php
+					$postURL = urlencode(get_the_permalink());
+					$postTitle = get_the_title();
+					$postIMG = urlencode(get_the_post_thumbnail_url());
+					$facebookURL = 'https://www.facebook.com/sharer.php?u=';
+					$twitterURL = 'https://twitter.com/share?url=';
+					$linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=";
+					$pinterestURL = "https://pinterest.com/pin/create/bookmarklet/?media=";
+					$telegramURL = "https://telegram.me/share/url?url="
+				    ?>
+				<ul class="social-share-container">
+					<li>
+						<a target="_blank" href="<?php echo $facebookURL . $postURL; ?>" class="sharebtn facebook-btn">
+							<?php get_template_part('inc/fb.svg'); ?>	
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="<?php echo $twitterURL . $postURL . '&text' . '=' . $postTitle; ?>" class="sharebtn twitter-btn">
+							<?php get_template_part('inc/twitter.svg'); ?>	
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="<?php echo $linkedinURL . $postURL?>" class="sharebtn linkedin-btn">
+							<?php get_template_part('inc/linkedin.svg'); ?>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="<?php echo $telegramURL . $postIMG . '&url=' . $postURL . '&description=' . $postTitle; ?>" class="sharebtn telegram-btn">
+							<?php get_template_part('inc/telegram.svg'); ?>
+						</a>
+					</li>
+				</ul>
+			</div>
 				<div class="richtext text-sm mb-5" id="test">
 					<?php the_content(); // Dynamic Content ?>
 					<p>
@@ -91,8 +81,6 @@ $telegramURL = "https://telegram.me/share/url?url="
 				<?php 
 				// comments_template(); 
 				?>
-				<!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c94c2f7ea8463de"></script>-->
-                <div class="addthis_inline_share_toolbox"></div>
 				<hr>
 				<?php $author_id=$post->post_author; ?>
 				<div class="news-author mb-5">
