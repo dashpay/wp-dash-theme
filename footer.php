@@ -8,14 +8,6 @@
 <div class="footer-top bg-dark">
 		<div class="container">
 			<div class="row">
-				<?php /*<div class="col-lg-4 order-lg-3">
-					<div class="row newsletter">
-						<div class="col-12">
-							<strong><?php echo get_field('newsletter_text',$homeid);?></strong>
-							<?php get_template_part('inc/newsletterform'); ?>
-						</div>
-					</div>
-				</div>*/ ?>
 				<div class="col-lg-6 has-border">
 					<div class="container-xs">
 						<strong><?php echo get_field('discussion_text',$homeid);?></strong>
@@ -102,11 +94,17 @@
 					</div>
 				</div>
 				<div class="col-lg-3">
+					<div class="row newsletter">
+						<div class="col-12">
+							<?php get_template_part('inc/newsletterform'); ?>
+						</div>
+					</div>
 					<div class="support">
-						<p><?php echo get_field('support_page_text',$homeid);?></p>
+					<p><?php echo get_field('support_page_text',$homeid);?></p>
 						<a href="<?php echo get_field('support_page_url',$homeid);?>" class="btn btn-ghost">
 							<?php echo get_field('support_page_button',$homeid);?>
 						</a>
+				
 					</div>
 					<div class="status d-flex justify-content-center mt-3">
 						<a href="https://statuspage.freshping.io/1446-Dash">
