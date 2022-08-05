@@ -104,7 +104,7 @@
 												<?php echo get_sub_field('nav_tagline'); ?>
 											</p>
 										</div>
-										<?php if (count($navposts)>1){?>
+										<?php if (is_countable($navposts)){?>
 											<div class="dropdown">
 												<?php 
 												$idx = 0;
