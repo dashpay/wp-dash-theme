@@ -278,7 +278,16 @@ $(document).mouseup(function(e){
    }
 });
 
-
+//Links for Tab
+jQuery(function($){
+  var hash = window.location.hash;
+  hash && $('.nav.nav-tabs a[href="' + hash + '"]').tab('show'); 
+  $('.nav.nav-tabs a').click(function (e) {
+     $(this).tab('show');
+     $('body').scrollTop();
+     window.location.hash = this.hash;
+  });
+});
 
 /* NEWSLETTER FORM SCRIPT SENDGRID */
 const myForm = document.getElementById('dash-nl');
