@@ -266,7 +266,17 @@ $(window).resize(function(){
 	Layout.resize();
 })
 
-
+// Close menu when out of div 
+$(document).mouseup(function(e){
+   var header = $ (".header, .lang-mobile");
+   var menu = $(".navbar, .dropdown");
+   if (!menu.is(e.target) // The target of the click isn't the container.
+   && menu.has(e.target).length === 0) // Nor a child element of the container
+   {
+      header.removeClass('is-open');
+	  menu.hide(); 
+   }
+});
 
 
 
