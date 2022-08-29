@@ -1,7 +1,7 @@
 <div class="sendgrid-subscription-widget">
 	<h4 class="widget-header"> Subscribe to our <br> Newsletter </h4>
 	<form name="dash-nl" id="dash-nl" class="sg-widget">
-		<input class="sg_email" type="text" name="contacts" id="email" placeholder="your@email.com *">
+		<input class="sg_email" type="text" name="contacts" id="email" placeholder="your@email.com *" method="get" action="https://o5sxxq7g38.execute-api.us-east-2.amazonaws.com/serverless_lambda_stage/hello">
 		<fieldset class="input-subscription-checkboxes">
 			<legend class="subscription-type" id="label-subscription_type">
 				<span>Subscription Type</span>
