@@ -26,6 +26,7 @@
 			</div>
 		</fieldset>
 		<div id="successDiv"> Success! Thank you for signing up for our newsletter.</div>
+		<?php echo do_shortcode('[hcaptcha]'); ?>
 		<button type="submit" class="sg-submit-btn">Submit </button>
 	</form>
 </div>
