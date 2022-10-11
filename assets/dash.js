@@ -267,6 +267,7 @@ $(window).resize(function(){
 })
 
 // Close menu when out of div 
+if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
 $(document).mouseup(function(e){
    var header = $ (".header, .lang-mobile");
    var menu = $(".navbar, .dropdown");
@@ -277,7 +278,7 @@ $(document).mouseup(function(e){
 	  menu.hide(); 
    }
 });
-
+}
 //Links for Tab
 jQuery(function($){
   var hash = window.location.hash;
