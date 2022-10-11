@@ -267,7 +267,7 @@ $(window).resize(function(){
 })
 
 // Close menu when out of div 
-if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
+if ($(window).width() < 990 || $(window).height() < 1000) {
 $(document).mouseup(function(e){
    var header = $ (".header, .lang-mobile");
    var menu = $(".navbar, .dropdown");
