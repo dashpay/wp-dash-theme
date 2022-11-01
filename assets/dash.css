@@ -1802,6 +1802,194 @@ footer {
   }
 
 
+/** APP PAGE **/
+#app-section-one h1{
+    color: #000;
+    font-weight: 600;
+}
+.icon-block {
+    display: flex;
+    align-items: center;
+}
+.icon-block h6 {
+    font-weight: 600;
+    margin-left: 15px;
+}
+#app-section-one .buttons a:nth-child(1), #app-section-seven .buttons a:nth-child(1) {
+    background: url(https://media.dash.org/wp-content/uploads/google-play.svg) no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    color: transparent;
+    height: 49px;
+    border: none;
+    padding-bottom: 2px;
+    width: 80px;
+    min-width: 150px;
+}
+#app-section-one .buttons a:nth-child(2), #app-section-seven .buttons a:nth-child(2) {
+    background: url(https://media.dash.org/wp-content/uploads/apple-store.svg) no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    color: transparent;
+    height: 49px;
+    border: none;
+    padding-bottom: 2px;
+    width: 80px;
+    min-width: 150px;
+}
+#app-section-two, #app-section-six{
+   background: #F5F6F7 !important;
+}
+#app-section-four{
+  background: linear-gradient(246.83deg, #024399 -10.63%, #012060 117.54%);
+}
+#app-section-seven{
+  background: linear-gradient(246.83deg, #78C4F5 -10.63%, #008DE4 117.54%);
+}
+#app-section-two, #app-section-four, #app-section-six, #app-section-seven{
+    max-width: 90%;
+    margin: auto;
+    padding: 0 4%;
+    border-radius: 5%;
+}
+#app-section-two h3 strong, #app-section-three h1{
+    font-size: 34px;
+    color: #000;
+    font-weight: 700;
+}
+#app-section-two h4{
+    font-size: 18px;
+    color: #525C66;
+    font-weight: 400;
+}
+#app-section-two .card-deck .card {
+    flex: 26%;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+#app-section-two .card-img-top {
+    height: 7vh;
+}
+#app-section-two h3.title-italic.card-title{
+      color: #000;
+    font-style: normal;
+    font-size: 18px;
+}
+#app-section-two .container-xs, #app-section-seven .container-xs {
+  width: 100%
+}
+#app-section-two .buttons, #app-section-seven .buttons {
+  padding-top: 0 !important;
+  text-align: center;
+}
+#app-section-seven .buttons {
+  padding-top: 20px !important;
+  }
+#app-section-two .buttons a, #app-section-three .buttons a {
+  background: #fff;
+  border: none;
+  box-shadow: 0px 1px 6px 3px #d8d8d838;
+}
+#app-section-two .buttons a:hover, #app-section-three .buttons a:hover  {
+  box-shadow: 0px 1px 20px 7px #504f4f59;
+}
+#app-section-two span.btn-icon {
+    background: url(https://media.dash.org/wp-content/uploads/btn-icon.svg) no-repeat;
+    float: right;
+    margin-left: 10px;
+    width: 22px;
+    height: 20px;
+}
+#app-section-four h3, #app-section-four h4, #app-section-four h5, #app-section-four p, #app-section-seven h3, #app-section-seven h4{
+  color: #fff;
+}
+#app-section-four h3, #app-section-four h4, #app-section-seven h4, #app-section-seven h3{
+  text-align: center;
+}
+#app-section-four h4, #app-section-seven h4{
+    font-weight: 400;
+    font-size: 18px;
+}
+#app-section-four .two-col-title{
+  max-width: 600px;
+    margin: auto;
+    padding: 0 0 30px 0;
+}
+#app-section-five{
+  margin-bottom: 100px;
+}
+section#app-section-five:before {
+    content: "";
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    top: 142px;
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    height: 100px;
+}
+section#app-section-five:after {
+    content: "";
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    height: 100px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    transform: rotate(-180deg);
+}
+#app-section-six{
+  margin-bottom: 50px;
+}
+#app-section-six .card-deck .card {
+    flex: 40%;
+    background: #fff !important;
+    border-radius: 5%;
+    padding: 20px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+    height: fit-content;
+  }
+  #app-section-six .card-img-top {
+    height: 1.8vh;
+}
+#app-section-six .card-body.px-2 {
+  text-align: left;
+  padding-left: 0 !important;
+}
+#app-section-six h3{
+    font-size: 20px;
+    font-style: normal;
+    color: #000;
+    margin-bottom: 0;
+}
+#app-section-six span{
+    color: #75808A;
+    font-size: 13px;
+}
+#app-section-six p{
+    font-size: 15px;
+}
+#app-section-six .block .block-pad-v {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#app-section-seven{
+  margin-bottom: 50px;
+}
+#app-section-seven .card-deck {
+  display: none;
+}
+#app-section-seven h3 {
+  font-size: 34px;
+}
+#app-section-seven .callouts-title {
+    margin-bottom: 2rem;
+}
+#app-section-seven {
+  border-bottom-right-radius: 5% 40px;
+  border-bottom-left-radius: 5% 40px;
+  border-top-left-radius: 5% 40px;
+  border-top-right-radius: 5% 40px;
+}
 @media only screen and (max-width: 1200px) and (min-width: 991px) {
   .banner-shape {
     max-width: 90%;
@@ -1854,6 +2042,7 @@ footer {
     .btn.btn-vendor {
       display: block;
       max-width: 100%;
+      min-height: 131px;
       margin: 0 auto 10px;
       text-align: center; }
       .btn.btn-vendor .icon {
@@ -2331,7 +2520,7 @@ justify-content: center;
 }
 
 .page-id-67894 .banner .caption p::after{
-	content: url(https://wp.dash.org/wp-content/uploads/esports-arrow.png);
+	content: url(https://staging-wp.dash.org/wp-content/uploads/esports-arrow.png);
 	width: 36px;
 	height: 21px;
 	display: block;
@@ -2735,6 +2924,9 @@ footer .support p {
     width: 100%;
     height: 100%;
   }
+  .block-tabs nav .nav-tabs .nav-link {
+    width: 100%;
+  }
 }
 
 @media(max-width: 442px){
@@ -2761,6 +2953,10 @@ footer .support p {
   }
   #app-download-links p a img, #dash-direct-call-to-action-links p a img {
     margin-bottom: 15px;
+  }
+  .page-template-page-brandguidelines .container{
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
