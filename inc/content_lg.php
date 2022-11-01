@@ -95,6 +95,9 @@ while( have_rows('content_sections') ): the_row();
 				<?php if ( get_sub_field ( "section_title")!=''){ ?>
 					<h3><strong><?php echo get_sub_field('section_title'); ?></strong></h3>
 					<?php } ?>
+					<?php if ( get_sub_field ( "section_subheading")!=''){ ?>
+				<h4><?php echo get_sub_field('section_subheading'); ?></h4>
+				<?php } ?>
 			</div>
 
 			<div class="card-deck">
@@ -132,11 +135,35 @@ while( have_rows('content_sections') ): the_row();
 				 <?php } ?>
 				
 			</div>
+				<div class="container-xs">
+								<div class="pt-md-5 pt-3 buttons">
+									<?php
+									 $links = get_sub_field('block_buttons');
+									 if (isset($links[0])){ ?>
+												<?php foreach ( $links as $link) {
+													$class = 'btn-ghost blue';
+													if ($link['button_style']=='solid') {
+														$class = 'btn-blue';
+													}
+												 ?>
+												<a href="<?php echo $link['button_url']; ?>" class="btn <?php echo $class ?>"><?php echo $link['button_title']; ?></a>
+										 		<?php } ?>
+									 	<?php } ?>
+								</div>
+							</div>
 		<?php } ?>
 
 		<?php if ($type=='2col_grid' || $type=='2col_image' || $type=='2col_terminal' || $type=='2col_app'){ 
 			// ACF true/false fields are bugged and always return false. using dropdown values 'yes' and 'no'
 			?>
+			<div class="two-col-title">
+				<?php if ( get_sub_field ( "section_title")!=''){ ?>
+					<h3><strong><?php echo get_sub_field('section_title'); ?></strong></h3>
+					<?php } ?>
+					<?php if ( get_sub_field ( "section_subheading")!=''){ ?>
+				<h4><?php echo get_sub_field('section_subheading'); ?></h4>
+				<?php } ?>
+			</div>
 			<div class="row align-items-center">
 				<div class="<?php 
 				$expand = get_sub_field('2_col_expand_column');
@@ -164,6 +191,18 @@ while( have_rows('content_sections') ): the_row();
 									</span>
 									<?php echo $link['link_title']; ?>
 								</a>
+						 		<?php } ?>
+							</div>
+						 <?php } ?>
+						 <?php
+						 $icons = get_sub_field('2_col_icons');
+						 if (isset($icons[0])){ ?>
+						 	<div class="icon-list">
+								<?php foreach ( $icons as $icon) { ?>
+									<div class="icon-block">
+										<img src="<?php echo $icon['icon_image']['url'] ?>" alt="<?php echo $icon['icon_image']['alt'] ?>" class="img-icons">
+										<h6><?php echo $icon['icon_title']; ?></h6>
+									</div>
 						 		<?php } ?>
 							</div>
 						 <?php } ?>
