@@ -129,30 +129,26 @@ while( have_rows('content_sections') ): the_row();
 											<strong><?php _e( 'Read more', 'html5blank' ); }?></strong>
 										</a>
 									</div>
-								<?php }  ?>
-								
-						</div>
-				 <?php } ?>
-				
-			</div>
-				<div class="container-xs">
-								<div class="pt-md-5 pt-3 buttons">
-									<?php
-									 $links = get_sub_field('block_buttons');
-									 if (isset($links[0])){ ?>
-												<?php foreach ( $links as $link) {
-													$class = 'btn-ghost blue';
-													if ($link['button_style']=='solid') {
-														$class = 'btn-blue';
-													}
-												 ?>
-												<a href="<?php echo $link['button_url']; ?>" class="btn <?php echo $class ?>"><?php echo $link['button_title']; ?></a>
-										 		<?php } ?>
-									 	<?php } ?>
-								</div>
+								<?php }  ?>	
 							</div>
-		<?php } ?>
-
+						<?php } ?>
+					</div>
+					<div class="container-xs">
+						<div class="pt-md-5 pt-3 buttons">
+							<?php 
+							$links = get_sub_field('block_buttons');
+							if (isset($links[0])){ ?>
+								<?php foreach ( $links as $link) {
+									$class = 'btn-ghost blue';
+									if ($link['button_style']=='solid') {
+										$class = 'btn-blue';
+									}
+								?>
+								<a href="<?php echo $link['button_url']; ?>" class="btn <?php echo $class ?>"><?php echo $link['button_title']; ?></a><?php } ?>
+							<?php } ?>
+						</div>
+					</div>
+				<?php } ?>
 		<?php if ($type=='2col_grid' || $type=='2col_image' || $type=='2col_terminal' || $type=='2col_app'){ 
 			// ACF true/false fields are bugged and always return false. using dropdown values 'yes' and 'no'
 			?>
