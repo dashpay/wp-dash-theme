@@ -2506,27 +2506,27 @@ justify-content: center;
 
 /* esports design tweaks */
 .page-id-67894 .banner{
-	max-height: 490px;
-	min-height: auto!important;
+  max-height: 490px;
+  min-height: auto!important;
 }
 
 .page-id-67894 .banner .caption h1{
-	font-style: normal;
+  font-style: normal;
 }
 
 .page-id-67894 .banner .caption p{
-	font-size: 2.3em;
-	font-weight: 300;
+  font-size: 2.3em;
+  font-weight: 300;
 }
 
 .page-id-67894 .banner .caption p::after{
-	content: url(https://wp.dash.org/wp-content/uploads/esports-arrow.png);
-	width: 36px;
-	height: 21px;
-	display: block;
-	margin: 0 auto;
-	position: relative;
-	top: 30px;
+  content: url(https://media.dash.org/wp-content/uploads/esports-arrow-1.png);
+  width: 36px;
+  height: 21px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 30px;
 }
 
 .page-id-67894 .btn.btn-white{
@@ -2587,20 +2587,20 @@ justify-content: center;
 }
 
 @media(max-width: 960px){
-	.page-id-67894 .banner .caption h1{
-		margin-top: 30px;
-	}
+  .page-id-67894 .banner .caption h1{
+    margin-top: 30px;
+  }
 
-	.page-id-67894 .banner .caption p{
-		font-size: 1.7em;
-		line-height: 1.2;
-		position: relative;
-		top: 20px;
-	}
-	.page-id-67894 .banner .caption p::after{
+  .page-id-67894 .banner .caption p{
+    font-size: 1.7em;
+    line-height: 1.2;
+    position: relative;
+    top: 20px;
+  }
+  .page-id-67894 .banner .caption p::after{
 
-		display: none;
-	}
+    display: none;
+  }
 }
 
 @media(max-width: 420px){
@@ -2819,12 +2819,12 @@ footer .support p {
 
 #app-download-links::after{
   content: url(https://media.dash.org/wp-content/uploads/arrow-down-blue.png);
-	width: 36px;
-	height: 21px;
-	display: block;
-	margin: 0 auto;
-	position: relative;
-	bottom: 70px;
+  width: 36px;
+  height: 21px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  bottom: 70px;
 }
 
 #app-download-links .container-xs, #select-merchant .container-xs,
@@ -3094,9 +3094,9 @@ footer .support p {
 .page-id-78843 .banner-short h1::after{
   content: url(https://media.dash.org/wp-content/uploads/dash-digital-cash-logo.svg);
   height: 125px;
-	display: block;
-	margin: 0 auto;
-	position: relative;
+  display: block;
+  margin: 0 auto;
+  position: relative;
   top: 50px;
 }
 
@@ -3286,11 +3286,11 @@ footer .support p {
 /* DashDirect CTA  */
 #merchant-kit-dashdirect h3::before{
   content: url(https://media.dash.org/wp-content/uploads/Dashdirect-logo.svg);
-	width: 528px;
-	height: 72px;
-	display: block;
-	margin: 0 auto;
-	position: relative;
+  width: 528px;
+  height: 72px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
   bottom: 50px;
 }
 
@@ -3324,11 +3324,11 @@ footer .support p {
 /* Exchange  */
 #merchant-kit-exchange-content-2::before{
   content: url(https://media.dash.org/wp-content/uploads/black-down-arrow.svg);
-	width: 36px;
-	height: 21px;
-	display: block;
-	margin: 0 auto;
-	position: relative;
+  width: 36px;
+  height: 21px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
   top: 10px;
 }
 
@@ -3411,11 +3411,11 @@ padding-bottom: 120px;
 
 #merchant-kit-pos-3 .text-section-header-wrap::after{
   content: url(https://media.dash.org/wp-content/uploads/black-down-arrow.svg);
-	width: 36px;
-	height: 21px;
-	display: block;
-	margin: 0 auto;
-	position: relative;
+  width: 36px;
+  height: 21px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
   bottom: -35px;
 }
 
