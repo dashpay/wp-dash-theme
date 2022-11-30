@@ -1256,7 +1256,9 @@ header .lang .dropdown .wpml-ls a {
   border-left: 0;
   border-right: 0;
   border-bottom: 1px solid #eee !important; }
-
+.card h4 {
+  margin: 20px 0 0;
+}
 .accordion .card-header {
   cursor: pointer;
   border: 0;

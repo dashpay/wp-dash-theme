@@ -29,6 +29,7 @@ get_header(); ?>
 				$i++;
 			?>
 			  <div class="card">
+			  	<h4><?php echo get_sub_field('title_sections');?></h4>
 			    <div class="card-header" id="heading<?php echo $i;?>">
 			      <h5 class="mb-0">
 			        <a class="" data-toggle="collapse" data-target="#panel<?php echo $i;?>" aria-expanded="false" aria-controls="panel<?php echo $i;?>">
