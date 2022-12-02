@@ -1249,7 +1249,23 @@ header .lang .dropdown .wpml-ls a {
     font-weight: 700; }
   .team-item p {
     margin: 0; }
-
+/*FAQ - reorder-blocks*/    
+page-id-122 #main {
+  display: flex;
+  flex-direction: column;
+}
+.page-id-122 section.block.block-accordions.bg-white.is-viewed {
+  order: 2;
+}
+.page-id-122 .row.mt-5 {
+  margin-top: 0 !important;
+}
+.page-id-122 .container.block-pad-v {
+  padding: 10px 0;
+}
+.page-id-122 .link-list {
+  font-size: 18px;
+}
 .accordion .card {
   border-radius: 0;
   border-top: 0;
