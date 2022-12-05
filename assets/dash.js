@@ -267,7 +267,10 @@ $(window).resize(function(){
 })
 
 // Close menu when out of div 
-if ($(window).width() < 990 || $(window).height() < 1000) {
+(function() {      
+    let isMobile = window.matchMedia("only screen and (max-width: 990px)").matches;
+
+    if (isMobile) {
 $(document).mouseup(function(e){
    var header = $ (".header, .lang-mobile");
    var menu = $(".navbar, .dropdown");
@@ -279,6 +282,7 @@ $(document).mouseup(function(e){
    }
 });
 }
+});
 //Links for Tab
 jQuery(function($){
   var hash = window.location.hash;
