@@ -558,7 +558,28 @@ header .lang .dropdown .wpml-ls a {
       transform: scaleX(1); }
       #navbar-main .bg.show .arrow {
         opacity: 1; }
-
+/*docs page*/
+#icon-doc img.card-img-top{
+  height: 12vh;
+  width:auto;
+}
+#icon-doc h3.title-italic.card-title {
+  color: #000;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+}
+#icon-doc .block-pad-v {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.page-id-103462 .banner-short .caption p::after {
+  content:none;
+}
+.page-id-103462 .banner-short {
+  height: auto;
+  min-height: 450px;
+}
 .banner {
   background-color: #031841;
   background-size: cover;
