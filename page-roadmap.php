@@ -3,7 +3,8 @@
 get_header(); ?>
 
 
-<div id="main" class="page-roadmap">
+<?php $main = get_field('main_id'); ?>
+<div id="main <?php echo $main; ?>" class="page-roadmap">
 
 <?php get_template_part('inc/content_lg'); ?>
 	

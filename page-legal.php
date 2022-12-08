@@ -2,7 +2,8 @@
 /* Template Name: Legal Page */ 
 get_header(); ?>
 
-	<main role="main" class="no-banner">
+<?php $main = get_field('main_id'); ?>
+<div id="main <?php echo $main; ?>" class="no-banner">
 		<!-- section -->
 		<section class="container">
 

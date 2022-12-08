@@ -2,7 +2,8 @@
 /* Template Name: Large Banner Page */ 
 get_header(); ?>
 
-<div id="main" class="page-largebanner">
+<?php $main = get_field('main_id'); ?>
+<div id="main <?php echo $main; ?>" class="page-largebanner">
 
 	<?php if (get_field( "hide_large_banner" )!='yes') { ?>
 	<div class="<?php 
