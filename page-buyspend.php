@@ -5,8 +5,7 @@
 
 get_header(); ?>
 
-<?php $main = get_field('main_id'); ?>
-<div id="main <?php echo $main; ?>" class="page-halfbanner">
+<div id="<?php echo get_field('main_id'); ?>" class="page-halfbanner">
 
 	<?php get_template_part('inc/halfbanner'); 
 
