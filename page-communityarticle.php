@@ -2,7 +2,7 @@
 /* Template Name: Community Article */ 
 get_header(); ?>
 
-<div id="main" class="page-communityarticle page-halfbanner">
+<div id="<?php echo get_field('main_id'); ?>" class="page-communityarticle page-halfbanner">
 
 	<?php get_template_part('inc/halfbanner'); ?>
 

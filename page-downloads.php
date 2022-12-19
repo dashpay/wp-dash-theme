@@ -2,7 +2,7 @@
 /* Template Name: Downloads */ 
 get_header(); ?>
 
-<div id="main" class="page-halfbanner"> <!-- page-downloads -->
+<div id="<?php echo get_field('main_id'); ?>" class="page-halfbanner"> <!-- page-downloads -->
 
 	<?php //get_template_part('inc/download_halfbanner'); ?>
 	<?php get_template_part('inc/halfbanner'); ?>

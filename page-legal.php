@@ -2,7 +2,7 @@
 /* Template Name: Legal Page */ 
 get_header(); ?>
 
-	<main role="main" class="no-banner">
+<div id="<?php echo get_field('main_id'); ?>" class="no-banner">
 		<!-- section -->
 		<section class="container">
 
