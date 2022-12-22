@@ -151,7 +151,7 @@ get_header(); ?>
 										?>
 										<div class="col-md-3 col-lg-2">
 											<div class="palette-item">
-												<div class="thumb" style="background:<?php the_sub_field('hexcolor'); ?>; border-radius: 8px; height: 75px;"></div>
+												<div class="thumb <?php the_sub_field('hexcolor'); ?>" style="border-radius: 8px; height: 75px;"></div>
 												<div class="text">
 													<h6 class="mb-3"><?php the_sub_field('color_title'); ?></h6>
 													<p class="text"> <?php the_sub_field('hexcolor'); ?> </p>
