@@ -1248,7 +1248,24 @@ header .lang .dropdown .wpml-ls a {
     max-width: 100%; }
     .block-brand .logo path, .block-brand .logo polygon {
       fill: #454545; }
-
+.block-brand .color-one{
+  background: #008de4;
+}
+.block-brand .color-two{
+  background: #012060;
+}
+.block-brand .color-three{
+  background: #0b0f3b;
+}
+.block-brand .color-four{
+  background: #111921;
+}
+.block-brand .color-five{
+  background: #787878;
+}
+.block-brand .color-six{
+  background: #fff;
+}
 .block-newsletter .form strong {
   display: none; }
 
