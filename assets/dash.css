@@ -573,10 +573,10 @@ header .lang .dropdown .wpml-ls a {
   padding-top: 0;
   padding-bottom: 0;
 }
-.page-id-103462 .banner-short .caption p::after {
+#docs-main .banner-short .caption p::after {
   content:none;
 }
-.page-id-103462 .banner-short {
+#docs-main .banner-short {
   height: auto;
   min-height: 450px;
 }
@@ -1288,20 +1288,20 @@ header .lang .dropdown .wpml-ls a {
   .team-item p {
     margin: 0; }
 /*FAQ - reorder-blocks*/    
-page-id-122 #main {
+#faq-main {
   display: flex;
   flex-direction: column;
 }
-.page-id-122 section.block.block-accordions.bg-white.is-viewed {
+#faq-main section.block.block-accordions.bg-white.is-viewed {
   order: 2;
 }
-.page-id-122 .row.mt-5 {
+#faq-main .row.mt-5 {
   margin-top: 0 !important;
 }
-.page-id-122 .container.block-pad-v {
+#faq-main .container.block-pad-v {
   padding: 10px 0;
 }
-.page-id-122 .link-list {
+#faq-main .link-list {
   font-size: 18px;
 }
 .accordion .card {
@@ -1335,26 +1335,26 @@ page-id-122 #main {
   .accordion .card-header a[aria-expanded="true"] .icon-inline {
     transform: rotate(270deg); }
 /*faq-hpmn-tables*/
-.page-id-104607 table {
+#faq-page table {
   border: 1px solid #e8e8e8;
   margin: 7px 0;
 }
-.page-id-104607 thead {
+#faq-page thead {
   border: 1px solid #e8e8e8;
 }
-.page-id-104607 th {
+#faq-page th {
   border: 1px solid #f1f0f0;
   padding: 5px;
   background: #f1f0f0;
 }
-.page-id-104607 tr {
+#faq-page tr {
  border: 3px solid #f1f0f0;
 }
-.page-id-104607 td {
+#faq-page td {
   border: 3px solid #f1f0f0;
   padding: 3px;
 }
-.page-id-104607 table {
+#faq-page table {
   border: 1px solid #ccc;
   border-collapse: collapse;
   margin: 0;
@@ -1362,21 +1362,21 @@ page-id-122 #main {
   width: 100%;
   table-layout: fixed;
 }
-.page-id-104607 table caption {
+#faq-page table caption {
   font-size: 1.5em;
   margin: .5em 0 .75em;
 }
-.page-id-104607 table tr {
+#faq-page table tr {
   background-color: #f8f8f8;
   border: 1px solid #ddd;
   padding: .35em;
 }
-.page-id-104607 table th,
-.page-id-104607 table td {
+#faq-page table th,
+#faq-page table td {
   padding: .625em;
   text-align: center;
 }
-.page-id-104607 table th {
+#faq-page table th {
   font-size: .85em;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -2610,21 +2610,21 @@ justify-content: center;
 /* Sara's corner of the Dash Stylesheet :) */
 
 /* esports design tweaks */
-.page-id-67894 .banner{
+#esport-main .banner{
   max-height: 490px;
   min-height: auto!important;
 }
 
-.page-id-67894 .banner .caption h1{
+#esport-main .banner .caption h1{
   font-style: normal;
 }
 
-.page-id-67894 .banner .caption p{
+#esport-main .banner .caption p{
   font-size: 2.3em;
   font-weight: 300;
 }
 
-.page-id-67894 .banner .caption p::after{
+#esport-main .banner .caption p::after{
   content: url(https://media.dash.org/wp-content/uploads/esports-arrow-1.png);
   width: 36px;
   height: 21px;
@@ -2634,12 +2634,12 @@ justify-content: center;
   top: 30px;
 }
 
-.page-id-67894 .btn.btn-white{
+#esport-main .btn.btn-white{
   background: #f8f9fa;
   border-radius: 4px;
 }
 
-.page-id-67894 .container-sm{
+#esport-main .container-sm{
   width: 100%;
 }
 
@@ -2647,69 +2647,69 @@ justify-content: center;
   text-align: center;
 }
 
-.page-id-67894 .container-xs {
+#esport-main .container-xs {
   width: 100%;
   padding-left: 0;
   padding-right: 15px;
 }
 
-.page-id-67894 .container-xs .richtext{
+#esport-main .container-xs .richtext{
   max-width: 480px;
 }
 
-.page-id-67894 .card-item{
+#esport-main .card-item{
   text-align: left;
   padding: 40px;
   position: relative;
   padding-bottom: 30px;
 }
 
-.page-id-67894 .card-item img{
+#esport-main .card-item img{
   max-width: 100%;
   max-height: 100%;
 }
 
-.page-id-67894 .card-item h4{
+#esport-main .card-item h4{
   min-height: 60px;
 }
 
-.page-id-67894 .card-item h4 img{
+#esport-main .card-item h4 img{
   max-height: 70px;
 }
 
-.page-id-67894 .card-item div img{
+#esport-main .card-item div img{
   padding-bottom: 25px;
   opacity: .9;
 }
 
-.page-id-67894 .card-item .btn.btn-ghost.blue:hover{
+#esport-main .card-item .btn.btn-ghost.blue:hover{
   color: #012060;
   border-color: #012060;
 }
 
-.page-id-67894 .banner .caption {
+#esport-main .banner .caption {
   width: auto!important;  
 }
 
 @media(max-width: 960px){
-  .page-id-67894 .banner .caption h1{
+  #esport-main .banner .caption h1{
     margin-top: 30px;
   }
 
-  .page-id-67894 .banner .caption p{
+  #esport-main .banner .caption p{
     font-size: 1.7em;
     line-height: 1.2;
     position: relative;
     top: 20px;
   }
-  .page-id-67894 .banner .caption p::after{
+  #esport-main .banner .caption p::after{
 
     display: none;
   }
 }
 
 @media(max-width: 420px){
-  .page-id-67894 .col-6{
+  #esport-main .col-6{
     flex: 0 0 100%;
     max-width: 100%;
     }
@@ -2750,13 +2750,13 @@ justify-content: center;
   margin-top: 37px;
 }
 @media(max-width:600px){
-  .page-id-104607 table {
+  #faq-page table {
     border: 0;
   }
-  .page-id-104607 table caption {
+  #faq-page table caption {
     font-size: 1.3em;
   } 
-  .page-id-104607 table thead {
+  #faq-page table thead {
     border: none;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -2766,24 +2766,24 @@ justify-content: center;
     position: absolute;
     width: 1px;
   }
-  .page-id-104607 table tr {
+  #faq-page table tr {
     border-bottom: 3px solid #ddd;
     display: block;
     margin-bottom: .625em;
   }
-  .page-id-104607 table td {
+  #faq-page table td {
     border-bottom: 1px solid #ddd;
     display: block;
     font-size: .8em;
     text-align: right;
   }
-  .page-id-104607 table td::before {
+  #faq-page table td::before {
     content: attr(data-label);
     float: left;
     font-weight: bold;
     text-transform: uppercase;
   } 
-  .page-id-104607 table td:last-child {
+  #faq-page table td:last-child {
     border-bottom: 0;
   }
 }
@@ -3233,7 +3233,7 @@ footer .support p {
 
 /*** New Merchant Kit Landing Page ***/
 
-.page-id-78843 .banner-short h1::after{
+#merchant-page .banner-short h1::after{
   content: url(https://media.dash.org/wp-content/uploads/dash-digital-cash-logo.svg);
   height: 125px;
   display: block;
@@ -3242,7 +3242,7 @@ footer .support p {
   top: 50px;
 }
 
-.page-id-78843 .banner-short p{
+#merchant-page .banner-short p{
   display: none;
 }
 
@@ -3849,7 +3849,7 @@ padding-bottom: 120px;
     padding-left: 40px;
     margin: 0 30px 0 0;
   }
-  .page-id-78843 .banner-short h1::after{
+  #merchant-page .banner-short h1::after{
     content:none;
     height: 0;
     top: 0;
