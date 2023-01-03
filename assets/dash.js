@@ -267,7 +267,7 @@ $(window).resize(function(){
 })
 
 // Close menu when out of div 
-(function() {      
+$(function() {      
     let isMobile = window.matchMedia("only screen and (max-width: 990px)").matches;
 
     if (isMobile) {
@@ -294,7 +294,7 @@ jQuery(function($){
   });
 });
 
-/* NEWSLETTER FORM SCRIPT SENDGRID */
+/* NEWSLETTER FORM SCRIPT SENDGRID 
 const myForm = document.getElementById('dash-nl');
 	const alertContainer = document.getElementById('warningDiv')
 	const successContainer = document.getElementById('successDiv')
@@ -348,3 +348,5 @@ const myForm = document.getElementById('dash-nl');
 		}
 	await handleSubmit()
 	});
+
+*/
