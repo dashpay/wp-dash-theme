@@ -20,11 +20,11 @@ if ($post->post_type=='downloadgroup'){
 
 				<span class="date text-gray title-small"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
 
-				<h2 class="py-3">
+				<h1 class="py-3">
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 						<strong><?php the_title(); ?></strong>
 					</a>
-				</h2>
+				</h1>
 				<div class="social-share">
 					<?php
 					$postURL = urlencode(get_the_permalink());
