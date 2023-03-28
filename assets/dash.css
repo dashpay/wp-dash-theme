@@ -1084,7 +1084,8 @@ header .lang .dropdown .wpml-ls a {
     box-shadow: 0 10px 15px rgba(0, 141, 228, 0.3); }
   .news-item .top {
     padding: 10px 0;
-    font-size: 10px; }
+    font-size: 10px;
+    min-height: 56px; }
     .news-item .top .read {
       color: #787878; }
   .news-item .image {
@@ -2103,6 +2104,17 @@ section#app-section-five:after {
       width: auto; } }
 
 @media only screen and (min-width: 991px) {
+   .single-post .col-lg-7 {
+    flex: 0 0 64.333333%;
+    max-width: 64.333333%;
+  }
+  .single-post .offset-lg-1 {
+    margin-left: 5%;
+  }
+  .single-post .col-lg-4 {
+    flex: 0 0 30.333333%;
+    max-width: 30.333333%;
+  }
   #navbar-main .navbar-container {
     display: flex !important; }
   .col-right .container-xs {
@@ -2802,6 +2814,9 @@ justify-content: center;
 }
 
 /* News blog post design tweaks */
+single-post h1.py-3 {
+  font-size: 2rem;
+}
 .page-newsdetail{
 padding-top: 200px;
 }
