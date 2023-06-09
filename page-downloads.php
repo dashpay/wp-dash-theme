@@ -75,7 +75,7 @@ get_header(); ?>
 									the_row(); 
 							?>
 								<div class="col-lg-4 col-md-6">
-									<div class="download-item">
+									<div class="download-item <?php the_sub_field('class_item'); ?>">
 										<div class="top">
 											<div class="row align-items-center">
 												<div class="col-3">
