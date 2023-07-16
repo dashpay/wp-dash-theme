@@ -1720,6 +1720,15 @@ footer {
     padding: 0 15px; }
     footer .support p {
       margin-bottom: 30px; }
+      footer .support a{
+        margin-top:10px; }
+        footer .trustpilot {
+        display: flex;
+        justify-content: center;
+        margin-top: 1em; }
+        footer .trustpilot a svg {
+          width: 130px;
+          display: block; }
   footer .footer-top {
     padding: 35px 0; }
     footer .footer-top strong {
