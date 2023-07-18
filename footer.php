@@ -14,7 +14,6 @@
 
 						<div class="link-container d-flex justify-content-between">
 							<a href="https://github.com/dashpay"><div class="icon-el github"></div></a>
-							<a href="https://github.com/dashevo"><div class="icon-el github"></div></a>
 							<a href="https://discordapp.com/invite/PXbUxJB"><div class="icon-el discord"></div></a>
 							<a href="https://t.me/dash_chat"><div class="icon-el telegram"></div></a>
 							<a href="https://www.dash.org/forum/"><div class="icon-el dashforum"></div></a>
@@ -111,8 +110,8 @@
 							<img src="https://statuspage.freshping.io/badge/6bd13996-45b7-47b0-aaa4-5762412982a7?0.8091951318490984"/>
 						</a>
 					</div>
-					<div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b757fa0340045cd0c938" data-businessunit-id="5fff59ee8b18380001bce801" data-style-height="25px" data-style-width="100%" style="margin-top: 1em">
-					  <a href="https://www.trustpilot.com/review/www.dash.org" target="_blank" rel="noopener">Trustpilot</a>
+					<div class="trustpilot">
+					  <a href="https://www.trustpilot.com/review/www.dash.org" target="_blank" rel="noopener"><img src="/wp-content/themes/dash-theme/assets/img/trustpilot.svg"></a>
 					</div>
 				</div>
 
