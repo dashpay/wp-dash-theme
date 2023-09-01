@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Montserrat", sans-serif;
   color: #454545;
@@ -1288,6 +1291,16 @@ header .lang .dropdown .wpml-ls a {
     font-weight: 700; }
   .team-item p {
     margin: 0; }
+
+/* Road Map */
+.bottom-date p {
+    text-align: center;
+    margin: 50px 0 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #008de4;
+} 
+
 /*FAQ - reorder-blocks*/    
 #faq-main {
   display: flex;

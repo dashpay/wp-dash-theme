@@ -54,6 +54,9 @@ get_header(); ?>
 				<?php if ( get_field( "bottom_image" )!='' ){
 					echo "<img src='". get_field( "bottom_image" ) ."' class='img-fluid'>";
 				} ?>
+				<div class="bottom-date">
+					<p><?php echo get_field('date_label'); ?></p> 
+				</div>
 			</div>
 		</div>
 	</div>
