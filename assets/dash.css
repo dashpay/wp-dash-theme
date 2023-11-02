@@ -760,7 +760,19 @@ header .lang .dropdown .wpml-ls a {
   padding-top: 100px;
 }
 */
-
+#buy-block, .halfbanner{
+	height:auto;
+}
+#buy-block .ml-auto, .mx-auto{
+	margin-left: 0!important;
+}
+#buy-block .col-lg-6{
+	flex: 0 0 63%;
+  max-width: 63%;
+}
+#buy-block iframe{
+	min-height:350px;
+}
 .page-news .halfbanner {
   height: auto; }
   .page-news .halfbanner .caption {

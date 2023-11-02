@@ -24,7 +24,10 @@
 			
 					<?php if(get_field( "half_banner_display" )=='image'){ ?>
 						<img src='<?php echo get_field( "half_banner_image" )?>' alt class="main img-fluid">
-					<?php }} ?> 
+					<?php }} ?>
+					<p>
+						<?php echo get_field( "full-text-hb" )?>
+					</p> 
 				</div>
 			</div>
 		</div>
