@@ -763,9 +763,6 @@ header .lang .dropdown .wpml-ls a {
 #buy-block, .halfbanner{
 	height:auto;
 }
-#buy-block .ml-auto, .mx-auto{
-	margin-left: 0!important;
-}
 #buy-block .col-lg-6{
 	flex: 0 0 63%;
   max-width: 63%;
