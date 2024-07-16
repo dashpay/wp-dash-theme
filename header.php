@@ -25,7 +25,7 @@
 		<meta name="apple-itunes-app" content="app-id=1206647026">
 
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700,900i%7COpen+Sans:400,600,700%7CRoboto+Condensed" rel="stylesheet">
-
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 		<?php wp_head(); ?>
 
 
@@ -41,6 +41,22 @@
 		<div class="wrapper <?php echo (get_field('navbar_text_color')?'nav-'.get_field('navbar_text_color'):''); ?>">
 
 			<!-- header -->
+			<div class="header-bar">
+        <div class="line left-line"><?php get_template_part('inc/line.svg'); ?></div>
+        <div class="countdown">
+            <div class="time-section">
+                <span class="days"></span> <span class="day-text">DAYS</span>
+            </div>
+            <div class="time-section">
+                <span class="hours"></span><span class="dots">:</span>
+                <span class="minutes"></span><span class="dots">:</span>
+                <span class="seconds"></span>
+            </div>
+            <div class="event-text">Until Evolution Genesis Release</div>
+            <a href="/news/evolution-genesis/" class="learn-more">Learn more</a>
+        </div>
+        <div class="line right-line"><?php get_template_part('inc/line-2.svg'); ?></div>
+    </div>
 			<header class="header clear" role="banner">
 					<div class="row top">
 						<div class="d-lg-none col-4">
