@@ -464,7 +464,7 @@ ul.slick-dots {
 }
 
 .line {
-max-width: 299px;
+max-width: 326px;
 width: 100%;
 }
 
@@ -476,7 +476,7 @@ display: flex;
   width: 100%;
   justify-content: center;
   max-width: 635px;
-  margin: 0px 34px;
+  margin: 0 34px 0 24px;
 }
 
 .time-section {
@@ -528,7 +528,7 @@ display:none
 }
 @media only screen and (max-width: 990px) {
   header {
-    top:48px;
+    top:73px !important;
   }
 }
 @media (max-width:810px){
