@@ -294,6 +294,16 @@ jQuery(function($){
   });
 });
 
+// Road Map
+$(document).ready(function() {
+    if ($('#road-map').length > 0) {
+        $('html, body').animate({
+            scrollTop: $('#update').offset().top
+        }, 'slow'); 
+    }
+});
+
+
 $(document).ready(function() {
     // Set the date we're counting down to in ET
     var countDownDate = new Date("Jul 29, 2024 11:00:00 GMT-0400").getTime(); // ET is currently UTC-4 during Daylight Saving Time
