@@ -44,16 +44,7 @@
 			<div class="header-bar">
         <div class="line left-line"><?php get_template_part('inc/line.svg'); ?></div>
         <div class="countdown">
-            <div class="time-section">
-                <span class="days"></span> <span class="day-text">DAYS</span>
-            </div>
-            <div class="time-section">
-                <span class="hours"></span><span class="dots">:</span>
-                <span class="minutes"></span><span class="dots">:</span>
-                <span class="seconds"></span>
-            </div>
-            <div class="event-text">Until Evolution Genesis Release</div>
-            <a href="/news/evolution-genesis/" class="learn-more">Learn more</a>
+		<a href="/blog/dash-evolution-v1-0-0-release-announcement/"><div class="event-text">Evolution Genesis has been released</div></a>
         </div>
         <div class="line right-line"><?php get_template_part('inc/line-2.svg'); ?></div>
     </div>
