@@ -16,6 +16,8 @@ while( have_rows('content_sections') ): the_row();
 	// app : App Callout
 	// speed : Speed Table [business]
 	// cta_with_background_image: CTA with Background Image
+	// slider_images : Slider Logos
+	// slider_testimonials : Slider Testimonials
 
 	$count++;
 
@@ -23,6 +25,7 @@ while( have_rows('content_sections') ): the_row();
 	$bg = get_sub_field('background_color');
 	$padding = get_sub_field('section_padding');
 	$section_id = get_sub_field('section_id');
+	$section_class = get_sub_field('section_class');
 
 	$classes = ['block-'.$type];
 
@@ -61,9 +64,8 @@ while( have_rows('content_sections') ): the_row();
 
 	$padding = $padding?$padding:'block-pad-v';
 ?>
-<section class="block <?php echo $bg;?> <?php echo implode(' ',$classes); ?>" <?php if ($section_id!=''){echo "id=\"$section_id\"";} ?>>
+<section class="block <?php echo $section_class;?> <?php echo $bg;?> <?php echo implode(' ',$classes); ?>" <?php if ($section_id!=''){echo "id=\"$section_id\"";} ?>>
 	<div class="container <?php echo $padding; ?>">
-
 
 		<?php if ($type=='text'){ ?>
 			<div class="text-section-header-wrap">
@@ -246,9 +248,14 @@ while( have_rows('content_sections') ): the_row();
 											<div class="icon">
 											<?php echo $link['block_item_image']?'<img src="'.$link['block_item_image'].'" alt>':'<span class="icon-placeholder"></span>' ?>
 											</div>
-											<div>
-												<span class="title"><?php echo $link['block_item_title'] ?></span>
-												<span class="link"><?php echo $link['block_item_description'] ?></span>
+											<div class="block-icons">
+												<div class="vendor-title-desc">
+													<span class="title"><?php echo $link['block_item_title'] ?></span>
+													<span class="link"><?php echo $link['block_item_description'] ?></span>
+								                </div>
+												<div class="vendor-button">
+													<span class="button"><?php echo $link['callout_block_link_text'] ?></span>
+								                </div>
 											</div>
 										</a>	
 									</div>
@@ -396,15 +403,22 @@ while( have_rows('content_sections') ): the_row();
 				<?php 
 				$links = get_sub_field('block_list');
 				$linkclass = "btn-white";
-				foreach ( $links as $link) {?>
+				foreach ( $links as $link) {
+					$target = $link['new_tab'] ? ' target="_blank"' : '';
+					?>
 				<div class="col-lg-3 col-6">
-					<a href="<?php echo $link['block_link'];?>" target="_blank" class="btn btn-vendor <?php echo $linkclass ?>">
+					<a href="<?php echo $link['block_link'];?>" <?php echo $target; ?> class="btn btn-vendor <?php echo $linkclass ?> <?php echo $link['image_class'] ?>">
 						<div class="icon">
 						<?php echo $link['block_item_image']['url']?'<img src="'.$link['block_item_image']['url'].'" alt="'.$link['block_item_image']['alt'].'">':'<span class="icon-placeholder"></span>' ?>
 						</div>
-						<div>
-							<span class="title"><?php echo $link['block_item_title'];?></span>
-							<span class="link"><?php echo ($link['block_item_description']!='')?$link['block_item_description']:$link['block_link'];?></span>
+						<div class="block-icons">
+							<div class="vendor-title-desc">
+								<span class="title"><?php echo $link['block_item_title'];?></span>
+								<span class="link"><?php echo ($link['block_item_description']!='')?$link['block_item_description']:$link['block_link'];?></span>
+				            </div>
+							<div class="vendor-button">
+								<span class="button"><?php echo $link['callout_block_link_text'] ?></span>
+				            </div>
 						</div>
 					</a>					
 				</div>
@@ -721,7 +735,7 @@ while( have_rows('content_sections') ): the_row();
 
 						<?php if ( get_sub_field( "cta_background_image_button" )!=''){
 						?>
-						<br><a href="<?php echo get_sub_field( "cta_background_image_button_link" )?>" 
+						<a href="<?php echo get_sub_field( "cta_background_image_button_link" )?>" 
 						class="banner-btn btn btn-blue"
 						target="<?php if ( get_sub_field( "cta_background_image_button_new_tab" ) ) { echo "_blank"; }?>">
 						<?php echo get_sub_field( "cta_background_image_button" )?></a>
@@ -746,9 +760,11 @@ while( have_rows('content_sections') ): the_row();
 					$linkclass = "btn-blue";
 				}
 
-				foreach ( $links as $link) {?>
+				foreach ( $links as $link) {
+					$target = $link['new_tab'] ? ' target="_blank"' : '';
+					?>
 				<div class="col-lg-3 col-6">
-					<a href="<?php echo $link['foot_vendor_link'];?>" target="_blank" class="btn btn-vendor <?php echo $linkclass ?>">
+					<a href="<?php echo $link['foot_vendor_link'];?>" <?php echo $target; ?> class="btn btn-vendor <?php echo $linkclass ?>">
 						<div class="icon">
 						<?php echo $link['foot_vendor_logo']?'<img src="'.$link['foot_vendor_logo'].'" alt>':'<span class="icon-placeholder"></span>' ?>
 						</div>
@@ -762,7 +778,60 @@ while( have_rows('content_sections') ): the_row();
 			</div>
 		</div>
 	<?php }?>
+	
+	<?php if ($type == 'slider_images') { ?>
+		<div class="callouts-title">
+				<?php if ( get_sub_field ( "section_title")!=''){ ?>
+					<h3><strong><?php echo get_sub_field('section_title'); ?></strong></h3>
+					<?php } ?>
+					<?php if ( get_sub_field ( "section_subheading")!=''){ ?>
+				<h4><?php echo get_sub_field('section_subheading'); ?></h4>
+				<?php } ?>
+			</div>
+    <div class="slider-container">
+        <div class="slider slider-for">
+            <?php if (have_rows('slider_images')) : ?>
+                <?php while (have_rows('slider_images')) : the_row(); ?>
+                    <?php
+                    // Retrieve the subfield 'slider_logo' within the current row of 'slider_images'
+                    $logoimage = get_sub_field('slider_logo');
+                    ?>
+                    <div class="slide">
+                        <img src="<?php echo esc_url($logoimage['url']); ?>" alt="<?php echo esc_attr($logoimage['alt']); ?>">
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
+    </div>
+<?php }?>
+
+<?php if ($type == 'slider_testimonials') { ?>
+	<div class="callouts-title">
+				<?php if ( get_sub_field ( "section_title")!=''){ ?>
+					<h3><strong><?php echo get_sub_field('section_title'); ?></strong></h3>
+					<?php } ?>
+					<?php if ( get_sub_field ( "section_subheading")!=''){ ?>
+				<h4><?php echo get_sub_field('section_subheading'); ?></h4>
+				<?php } ?>
+			</div>
+    <div class="slider-container">
+        <div class="slider slider-testimonial">
+            <?php if (have_rows('slider_testimonials')) : ?>
+                <?php while (have_rows('slider_testimonials')) : the_row(); ?>
+                    <?php
+                    $testimimage = get_sub_field('testimonial_image');
+                    $testimtext = get_sub_field('testimonial_text');
+                    ?>
+                    <div class="slide">
+                        <img src="<?php echo esc_url($testimimage['url']); ?>" alt="<?php echo esc_attr($testimimage['alt']); ?>">
+                        <div><?php echo $testimtext; ?></div>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
+    </div>
+<?php } ?>
 
 </section>
-<?php endwhile; ?>
 
+<?php endwhile; ?>

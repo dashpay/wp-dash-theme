@@ -104,7 +104,7 @@ function theme_scripts()
         wp_register_script('trustpilot','https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js',[],false,true);
         wp_enqueue_script('trustpilot'); 
         
-        wp_register_script('dash', get_template_directory_uri() . '/assets/dash.js',[],'1.65',true);
+        wp_register_script('dash', get_template_directory_uri() . '/assets/dash.js',[],'1.66',true);
         wp_enqueue_script('dash');
         wp_register_script('vue-buyspend', get_template_directory_uri() . '/assets/vue-buyspend.js',[],'1.21',true);
         wp_enqueue_script('vue-buyspend');
@@ -149,7 +149,7 @@ function theme_styles()
     
     // Remove time() and replace with static version number after strophy finishes fixing CSS
 
-    wp_register_style('dashcss', get_template_directory_uri() . '/assets/dash.css', array(), '1.70', 'all');
+    wp_register_style('dashcss', get_template_directory_uri() . '/assets/dash.css', array(), '1.71', 'all');
     wp_enqueue_style('dashcss');
 
 }
@@ -314,7 +314,13 @@ function html5blankgravatar ($avatar_defaults)
     return $avatar_defaults;
 }
 
-
+// Load css file only for Home Page
+function load_home_styles() {
+    if ( is_front_page() ) {
+        wp_enqueue_style( 'home-css', get_template_directory_uri() . '/assets/home.css' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'load_home_styles' );
 
 
 /*------------------------------------*\

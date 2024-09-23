@@ -65,67 +65,69 @@ var Layout = {
 			}
 		});
 		// mobile dropdowns
-		var defaultheight = 55; //default header height
+var defaultheight = 55; //default header height
 
-		// Main Menu
-		$('.menu-toggle').on('click',function(e){
-			e.preventDefault();
-			if ( $('.lang-mobile').hasClass('is-open') ){
-				$('.lang-mobile a').trigger('click')
-			}
-			if ( !$('header').hasClass('is-open')){
-				$('header').addClass('is-open');
-				$('#navbar-main').fadeIn();
-			}
-			else {
-				$('header').removeClass('is-open');
-				$('#navbar-main').fadeOut();
-			}
+$(document).ready(function() {
+    // Main Menu Toggle
+    $('.menu-toggle').on('click', function(e) {
+        e.preventDefault();
+        
+        if ($('header').hasClass('is-open')) {
+            // Menu is open, so close it
+            $('header').removeClass('is-open');
+            $('#navbar-main').hide();
+            // Ensure submenus are collapsed
+            $('#navbar-main .navbar-item').removeClass('dropdown-open');
+        } else {
+            // Menu is closed, so open it
+            $('header').addClass('is-open');
+            $('#navbar-main').show();
+        }
+    });
 
+    // Languages Toggle
+    $('.lang-mobile .link').on('click', function(e) {
+        e.preventDefault();
 
+        var $langMobile = $(this).closest('.lang-mobile');
 
-			// if ( $('.lang-mobile').hasClass('is-open') ){ //close language dropdown if open
-			// 	$('.lang-mobile a').trigger('click')
-			// }
-			// if ( !$('header').hasClass('is-open')){
-			// 	// opening: fade in bg then fade in items
-			// }
-			// else {
-			// 	// closing: fade out items then bg
-			// 	$('#navbar-main .navbar-container').fadeOut(500,function(){
-			// 		$('header').removeClass('is-open');
-			// 	});
-			// }
-		})
-		// Languages
-		$('.lang-mobile a').first().on('click',function(e){
-			e.preventDefault();
-			if ( $('header').hasClass('is-open') ){ //close large dropdown if open
-				$('.menu-toggle').trigger('click')
-			}
+        // If the current dropdown is open, close it
+        if ($langMobile.hasClass('is-open')) {
+            $langMobile.removeClass('is-open');
+            $langMobile.find('.dropdown').hide();
+        } else {
+            // Close any other open dropdowns
+            $('#navbar-main .navbar-item').removeClass('dropdown-open');
+            $('.lang-mobile').removeClass('is-open');
+            $('.lang-mobile .dropdown').hide();
 
-			$('.lang-mobile').toggleClass('is-open');
-			// $('body').toggleClass('noscroll');
+            // Open the clicked dropdown
+            $langMobile.addClass('is-open');
+            $langMobile.find('.dropdown').show();
+        }
+    });
 
-			$('.lang-mobile .dropdown').fadeToggle();
-		})
+    // Subnav Toggle
+    $('#navbar-main .navbar-item > .link').on('click', function(e) {
+        var $parent = $(this).closest('.navbar-item');
+        
+        if ($('header').hasClass('is-open') && $parent.find('.dropdown').length) {
+            e.preventDefault();
+            
+            // Close other open submenus
+            $('#navbar-main .navbar-item').not($parent).removeClass('dropdown-open');
+            
+            // Toggle the visibility of the current submenu
+            if (!$parent.hasClass('dropdown-open')) {
+                $parent.addClass('dropdown-open');
+            } else {
+                $parent.removeClass('dropdown-open');
+            }
+        }
+    });
+});
+
 		
-		// Subnav
-		// $('#navbar-main .navbar-item > .link a').on('click',function(e){ //submenus
-			// var $parent = $(this).parent().parent();
-			// if ( $('header').hasClass('is-open') && $parent.find('.dropdown').length ){
-				// e.preventDefault();
-				// if ( $parent.find('.dropdown:visible').length==0 ){
-				// 	// close any and open this one
-				// 	 $('header .dropdown').slideUp();
-				// 	$parent.find('.dropdown').slideToggle();
-				// }
-				// else {
-				// 	// close all
-				// 	$('header .dropdown').slideUp();
-				// }
-			// }
-		// })
 
 
 		// WAYPOINTS - just show if we have scrolled past. effect depends on block type.
@@ -266,23 +268,7 @@ $(window).resize(function(){
 	Layout.resize();
 })
 
-// Close menu when out of div 
-$(function() {      
-    let isMobile = window.matchMedia("only screen and (max-width: 990px)").matches;
 
-    if (isMobile) {
-$(document).mouseup(function(e){
-   var header = $ (".header, .lang-mobile");
-   var menu = $(".navbar, .dropdown");
-   if (!menu.is(e.target) // The target of the click isn't the container.
-   && menu.has(e.target).length === 0) // Nor a child element of the container
-   {
-      header.removeClass('is-open');
-	  menu.hide(); 
-   }
-});
-}
-});
 //Links for Tab
 jQuery(function($){
   var hash = window.location.hash;
@@ -293,7 +279,6 @@ jQuery(function($){
      window.location.hash = this.hash;
   });
 });
-
 // Road Map
 $(document).ready(function() {
     if ($('#road-map').length > 0) {
@@ -302,8 +287,50 @@ $(document).ready(function() {
         }, 'slow'); 
     }
 });
-
-
+/* Slider */
+jQuery(document).ready(function($){
+    // Initialize first slider
+	$('.slider-for').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: false,
+		fade: false,
+		infinite: true,  
+		autoplay: true,  
+		autoplaySpeed: 0,  
+		speed: 8000,  
+		cssEase: 'linear', 
+		responsive: [
+			{
+				breakpoint: 900,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					dots: false
+				}
+			}
+		]
+	});
+    // Initialize second slider
+    $('.slider-testimonial').slick({
+        dots: false,
+		arrows:false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        centerMode: true,
+        variableWidth: true,
+		responsive: [
+			{
+			  breakpoint: 600,
+			  settings: {
+				dots: true
+			  }
+			}
+		]
+    });
+  });
 /* NEWSLETTER FORM SCRIPT SENDGRID 
 const myForm = document.getElementById('dash-nl');
 	const alertContainer = document.getElementById('warningDiv')
