@@ -23,8 +23,8 @@
 		<meta name="theme-color" content="#0A2B69">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="apple-itunes-app" content="app-id=1206647026">
-
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700,900i%7COpen+Sans:400,600,700%7CRoboto+Condensed" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 		<?php wp_head(); ?>
 
@@ -44,44 +44,35 @@
 			<div class="header-bar">
         <div class="line left-line"><?php get_template_part('inc/line.svg'); ?></div>
         <div class="countdown">
-		<a href="/blog/dash-evolution-v1-0-0-release-announcement/"><div class="event-text">Evolution Genesis has been released</div></a>
+            <div class="time-section">
+                <span class="days"></span> <span class="day-text">DAYS</span>
+            </div>
+            <div class="time-section">
+                <span class="hours"></span><span class="dots">:</span>
+                <span class="minutes"></span><span class="dots">:</span>
+                <span class="seconds"></span>
+            </div>
+            <div class="event-text">Until Evolution Genesis Release</div>
+            <a href="#" class="learn-more">Learn more</a>
         </div>
         <div class="line right-line"><?php get_template_part('inc/line-2.svg'); ?></div>
     </div>
 			<header class="header clear" role="banner">
 					<div class="row top">
-						<div class="d-lg-none col-4">
+						<div class="col-lg-2 col-6">
+							<div class="logo">
+								<a href="<?php echo home_url(); ?>">
+									<?php get_template_part('inc/new-dash-logo.svg'); ?>
+								</a>
+							</div>
+						</div>
+						<div class="d-lg-none col-6">
 							<a href="#" class="menu-toggle menu-icon">
+								<span class="bar"></span>
 								<span class="bar"></span>
 								<span class="bar"></span>
 							</a>
 						</div>
-						<div class="col-lg-2 col-4">
-							<div class="logo">
-								<a href="<?php echo home_url(); ?>">
-									<?php get_template_part('inc/dashlogo.svg'); ?>
-								</a>
-							</div>
-						</div>
-						<div class="d-lg-none col-4 text-right">
-							<div class="lang-mobile">
-								<div class="link">
-									<a href="#">
-									<span class="lang-current"></span> 
-									<span class="icon-inline sm caret down">
-										<?php get_template_part('inc/caret.svg'); ?>
-									</span>
-									</a>
-								</div>
-								<div class="dropdown">
-									<div class="d-block d-lg-none mobile-arrow"></div>
-									<?php 
-											do_action('wpml_add_language_selector');
-									?>
-								</div>
-							</div>
-						</div>
-
 						<?php 
 							// $homeid = get_option( 'page_on_front' );
 							$homeid = "option";
@@ -96,7 +87,7 @@
 
 								</div>
 								
-								<div class="d-block d-lg-none mobile-arrow"></div>
+								<!--<div class="d-block d-lg-none mobile-arrow"></div>-->
 
 								<div class="navbar-container">
 									<?php while( have_rows('navigation_main',$homeid) ): the_row();
@@ -107,9 +98,10 @@
 											<a href="<?php echo get_permalink($navposts[0])?>">
 												<?php echo get_sub_field('nav_item_title'); ?>
 											</a>
-											<p class="tagline d-lg-none">
-												<?php echo get_sub_field('nav_tagline'); ?>
-											</p>
+											<span class="arrow"><img src="/wp-content/uploads/arrow-menu.svg"></span>
+											<!--<p class="tagline d-lg-none">
+												<?php //echo get_sub_field('nav_tagline'); ?>
+											</p>-->
 										</div>
 										<?php if (is_countable($navposts)){?>
 											<div class="dropdown">
@@ -125,7 +117,31 @@
 										
 									</div>
 									<?php endwhile; ?>
-
+									<div class="navbar-item lang-mob">
+    <div class="link lang-mobile">
+        <?php 
+            $current_language = apply_filters('wpml_current_language', NULL);
+            $languages = apply_filters('wpml_active_languages', NULL, 'skip_missing=0');
+            if (!empty($languages) && isset($languages[$current_language])) {
+                $current_lang = $languages[$current_language];
+                echo '<a href="#"><img src="' . esc_url($current_lang['country_flag_url']) . '" alt="' . esc_attr($current_lang['translated_name']) . '">';
+                echo '<span>Language | ' . esc_html($current_lang['translated_name']) . '</span></a>';
+            }
+        ?>
+    </div>
+    <div class="dropdown">
+       <!-- <div class="d-block d-lg-none mobile-arrow"></div>-->
+        <?php 
+            if (!empty($languages)) {
+                foreach ($languages as $lang) {
+                    if (!$lang['active']) {
+                        echo '<div class="link"><a href="' . esc_url($lang['url']) . '"><img class="flag" src="' . esc_url($lang['country_flag_url']) . '" alt="' . esc_attr($lang['translated_name']) . '"> ' . esc_html($lang['translated_name']) . '</a></div>';
+                    }
+                }
+            }
+        ?>
+    </div>
+</div>
 									<div class="navbar-item lang">
 										<div class="link">
 											<a href="#">
@@ -140,8 +156,6 @@
 											do_action('wpml_add_language_selector');
 											?>
 										</div>
-									</div>
-
 								</div>
 							</div>
 						</div>
