@@ -98,7 +98,7 @@
 											<a href="<?php echo get_permalink($navposts[0])?>">
 												<?php echo get_sub_field('nav_item_title'); ?>
 											</a>
-											<span class="arrow"><img src="/wp-content/uploads/arrow-menu.svg"></span>
+											<span class="arrow"><img src="/wp-content/uploads/arrow-menu-1.svg"></span>
 											<!--<p class="tagline d-lg-none">
 												<?php //echo get_sub_field('nav_tagline'); ?>
 											</p>-->

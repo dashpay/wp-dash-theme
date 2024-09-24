@@ -426,7 +426,7 @@
   bottom: 0;
   width: 995px;
   height: 560px;
-  background-image: url(/wp-content/uploads/coming-soon-2.png);
+  background-image: url(https://media.dash.org/wp-content/uploads/coming-soon-2-2.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -450,7 +450,7 @@
   #home .caption-container .banner-btn {
     margin-top: 0;
     max-width: 164px;
-    background-image: url(/wp-content/uploads/banner-mob-button.png);
+    background-image: url(https://media.dash.org/wp-content/uploads/banner-mob-button-1.png);
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
@@ -665,7 +665,7 @@
     font-weight: 500;
   }
   #icons-block span.button {
-    background-image: url(/wp-content/uploads/arrow-icon.svg);
+    background-image: url(https://media.dash.org/wp-content/uploads/arrow-icon-1.svg);
     width: 8px;
   }
   .coins img {
