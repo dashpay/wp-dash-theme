@@ -152,9 +152,6 @@ function theme_styles()
     wp_register_style('dashcss', get_template_directory_uri() . '/assets/dash.css', array(), '1.72', 'all');
     wp_enqueue_style('dashcss');
 
-    wp_register_style('homecss', get_template_directory_uri() . '/assets/home.css', array(), '1.70', 'all');
-    wp_enqueue_style('homecss');
-
 }
 
 // Sort exchange list page in alphabetical order: https://www.advancedcustomfields.com/resources/how-to-sorting-a-repeater-field/
@@ -320,7 +317,7 @@ function html5blankgravatar ($avatar_defaults)
 // Load css file only for Home Page
 function load_home_styles() {
     if ( is_front_page() ) {
-        wp_enqueue_style( 'home-css', get_template_directory_uri() . '/assets/home.css' );
+        wp_enqueue_style( 'home-css', get_template_directory_uri() . '/assets/home.css', array(), '1.71', 'all' );
     }
 }
 add_action( 'wp_enqueue_scripts', 'load_home_styles' );
