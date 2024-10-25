@@ -526,6 +526,12 @@
   #testimonial-block h4 {
     font-size: 15px;
   }
+  .slick-slider:lang(ar) {
+    direction: ltr;
+  }
+  .slick-slide:lang(fa-IR) {
+    direction: ltr;
+  }
   ul.slick-dots li button {
     width: 5px;
     height: 5px;
