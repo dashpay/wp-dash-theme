@@ -527,10 +527,10 @@
     font-size: 15px;
   }
   .slick-slider:lang(ar) {
-    direction: ltr;
+    direction: rtl;
   }
   .slick-slide:lang(fa-IR) {
-    direction: ltr;
+    direction: rtl;
   }
   ul.slick-dots li button {
     width: 5px;
