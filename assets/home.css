@@ -447,7 +447,7 @@
   padding-bottom: 0;
 }
 @media (max-width: 700px) {
-  #home .caption-container .banner-btn {
+  /*#home .caption-container .banner-btn {
     margin-top: 0;
     max-width: 164px;
     background-image: url(https://media.dash.org/wp-content/uploads/banner-mob-button-1.png);
@@ -457,7 +457,7 @@
     border: none;
     border-radius: 0;
     color: transparent;
-  }
+  }*/
   #home .banner {
     background-position-x: 0;
     background-position-y: 0;
@@ -476,7 +476,7 @@
   }
   #home .banner .caption-container {
     align-items: self-start;
-    padding: 154px 40px 176px;
+    padding: 127px 40px 176px;
   }
   #home .banner .caption {
     text-align: center;
@@ -525,6 +525,12 @@
   }
   #testimonial-block h4 {
     font-size: 15px;
+  }
+  .slick-slider:lang(ar) {
+    direction: rtl;
+  }
+  .slick-slide:lang(fa-IR) {
+    direction: rtl;
   }
   ul.slick-dots li button {
     width: 5px;

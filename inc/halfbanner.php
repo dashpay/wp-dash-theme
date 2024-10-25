@@ -41,12 +41,5 @@
 	.halfbanner .caption h1 {
 		color: #fff;
 	}
-	header .lang path, header .lang polygon,
-	header .logo path, header .logo polygon {
-		fill: #fff!important;
-	}
-	header a, header a:hover {
-		color: #fff;
-	}
 </style>
 <?php } ?>
