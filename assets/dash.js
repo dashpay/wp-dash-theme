@@ -16,16 +16,6 @@ var Layout = {
       	$(this).text($('.wpml-ls-current-language').first().text())
 
       })
-
-      //generic fade-ins
-		window.sr = ScrollReveal({ reset: true });
-		if ( !Layout.isMobile() ){
-			sr.reveal('.fade-in-left', { duration: 1000, origin: 'left', scale: 1, distance: '50px' });
-			sr.reveal('.fade-in-right', { duration: 1000, origin: 'right', scale: 1, distance: '50px' });
-		}
-		sr.reveal('.fade-in', { duration: 1000, scale: 1 });
-	
-
 	},
 	initNav: function(){
 		// desktop dropdown shape
