@@ -433,7 +433,7 @@ while( have_rows('content_sections') ): the_row();
 				</div>
 				<div class="row">
 					<?php 
-					$args = array( 'post_type' => 'post', 'posts_per_page' => 3 );
+					$args = array( 'post_type' => 'post', 'posts_per_page' => 5, 'ignore_sticky_posts' => 1 );
 					$wp_query = new WP_Query($args);
 					while ( have_posts() ) : the_post(); ?>
 						<div class="col-lg-4 col-md-6">
