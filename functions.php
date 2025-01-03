@@ -322,6 +322,17 @@ function load_home_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'load_home_styles' );
 
+// Load CSS file for Evolution Landing
+function load_specific_page_styles() {
+    $body_classes = get_body_class(); 
+    $target_class = 'evolution'; 
+
+    if ( in_array( $target_class, $body_classes ) ) {
+        wp_enqueue_style( 'specific-page-css', get_template_directory_uri() . '/assets/evo.css', array(), '1.00', 'all' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'load_specific_page_styles' );
+
 
 /*------------------------------------*\
 	Actions + Filters + ShortCodes

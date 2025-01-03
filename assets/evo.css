@@ -1,0 +1,473 @@
+body.evolution {
+    margin: 0;
+    padding: 0;
+    background-color: #000 !important;
+    color: white !important;
+}
+
+#evolution .row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+#evolution .container {
+    width: auto;
+}
+
+#evolution .banner {
+  background-color: transparent;
+  position: relative;
+  text-align: center;
+  background-image: linear-gradient(2deg, #000000 0%, #00000000 21%), url(https://media.dash.org/wp-content/uploads/hero-min.png) !important;
+  background-blend-mode: multiply;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 730px;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 0;
+}
+
+#evolution .banner::before {
+    content: none;
+}
+
+#evolution .bg-white {
+    background-color: transparent !important;
+}
+
+#evolution .block {
+    overflow-x: inherit;
+}
+
+#evolution .banner .caption {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+
+.logo {
+    max-width: 121px;
+    margin-bottom: 20px;
+}
+
+#evolution .banner .caption h1 {
+    font-size: 70px;
+    text-shadow: 0px 0px 55px rgba(255, 255, 255, 0.10), 0px 0px 10px rgba(255, 255, 255, 0.60);
+    margin: 0;
+    font-weight: 800;
+    font-style: normal;
+    line-height: normal;
+}
+
+#evolution .banner .caption p {
+    font-family: "Inter", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+    margin: 0;
+}
+
+.background-block {
+  position: relative;
+  max-width: 1240px;
+  margin: auto;
+}
+
+.background-block img{
+  position: absolute;
+}
+
+.background-block .desk {
+  display: block;
+}
+
+.background-block .mob {
+  display: none;
+}
+
+/* Feature Section Styling */
+.features {
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+.features .background-block img {
+  left: 7%;
+}
+.block.features .block-pad-v {
+    position: relative;
+    max-width: 1240px;
+    border-radius: 30px;
+    margin: -27px auto 0;
+    padding: 100px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(170px);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.features h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 auto 80px;
+    max-width: 630px;
+    color: white !important;
+}
+
+/* Flexbox Layout */
+#evolution .row.pt-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 50px;
+    padding-top: 0 !important;
+}
+
+#evolution .col-lg-3.col-6 {
+    flex: 1 1 250px; 
+    max-width: 300px;
+    text-align: left;
+    padding: 0;
+}
+
+#evolution .btn.btn-vendor {
+    text-align: left;
+    border-radius: 0;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0;
+    background: transparent;
+    border: none;
+    color: white;
+    flex-direction: column;
+    padding: 0;
+}
+
+#evolution .btn.btn-vendor .icon {
+    margin-right: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#evolution .btn.btn-white:hover {
+    box-shadow: none;
+    cursor: auto;
+}
+
+.features .btn.btn-vendor .title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.features .btn.btn-vendor .link {
+    font-size: 17px;
+    color: #B4BAC0;
+    line-height: 22px;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+/* Flex Layout for Items */
+.evolution-features {
+    width: 100%;
+    text-align: center;
+}
+
+.evolution-features .background-block img {
+  left: 22%;
+  top: 74px;
+}
+
+.block.evolution-features .block-pad-v {
+    position: relative;
+    max-width: 1240px;
+    background-position: center;
+    border-radius: 30px;
+    padding: 100px;
+    margin: 26px auto;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(170px);
+}
+
+.evolution-features .container-sm h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    margin: 10px 0;
+    color: white !important;
+}
+
+.evolution-features .container-sm p {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    margin: 0;
+}
+
+#evolution .evolution-features .row.pt-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+    margin-top: 80px;
+}
+
+#evolution .evolution-features .btn.btn-vendor {
+    flex-direction: row;
+    gap: 15px;
+}
+
+#evolution .evolution-features .col-lg-3.col-6 {
+    flex: 1 1 45%; 
+    max-width: 500px;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.evolution-features .btn.btn-vendor .icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.evolution-features .btn.btn-vendor .title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.evolution-features .btn.btn-vendor .link {
+    margin: 5px 0;
+    line-height: 22px;
+    color: #B4BAC0;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* Testimonial Section Styling */
+.testimonials {
+    padding: 0 100px;
+    background-color: #000;
+    color: white;
+    text-align: left;
+}
+
+.testimonials .text-lg-center {
+    text-align: left !important;
+}
+
+.block.testimonials .block-pad-v {
+    padding-top: 50px;
+    padding-bottom: 0;
+}
+
+.testimonials-block {
+    display: flex;
+    max-width: 1040px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.testimonial {
+    max-width: 45%; 
+}
+
+.testimonial p {
+    font-size: 34px;
+    font-weight: 800;
+    margin: 0 0 10px;
+    line-height: 42px;
+}
+
+.testimonial span {
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    opacity: 0.6;
+}
+
+.testimonial-second p span {
+    font-style: normal;
+    font-weight: 500;
+}
+
+.testimonial-second p {
+    font-style: italic;
+}
+
+/* CTA Section Styling */
+.cta {
+    width: 100%;
+    text-align: center;
+}
+
+.cta .background-block img {
+    left: 7%;
+    top: 77px;
+}
+
+.block.cta .block-pad-v{
+    position: relative;
+    max-width: 1240px;
+    border-radius: 30px;
+    padding: 60px;
+    margin: 26px auto 50px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(0, 141, 228, 0.08);
+    backdrop-filter: blur(170px);   
+}
+
+.cta p {
+    max-width: 600px;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0 auto 30px;
+    line-height: 34px;
+}
+
+.cta-button {
+  background-color: white;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  height: 46px;
+  width: 181px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+a.cta-button:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+@media (max-width: 1250px) {
+    .block.features .block-pad-v, .block.evolution-features .block-pad-v, .block.cta .block-pad-v {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 1150px) {
+    #evolution .banner {
+    background-size: cover;
+  }
+  .background-block img {
+    width: 50%;
+    left: 0;
+  }
+}
+
+@media (max-width: 800px) {
+    .block.features .block-pad-v, .block.evolution-features .block-pad-v, .block.testimonials .block-pad-v, .block.cta .block-pad-v {
+    padding: 50px 20px;
+    margin: 20px;
+  }
+
+  .block.testimonials .block-pad-v {
+    padding-bottom: 0;
+  }
+
+  #evolution .banner .caption h1 {
+    font-size: 36px;
+  }
+
+  .background-block {
+    max-width: 390px;
+  }
+
+  #evolution .row.pt-4 {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 30px;
+  } 
+
+  #evolution .col-lg-3.col-6 {
+    flex: 1 1 175px;
+    max-width: 100%;
+  }
+
+  .testimonial {
+    max-width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .testimonials {
+    padding: 0;
+  }
+
+  .img-wrapper {
+    margin-bottom: 0px;
+  }
+
+  #evolution .evolution-features .btn.btn-vendor, .testimonials-block {
+    flex-direction: column;
+  }
+
+  .features h2, .evolution-features .container-sm h2, .testimonial p {
+    font-size: 26px;
+    max-width: 360px;
+    line-height: 32px;
+  }
+
+  .features h2 {
+    margin: 0 auto 40px;
+  }
+
+  .evolution-block p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .cta p, #evolution .banner .caption p {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+
+  .feature-item h3, .evolution-item h3 {
+    font-size: 17px;
+  }
+
+  .feature-item p, .evolution-item p {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .background-block img {
+    width: 100%;
+  }
+
+  .background-block .desk {
+    display: none;
+  }
+  
+  .background-block .mob {
+    display: block;
+  }
+
+  .features .background-block img, .evolution .background-block img, .cta .background-block img {
+    left: 0;
+  }
+
+  .evolution-item img {
+    width: 35px;
+  }
+
+  .block.cta .block-pad-v {
+    margin-bottom: 60px;
+  }
+}

@@ -251,7 +251,6 @@ h6 {
 }
 
 .btn {
-  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   min-width: 200px;
   padding: 12px 25px;
@@ -1126,7 +1125,6 @@ span.arrow {
 }
 .banner .caption p {
   font-size: 18px;
-  font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
 .banner .caption a.playvideo-js {
@@ -3543,9 +3541,6 @@ html[dir="rtl"] #navbar-main .navbar-item .dropdown {
 }
 
 /* FONT OVERRIDES */
-.widget-container .itb-widget * {
-  font-family: "Montserrat" !important;
-}
 
 /* TOKEN SUMMARY OVERRIDES */
 .widget-container .itb-widget .summary .legend .value {
