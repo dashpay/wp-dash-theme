@@ -131,7 +131,13 @@
 			$post = $posts[1];
 			setup_postdata($post); ?>
 			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-			<?php wp_reset_postdata(); ?>							
+			<span class="divider">|</span>
+			<?php 
+			$post = $posts[2];
+			setup_postdata($post); ?>
+			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			<?php wp_reset_postdata(); ?>	
+
 		</div>
 	</div>
 
