@@ -148,13 +148,13 @@ h6 {
   height: 1.2em;
 }
 .icon-el.twitter {
-  background-image: url(img/icon-twitter.svg);
+  background-image: url(https://wp.dash.org/wp-content/themes/dash-theme/assets/img/icon-twitter.svg);
 }
 .icon-el.youtube {
   background-image: url(img/icon-youtube-1.svg);
 }
 .icon-el.linkedin {
-  background-image: url(img/icon-linkedin-1.svg);
+  background-image: url(https://wp.dash.org/wp-content/themes/dash-theme/assets/img/icon-linkedin-1.svg);
 }
 .icon-el.facebook {
   background-image: url(img/icon-facebook-1.svg);
@@ -163,10 +163,10 @@ h6 {
   background-image: url(img/icon-instagram-1.svg);
 }
 .icon-el.github {
-  background-image: url(img/icon-github.svg);
+  background-image: url(https://wp.dash.org/wp-content/themes/dash-theme/assets/img/icon-github.svg);
 }
 .icon-el.discord {
-  background-image: url(img/icon-discord-1.svg);
+  background-image: url(https://wp.dash.org/wp-content/themes/dash-theme/assets/img/icon-discord-1.svg);
 }
 .icon-el.dashforum {
   background-image: url(img/icon-dashforum-2.svg);
