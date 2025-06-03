@@ -65,7 +65,10 @@ while( have_rows('content_sections') ): the_row();
 	$padding = $padding?$padding:'block-pad-v';
 ?>
 <section class="block <?php echo $section_class;?> <?php echo $bg;?> <?php echo implode(' ',$classes); ?>" <?php if ($section_id!=''){echo "id=\"$section_id\"";} ?>>
-	<div class="container <?php echo $padding; ?>">
+            <div class="added-code">
+				<?php echo get_sub_field('section_code') ?>
+			</div>	
+<div class="container <?php echo $padding; ?>">
 
 		<?php if ($type=='text'){ ?>
 			<div class="text-section-header-wrap">

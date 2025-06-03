@@ -16,6 +16,7 @@ var Layout = {
       	$(this).text($('.wpml-ls-current-language').first().text())
 
       })
+
 	},
 	initNav: function(){
 		// desktop dropdown shape
@@ -279,7 +280,6 @@ $(document).ready(function() {
 });
 /* Slider */
 jQuery(document).ready(function($){
-    // Initialize first slider
 	$('.slider-for').slick({
 		slidesToShow: 5,
 		slidesToScroll: 1,
@@ -302,7 +302,6 @@ jQuery(document).ready(function($){
 			}
 		]
 	});
-    // Initialize second slider
     $('.slider-testimonial').slick({
         dots: false,
 		arrows:false,
@@ -321,6 +320,76 @@ jQuery(document).ready(function($){
 		]
     });
   });
+
+  $('#navbar-footer .navbar-item > .link').on('click', function(e) {
+	var $parent = $(this).closest('.navbar-item');
+		$('#navbar-footer .navbar-item').not($parent).removeClass('dropdown-open');	
+		if (!$parent.hasClass('dropdown-open')) {
+			$parent.addClass('dropdown-open');
+		} else {
+			$parent.removeClass('dropdown-open');
+		}
+});
+
+
+$(document).ready(function() {
+	$('.sg_email').on('input', function() {
+		if ($(this).val().trim().length >= 3) {
+			$('.sg-submit-btn').show();
+		} else {
+			$('.sg-submit-btn').hide();
+		}
+	});
+
+	$('.sg_email').blur(function() {
+		if ($(this).val().trim() === '') {
+			$('.sg-submit-btn').hide();
+		}
+	});
+
+	$('#dash-nl').on('submit', function(event) {
+		event.preventDefault();
+
+		const email = $('.sg_email').val().trim();
+
+		if (!validateEmail(email)) {
+			$('#emailError').text('Please enter a valid email.').show();
+			$('#successMessage').hide();
+			return;
+		}
+
+		const apiUrl = $(this).attr('action') + '?contacts=' + encodeURIComponent(email);
+
+		$.ajax({
+			url: apiUrl,
+			method: 'GET',
+			success: function(response) {
+				$('.sg_email').hide();
+				$('.sg-submit-btn').hide();
+				$('#successMessage').text('You have been successfully subscribed!').show();
+				$('#emailError').hide();
+			},
+			error: function(xhr) {
+				let message = 'Sorry, try again';
+				try {
+					const response = JSON.parse(xhr.responseText);
+					message = response.message || message;
+				} catch (e) {}
+				$('#emailError').text(message).show();
+				$('#successMessage').hide();
+			}
+		});
+	});
+
+	function validateEmail(email) {
+		const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return re.test(String(email).toLowerCase());
+	}
+});
+
+	
+
+
 /* NEWSLETTER FORM SCRIPT SENDGRID 
 const myForm = document.getElementById('dash-nl');
 	const alertContainer = document.getElementById('warningDiv')
