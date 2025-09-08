@@ -16,7 +16,7 @@
 							<a href="https://github.com/dashpay"><div class="icon-el github"></div></a>
 							<a href="https://discordapp.com/invite/PXbUxJB"><div class="icon-el discord"></div></a>
 							<a href="https://t.me/dash_chat"><div class="icon-el telegram"></div></a>
-							<a href="https://staging-www.dash.org/forum/"><div class="icon-el dashforum"></div></a>
+							<a href="https://www.dash.org/forum/"><div class="icon-el dashforum"></div></a>
 							<a href="https://blog.dash.org/"><div class="icon-el dashblog"></div></a>
 						</div>
 
@@ -81,7 +81,7 @@
                         <a href="<?php echo get_permalink($navposts[0]->ID); ?>">
                             <?php echo get_the_title($navposts[0]->ID); ?>
                         </a>
-                        <span class="arrow"><img src="/wp-content/uploads/arrow-menu.svg"></span>
+                        <span class="arrow"><img src="/wp-content/uploads/arrow-menu-1.svg"></span>
                     </div>
                     <!-- Check if there are more than one post and create dropdown -->
                     <?php if ( count($navposts) > 1 ): ?>
@@ -106,8 +106,8 @@
 				    <img src="https://media.dash.org/wp-content/uploads/support.svg">
 				  </div>
 				  <div class="t-support">
-				  <strong>Contact support</strong>
-				  <p>Full services support desk with humans</p>
+				  <strong><?php _e('Contact support', 'dash-theme'); ?></strong>
+        <p><?php _e('Full services support desk with humans', 'dash-theme'); ?></p>
 				  </div>
 					</div></a>
 					<div class="row newsletter">

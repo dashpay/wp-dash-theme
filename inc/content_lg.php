@@ -18,6 +18,7 @@ while( have_rows('content_sections') ): the_row();
 	// cta_with_background_image: CTA with Background Image
 	// slider_images : Slider Logos
 	// slider_testimonials : Slider Testimonials
+	// section_code : Code
 
 	$count++;
 
@@ -65,9 +66,6 @@ while( have_rows('content_sections') ): the_row();
 	$padding = $padding?$padding:'block-pad-v';
 ?>
 <section class="block <?php echo $section_class;?> <?php echo $bg;?> <?php echo implode(' ',$classes); ?>" <?php if ($section_id!=''){echo "id=\"$section_id\"";} ?>>
-            <div class="added-code">
-				<?php echo get_sub_field('section_code') ?>
-			</div>	
 <div class="container <?php echo $padding; ?>">
 
 		<?php if ($type=='text'){ ?>
@@ -83,6 +81,12 @@ while( have_rows('content_sections') ): the_row();
 			<div class="richtext text-lg-center">
 				<?php echo get_sub_field('section_description') ?>
 			</div>
+		<?php } ?>
+		
+		<?php if ($type=='section_code'){ ?>
+		<div class="added-code">
+			<?php echo get_sub_field('section_code'); ?>
+		</div>
 		<?php } ?>
 
 		<?php if ($type=='callouts'){ ?>
