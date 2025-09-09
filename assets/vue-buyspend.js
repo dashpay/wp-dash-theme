@@ -18,9 +18,10 @@ Vue.component('dash-buyspend', {
       items: [],
       items_all: [],
 
+      tabFilter: 'exchange',
+
       // 'capApi':'https://www.coincap.io/front/',
       'buyApi':'https://exchapi.dashevo.org/exchange/'
-
     }
   },
   mounted: function(){
@@ -34,18 +35,6 @@ Vue.component('dash-buyspend', {
     if (this.vendors.length){
       this.items_all = JSON.parse(this.vendors);
       if (this.type=='buy'){
-/*
-        that.currencyFilter = that.items_all[0].currencies;
-        // setup currency filter and buy method filter
-        for (var curr in that.currencyFilter) {
-          that.currencies.push(curr.toUpperCase());
-          that.currencyFilter[curr].forEach(function(method){
-            if ( that.methods.indexOf(method)<0 ){
-              that.methods.push(method);
-            }
-          })
-        }
-*/
         for (var exchange in that.items_all) {
           for (var currencies in that.items_all[exchange].currency) {
             var currency = that.items_all[exchange].currency[currencies];
@@ -54,7 +43,6 @@ Vue.component('dash-buyspend', {
             }
           }
         }
-        //this.items_all.shift();
         that.filter();
 
         // get the prices from API, later
@@ -76,20 +64,6 @@ Vue.component('dash-buyspend', {
           })
           that.filter();
         });
-/*
-        $.ajax({
-          url: that.capApi,
-          error: function(jqXHR, textStatus, errorThrown) {
-            console.log(jqXHR);
-            console.log(textStatus);
-            console.log('errorThrown:', errorThrown);
-          }
-        }).done(function(prices) {
-          console.log(prices);
-          // that.filter();
-        });
-*/
-
       }
       else {
         this.items_all.forEach(function(el){
@@ -113,16 +87,12 @@ Vue.component('dash-buyspend', {
           }
         })
       this.filter();
-
       }
-
 
       that.methods = that.sortArray(that.methods);
       that.currency = that.sortArray(that.currencies);
       that.categories = that.sortArray(that.categories);
     }
-
-
   },
   watch : {
     currency_c: function(){
@@ -182,7 +152,6 @@ Vue.component('dash-buyspend', {
           }
         })
       }
-
     },
     sortArray: function(array){
       var s = array.sort(function(a, b){
@@ -213,5 +182,4 @@ if ( $('dash-buyspend').length ){
   new Vue({
     el: 'dash-buyspend'
   });
-
 }
