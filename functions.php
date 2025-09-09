@@ -104,7 +104,7 @@ function theme_scripts()
         wp_register_script('trustpilot','https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js',[],false,true);
         wp_enqueue_script('trustpilot'); 
         
-        wp_register_script('dash', get_template_directory_uri() . '/assets/dash.js',[],'1.69',true);
+        wp_register_script('dash', get_template_directory_uri() . '/assets/dash.js',[],'1.70',true);
         wp_enqueue_script('dash');
         wp_register_script('vue-buyspend', get_template_directory_uri() . '/assets/vue-buyspend.js',[],'1.21',true);
         wp_enqueue_script('vue-buyspend');
