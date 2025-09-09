@@ -387,6 +387,30 @@ $(document).ready(function() {
 	}
 });
 
+		// Play video animation on hover 
+		$(document).ready(function() {
+			$('.card').hover(
+			  function() {
+				$(this).find('.hover-video')[0].play();
+			  },
+			  function() {
+				var video = $(this).find('.hover-video')[0];
+				video.pause();
+				video.currentTime = 0;
+			  }
+			);
+		  });
+		  
+		  // HEADER on scroll
+		  $(document).ready(function() {
+			$(window).on('scroll', function() {
+			  if ($(this).scrollTop() > 10) {
+				$('header').addClass('scrolled');
+			  } else {
+				$('header').removeClass('scrolled');
+			  }
+			});
+		  });
 	
 
 
