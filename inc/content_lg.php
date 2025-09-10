@@ -104,8 +104,6 @@ while( have_rows('content_sections') ): the_row();
 				<h4><?php echo get_sub_field('section_subheading'); ?></h4>
 				<?php } ?>
 			</div>
-
-			<div class="card-deck">
 			<?php
 $links = get_sub_field('block_list');
 $class = "card border-0 text-center bg-transparent";
