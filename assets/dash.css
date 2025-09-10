@@ -7,6 +7,21 @@ html {
   scroll-behavior: smooth;
 }
 
+html *:lang(fa-IR) {
+  direction: ltr;
+}
+
+html[lang="fil-PH"] .sg_email,
+html[lang="ru-RU"] .sg_email,
+html[lang="fr-FR"] .sg_email,
+html[lang="uk"] .sg_email {
+  width: 195px;
+}
+
+html[dir="rtl"] .subscription-form {
+  flex-direction: row-reverse;
+}
+
 body {
   font-family: "Inter", sans-serif;
   color: #191c1f;
@@ -60,7 +75,7 @@ h6 {
 
 h1 {
   font-size: 50px;
-  line-height: 56px;
+  line-height: 42px;
 }
 
 h2 {
@@ -83,6 +98,46 @@ h5 {
 h6 {
   font-size: 15px;
 }
+
+/* Cookies */
+#cookie-law-info-bar {
+  padding: 12px 0 12px 20px;
+  font-size: 13px;
+  max-width: 485px;
+  left: 33%;
+  right: 33%;
+  border-radius: 16px;
+  bottom: 10px !important;
+}
+
+#cookie-law-info-bar span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#cookie_action_close_header {
+  order: 2;
+}
+
+#CONSTANT_OPEN_URL {
+  order: 1;
+}
+
+.cli-plugin-button,
+.cli-plugin-button:visited,
+.medium.cli-plugin-button,
+.medium.cli-plugin-button:visited {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.cli-plugin-button,
+.cli-plugin-button:visited {
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
 
 /** SHARE ICONS **/
 .social-share {
@@ -1479,6 +1534,30 @@ a.btn-google img {
   height: 50px;
 }
 
+#businesses .row.pt-4 {
+  justify-content: center;
+}
+
+#graphic .d-none {
+  display: block !important;
+}
+
+#graphic .image {
+  display: flex;
+}
+
+.slick-slider:lang(ar) {
+  direction: ltr;
+}
+
+.slick-slide:lang(fa-IR) {
+  direction: ltr;
+}
+
+.thumb.color-seven {
+  background: #001624;
+}
+
 /* NEW NO BANNER HOME*/
 .two-block-section {
   width: 100%;
@@ -1494,6 +1573,8 @@ a.btn-google img {
   font-style: normal;
   font-weight: 800;
   line-height: 42px;
+  z-index: 99999;
+
 }
 
 .two-block-section p {
@@ -1515,6 +1596,10 @@ a.btn-google img {
   border-radius: 30px;
   line-height: 24px;
   font-size: 14px;
+}
+
+#new-hero {
+  padding-top: 30px;
 }
 
 #new-hero .static-back .btn {
@@ -3662,6 +3747,7 @@ section#pay {
 footer {
   color: #cdcdcd;
   font-size: 14px;
+  margin-top: 20px;
 }
 
 footer .container {
@@ -3905,17 +3991,25 @@ footer .copyright {
   display: flex;
 }
 
+.form-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
 .sg_email {
-  flex-grow: 1;
-  margin-right: 29px;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-right: 10px;
+  padding: 0 10px;
+  font-size: 13px;
+  font-weight: 400;
   border: none;
   outline: none;
-  padding: 0 10px;
   background-color: rgb(242 249 254);
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 18px;
+  width: 211px;
 }
 
 input.sg_email::placeholder {
@@ -3934,15 +4028,16 @@ button.sg-submit-btn:focus {
 }
 
 .sg-submit-btn {
-  padding: 0;
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  background: transparent;
   color: #008de4;
   border: none;
   cursor: pointer;
-  background: transparent;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 18px;
+  padding: 0 10px;
 }
 
 .sg-submit-btn {
@@ -5025,6 +5120,21 @@ section#app-section-five:after {
   border-top-right-radius: 5% 40px;
 }
 
+#home .banner {
+  display: block;
+  min-height: 830px
+}
+
+#home .static-back .btn.btn-white:hover {
+  background: #fff !important;
+}
+
+#home .btn.btn-white:hover {
+  border-color: none;
+  box-shadow: none;
+  background: rgba(120, 196, 245, 0.15);
+}
+
 @media (max-width: 990px) {
   #app-section-four .row.align-items-center {
     flex-direction: column-reverse;
@@ -5071,7 +5181,7 @@ section#app-section-five:after {
     display: none;
   }
 
-  #app-section-two .card-deck .card-deck {
+  #app-section-two .card-deck {
     width: 100%;
     margin: 0;
     display: flex;
@@ -5085,11 +5195,11 @@ section#app-section-five:after {
     scrollbar-width: none;
   }
 
-  #app-section-two .card-deck .card-deck::-webkit-scrollbar {
+  #app-section-two .card-deck::-webkit-scrollbar {
     display: none;
   }
 
-  #app-section-two .card-deck .card-deck .card {
+  #app-section-two .card-deck .card {
     box-sizing: border-box;
     flex: 0 0 85%;
     max-width: 85%;
@@ -5100,7 +5210,7 @@ section#app-section-five:after {
     min-width: 0;
   }
 
-  #app-section-two .card-deck .card-deck::after {
+  #app-section-two .card-deck::after {
     content: "";
     flex: 0 0 16px;
   }
@@ -5158,13 +5268,13 @@ section#app-section-five:after {
     margin-bottom: 15px;
   }
 
-  #app-section-six .card-deck .card-deck {
+  #app-section-six .card-deck {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
   }
 
-  #app-section-six .card-deck .card-deck .card {
+  #app-section-six .card-deck .card {
     box-sizing: border-box;
     flex: 1 1 calc(50% - 10px);
     background: #f5f6f7 !important;
@@ -5177,7 +5287,7 @@ section#app-section-five:after {
     min-height: 96px;
   }
 
-  #app-section-six .card-deck .card-deck .callout-image {
+  #app-section-six .card-deck .callout-image {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5185,14 +5295,14 @@ section#app-section-five:after {
     height: 100%;
   }
 
-  #app-section-six .card-deck .card-deck .callout-image img {
+  #app-section-six .card-deck .callout-image img {
     max-height: 36px;
     width: auto;
   }
 
-  #app-section-six .card-deck .card-deck .card-body,
-  #app-section-six .card-deck .card-deck .card-title,
-  #app-section-six .card-deck .card-deck .card-text {
+  #app-section-six .card-deck .card-body,
+  #app-section-six .card-deck .card-title,
+  #app-section-six .card-deck .card-text {
     display: none !important;
   }
 
@@ -5243,7 +5353,7 @@ section#app-section-five:after {
 }
 
 @media (max-width: 420px) {
-  #app-section-six .card-deck .card-deck .card {
+  #app-section-six .card-deck .card {
     flex: 1 1 100%;
   }
 }
@@ -5368,6 +5478,21 @@ section#app-section-five:after {
 
   #home .banner .caption {
     padding: 0;
+  }
+
+  #home .banner {
+    background-image: none !important;
+    background-color: #fff;
+    height: auto;
+  }
+
+  #buy-block .col-lg-6 {
+    flex: 0 0 100%;
+    max-width: 100%
+  }
+
+  .subscription-form {
+    max-width: 100%;
   }
 
   #navbar-main .navbar-item .dropdown .link a {
