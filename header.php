@@ -20,7 +20,6 @@
 
 		<meta name="msapplication-TileColor" content="#0A2B69">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/img/icons/favicon/ms-icon-144x144.png">
-		<meta name="theme-color" content="#0A2B69">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="apple-itunes-app" content="app-id=1206647026">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
