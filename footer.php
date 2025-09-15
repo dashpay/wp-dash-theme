@@ -13,10 +13,10 @@
 						<strong><?php echo get_field('discussion_text',$homeid);?></strong>
 
 						<div class="link-container d-flex justify-content-between">
-							<a href="https://github.com/dashpay"><div class="icon-el github"></div></a>
-							<a href="https://discordapp.com/invite/PXbUxJB"><div class="icon-el discord"></div></a>
-							<a href="https://t.me/dash_chat"><div class="icon-el telegram"></div></a>
-							<a href="https://www.dash.org/forum/"><div class="icon-el dashforum"></div></a>
+							<a href="https://github.com/dashpay" target="_blank"><div class="icon-el github"></div></a>
+							<a href="https://discordapp.com/invite/PXbUxJB" target="_blank"><div class="icon-el discord"></div></a>
+							<a href="https://t.me/dash_chat" target="_blank"><div class="icon-el telegram"></div></a>
+							<a href="https://www.dash.org/forum/" target="_blank"><div class="icon-el dashforum"></div></a>
 							<a href="https://blog.dash.org/"><div class="icon-el dashblog"></div></a>
 						</div>
 
@@ -26,11 +26,11 @@
 					<div class="container-xs">
 						<strong><?php echo get_field('social_text',$homeid);?></strong>
 						<div class="link-container d-flex justify-content-between">
-							<a href="https://reddit.com/r/dashpay/"><div class="icon-el reddit"></div></a>
-							<a href="https://twitter.com/Dashpay"><div class="icon-el twitter"></div></a>
-							<a href="https://www.youtube.com/c/DashOrg"><div class="icon-el youtube"></div></a>
-							<a href="https://www.linkedin.com/company/10424093"><div class="icon-el linkedin"></div></a>
-							<a href="https://www.instagram.com/dashpay/"><div class="icon-el instagram"></div></a>
+							<a href="https://reddit.com/r/dashpay/" target="_blank"><div class="icon-el reddit"></div></a>
+							<a href="https://twitter.com/Dashpay" target="_blank"><div class="icon-el twitter"></div></a>
+							<a href="https://www.youtube.com/c/DashOrg" target="_blank"><div class="icon-el youtube"></div></a>
+							<a href="https://www.linkedin.com/company/10424093" target="_blank"><div class="icon-el linkedin"></div></a>
+							<a href="https://www.instagram.com/dashpay/" target="_blank"><div class="icon-el instagram"></div></a>
 						</div>
 					</div>
 				</div>

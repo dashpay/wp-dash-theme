@@ -1755,7 +1755,7 @@ a.btn-google img {
   align-items: baseline;
 }
 
-#buy-block ul.buy-tabs {
+ul.buy-tabs {
   display: flex;
   gap: 20px;
   padding: 20px 0;
@@ -1772,7 +1772,7 @@ a.btn-google img {
   text-align: left !important;
 }
 
-#buy-block ul.buy-tabs li {
+ul.buy-tabs li {
   padding: 6px 12px;
   border-radius: 20px;
   border: none;
@@ -1782,7 +1782,7 @@ a.btn-google img {
   transition: all 0.3sease;
 }
 
-#buy-block ul.buy-tabs li.active {
+ul.buy-tabs li.active {
   background-color: rgba(0, 141, 228, 0.05);
   color: #007bff;
   border: none;
@@ -3378,6 +3378,215 @@ input.is-copied {
 
 .roadmap-modal .border-right {
   border-right: 1px solid #787878;
+}
+
+/* Spend Page */
+#spend .halfbanner.bg.bg-lightgray.with-bgimg {
+  background: #fff;
+}
+
+#spend .col-lg-4 {
+  display: none;
+}
+
+#spend .col-lg-6.ml-auto.mt-auto {
+  flex: 0 0 100%;
+  max-width: 100%;
+  background: #018de3;
+  border-radius: 20px;
+  padding: 50px 20px 0;
+  overflow: hidden;
+}
+
+#spend section.spend-dash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#spend .spend-dash__content {
+  width: 100%;
+  max-width: 620px;
+  text-align: center;
+}
+
+#spend .spend-dash h2,
+#spend .spend-dash p {
+  color: #fff;
+}
+
+#spend .spend-dash p {
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+#spend .spend-dash video {
+  width: 600px;
+  margin-bottom: -12px;
+  clip-path: inset(0 2px 0 2px);
+}
+
+
+#spend .bg-light.py-4.filter-bar {
+  background: #fff !important;
+  padding: 0 !important;
+}
+
+#spend ul.buy-tabs {
+  padding: 0;
+}
+
+#spend .container.py-5.spend {
+  padding: 0 !important;
+}
+
+.container.py-5.spend-container {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.spend-container img.img-fluid {
+  width: 100%;
+  min-width: 265px;
+  position: absolute;
+  top: 24px;
+  bottom: 0;
+  right: 0;
+}
+
+.spend-container .row.align-items-center.mb-5 {
+  position: relative;
+  width: 50%;
+  background: #008de4;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 50px 0 0 50px;
+  min-height: 380px;
+  align-content: flex-start;
+}
+
+.spend-container .row.align-items-center.mb-5:nth-of-type(2) {
+  background: #000;
+}
+
+.spend-container .col-lg-6.mb-4.mb-lg-0 {
+  max-width: 60%;
+  flex: 0 0 60%;
+  padding: 0;
+  z-index: 9999;
+}
+
+.spend-container h3.mb-3 {
+  color: #fff;
+}
+
+.spend-container .mb-3.richtext {
+  color: #fff;
+  opacity: 0.75;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+@media (min-width: 992px) {
+  .spend-container .col-lg-6.text-center {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+}
+
+.block .buttons .btn {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background-color: #ffffff;
+  border: none;
+  text-decoration: none;
+  font-weight: 600;
+  color: #008de4;
+  position: relative;
+  font-size: 12px;
+  min-width: 100px;
+}
+
+.buttons a.btn.btn-blue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #000;
+  min-width: 121px;
+  margin: 0;
+}
+
+.buttons a.btn.btn-blue::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.buttons a.btn.btn-blue:nth-child(1)::before {
+  background-image: url(https://media.dash.org/wp-content/uploads/Vector.svg);
+}
+
+.buttons a.btn.btn-blue:nth-child(2)::before {
+  background-image: url(https://media.dash.org/wp-content/uploads/apple-l.svg);
+}
+
+.spend-container video {
+  position: absolute;
+  width: 600px;
+  right: 0;
+  top: -170px;
+  bottom: 0;
+  left: -224px;
+}
+
+@media (max-width: 600px) {
+  .container.py-5.spend-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 35px;
+    align-items: center;
+  }
+
+  .spend-container .row.align-items-center.mb-5 {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 0 !important;
+  }
+
+  .spend-container .col-lg-6.mb-4.mb-lg-0 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .spend-container img.img-fluid {
+    top: -25px;
+    right: -27px;
+  }
+
+  .spend-container .col-lg-6.text-center {
+    height: 200px;
+  }
+
+  .spend-container video {
+    top: -100px;
+    left: -140px;
+  }
+
+  #spend ul.buy-tabs {
+    padding: 20px;
+  }
 }
 
 /* DASHPAY NEW PAGE */
