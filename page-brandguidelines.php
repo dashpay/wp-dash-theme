@@ -1,175 +1,229 @@
-<?php 
-/* Template Name: Buy or Spend */ 
+<?php
+/* Template Name: Brand Guidelines */
 get_header(); ?>
 
+
 <div id="<?php echo get_field('main_id'); ?>" class="page-halfbanner">
-	<?php get_template_part('inc/halfbanner'); ?>
 
-	<?php 
-	$vendors = [];
-	if ( get_field( "buyspend_page_type" ) == 'spend' ) {
-		$vendors = json_encode(get_field( "spend_vendors"));
-	} elseif ( get_field( "buyspend_page_type" ) == 'buy' ) {
-		$vendors = get_field( "buy_vendor_json");
-	} else {
-		$vendors = json_encode(get_field( "full_list_vendors"));
-	}
-	?>
+    <?php get_template_part('inc/halfbanner'); ?>
 
-	<dash-buyspend 
-		type="<?php echo get_field( "buyspend_page_type" ); ?>" 
-		vendors='<?php echo $vendors; ?>'
-		inline-template>
-			<div v-cloak>
+    <?php if ( !empty( get_the_content() ) ){ ?>
+    <section class="block block-text bg-white">
+        <div class="container-sm block-pad-v">
+            <div class="richtext text-lg-center">
+                <?php the_content(); ?>
+            </div>
+        </div>
+    </section>
+    <?php }?>
 
-				<!-- Filter Tabs for BUY -->
-				<div class="bg-light py-4 filter-bar" v-if="type=='buy'">
-					<div class="container-sm">
-						<?php if (get_field('buy_tabs_title')): ?>
-							<h3 class="mb-3 text-center"><?php the_field('buy_tabs_title'); ?></h3>
-						<?php endif; ?>
-						<ul class="buy-tabs">
-							<li :class="{ active: tabFilter === 'exchange' }" @click="tabFilter = 'exchange'">Exchange</li>
-							<li :class="{ active: tabFilter === 'onramp' }" @click="tabFilter = 'onramp'">Onramp</li>
-							<li :class="{ active: tabFilter === 'dex' }" @click="tabFilter = 'dex'">DEX</li>
-							<li :class="{ active: tabFilter === 'swap' }" @click="tabFilter = 'swap'">Swap</li>
-						</ul>
-					</div>
-				</div>
+    <div class="container">
 
-				<!-- Category Tabs for SPEND (Grid Layout) -->
-				<div class="bg-light py-4 filter-bar" v-if="type=='spend'">
-					<div class="container py-5 spend">
-						<ul class="buy-tabs">
-							<li :class="{ active: category_c === '' }" @click="category_c = ''">All</li>
-							<li v-for="cat in categories" 
-    v-if="cat" 
-    :key="cat" 
-    :class="{ active: category_c === cat }" 
-    @click="category_c = cat">
-    {{ cat }}
-</li>
+        <section class="block block-tabs" style="padding-top: 50px;">
+            <div class="container">
+                <nav>
+                    <div class="nav nav-tabs" role="tablist">
+                        <?php
+                        $panel = 0;
+                        while( have_rows('tab_list') ):
+                            the_row();
+                            $panel++;
+                        ?>
+                        <a
+                        class="nav-item nav-link <?php echo $panel==1?'active':'' ?>"
+                         id="group-label<?php echo $panel?>"
+                         data-toggle="tab"
+                         href="#group-tab<?php echo $panel?>"
+                         role="tab"
+                         aria-controls="nav-home"
+                         style="padding-right: 75px;">
+                            <?php the_sub_field('tab_title'); ?>
+                        </a>
+                        <?php endwhile; ?>
+                    </div>
+                </nav>
 
-						</ul>
-					</div>
-				</div>
+                <div class="tab-content">
 
-				<?php if ( !empty( get_the_content() ) ){ ?>
-				<section class="block block-text bg-white">
-					<div class="container-sm block-pad-v">
-						<div class="richtext text-lg-center">
-							<?php the_content(); ?>
-						</div>
-					</div>
-				</section>
-				<?php }?>
+                    <?php
+                    $panel = 0;
 
-				<!-- SPEND grid content -->
-				<div class="container py-5" v-if="type=='spend'">
-					<div class="row text-center">
-						<div class="col-6 col-md-4 col-lg-2 mb-4" v-for="item in items">
-							<a :href="item.vendor_website" target="_blank" class="d-block text-decoration-none text-dark">
-								<img :src="item.vendor_logo" alt="" class="img-fluid mb-2" style="max-height:40px; object-fit:contain;">
-								<div class="font-weight-bold small">{{ item.vendor_name }}</div>
-								<div class="text-muted small">{{ item.vendor_category }}</div>
-							</a>
-						</div>
-					</div>
-				</div>
+                    while( have_rows('tab_list') ):
+                        the_row();
+                        $panel++;
+                    ?>
+                    <div
+                    class="tab-pane fade show <?php echo $panel==1?'active':'' ?>"
+                    id="group-tab<?php echo $panel?>"
+                    role="tabpanel"
+                    aria-labelledby="group-label<?php echo $panel?>">
+                        <div class="py-4">
 
-				<!-- SPEND CTA BLOCKS -->
-				<?php if ( get_field("buyspend_page_type") == 'spend' && have_rows('spend_cta_blocks') ): ?>
-				<section class="block block-2col-card bg-white">
-					<div class="container py-5 spend-container">
-						<?php while( have_rows('spend_cta_blocks') ): the_row(); ?>
-							<div class="row align-items-center mb-5">
-								<!-- TEXT LEFT -->
-								<div class="col-lg-6 mb-4 mb-lg-0">
-									<?php if ( get_sub_field('title') ): ?>
-										<h3 class="mb-3"><strong><?php the_sub_field('title'); ?></strong></h3>
-									<?php endif; ?>
-									<?php if ( get_sub_field('description') ): ?>
-										<div class="mb-3 richtext">
-											<?php the_sub_field('description'); ?>
-										</div>
-									<?php endif; ?>
-									<div class="buttons">
-										<?php if( have_rows('buttons') ): ?>
-											<?php while( have_rows('buttons') ): the_row(); 
-												$btn_class = (get_sub_field('style') == 'solid') ? 'btn-blue' : 'btn-ghost blue'; ?>
-												<a href="<?php the_sub_field('url'); ?>" 
-												   class="btn <?php echo $btn_class; ?>" 
-												   target="_blank">
-												   <?php the_sub_field('text'); ?>
-												</a>
-											<?php endwhile; ?>
-										<?php endif; ?>
-									</div>
-								</div>
+                            <?php
+                                $section = 0;
+                                while (have_rows('content_section')):
+                                    the_row();
+                                    $section++;
+                            ?>
 
-								<!-- MEDIA RIGHT -->
-								<div class="col-lg-6 text-center">
-									<?php 
-									$media_type = strtolower(get_sub_field('media_type'));
-									if ($media_type === 'image') {
-										$img = get_sub_field('image');
-										if (!empty($img)) { ?>
-											<img src="<?php echo esc_url($img['url']); ?>" 
-											     alt="<?php echo esc_attr($img['alt']); ?>" 
-											     class="img-fluid">
-										<?php }
-									} elseif ($media_type === 'video') {
-										$video = get_sub_field('video_iframe');
-										if (!empty($video)) { ?>
-											<div class="video-wrapper">
-												<?php echo $video; ?>
-											</div>
-										<?php }
-									} ?>
-								</div>
-							</div>
-						<?php endwhile; ?>
-					</div>
-				</section>
-				<?php endif; ?>
+                                <!-- Content Section Row Starts Here -->
+                                <div class="container row no-gutters" style="<?php if ($section > 1) { ?> border-top: 1px solid #dee2e6; <?php } ?>">
+                                    <div>
+                                        <div><h3> <?php the_sub_field('section_title'); ?> </h3></div>
+                                        <p> <?php the_sub_field('section_description'); ?> </p>
+                                    </div>
+                                    
+                                    <!-- Image Row Starts Here -->
+                                    <div class="row no-gutters" style="margin-bottom: 20px">
+                                    <?php
+                                        $image = 0;
+                                        while (have_rows('image_block')):
+                                            the_row();
+                                            $image++;
+                                    ?>
+                                    
+                                        <div class="col-lg-4 col-md-6">
+                                            <div>
+                                                <div class="top">
+                                                    <div class="row no-gutters align-items-center">
+                                                        <div>
+                                                            <div class="download-modal-trigger">
+                                                                <?php if (get_sub_field('image_file')){ ?>
+                                                                    <img src="<?php the_sub_field('image_file'); ?>" class="image img-fluid" alt>
+                                                                <?php } else { ?>
+                                                                    <span class="icon-placeholder image"></span>
+                                                                <?php } ?>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
-				<!-- BUY content redesigned -->
-				<div class="buyspend-items container" v-if="type=='buy'">
-					<div class="buyspend-header d-none d-lg-flex font-weight-bold py-2 border-bottom">
-						<div class="col-lg-3"></div>
-						<div class="col-lg-3">Features</div>
-						<div class="col-lg-2">Deposit time</div>
-						<div class="col-lg-2">Trading pairs</div>
-					</div>
-					<div class="buyspend-item row py-3 align-items-center border-bottom" v-for="item in items" v-if="item.type === tabFilter">
-						<div class="col-lg-3 d-flex align-items-center gap-2">
-							<img :src="item.image" :alt="item.name" class="img-fluid" style="max-width:32px;">
-							<span class="font-weight-bold">{{ item.name }}</span>
-						</div>
-						<div class="col-lg-3">
-							<span v-if="item.chainlocks">ChainLocks</span>
-							<span v-if="item.chainlocks && item.instantsend"> / </span>
-							<span v-if="item.instantsend">InstantSend</span>
-						</div>
-						<div class="col-lg-2">
-							{{ item.confirmations * 2.5 }} min
-						</div>
-						<div class="col-lg-2">
-							<span v-for="(cur, index) in item.currency">
-								{{ cur }}<span v-if="index !== item.currency.length - 1"> / </span>
-							</span>
-						</div>
-					</div>
-				</div>
+                                    <?php endwhile; ?>
+                                    </div>
+                                    <!-- Image Row Ends Here -->
 
-				<?php if (get_field( "view_more_link") != ""){?>
-				<div class="container py-5">
-					<a href="<?php echo get_field( "view_more_link" ); ?>" target="_blank" class="btn btn-blue"><?php _e( 'View more', 'html5blank' ); ?></a>
-				</div>
-				<?php } ?>
-			</div>
-	</dash-buyspend>
+                                    <!-- Feature Row Starts Here -->
+                                    <div class="row no-gutters">
+                                    <?php
+                                        $feature = 0;
+                                        while (have_rows('feature_block')):
+                                            the_row();
+                                            $feature++;
+                                    ?>
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="download-item">
+                                                <div class="top">
+                                                    <div class="row no-gutters align-items-center">
+                                                        <?php if (get_sub_field('feature_icon')){ ?>
+                                                            <div class="col-3">
+                                                                <div class="download-modal-trigger">
+                                                                    <img src="<?php the_sub_field('feature_icon'); ?>" class="image img-fluid" alt>
+                                                                </div>
+                                                            </div>
+                                                        <?php } ?>
+                                                        <div class="col-9">
+                                                            <div href="#" class="download-modal-trigger">
+                                                                <h4><?php the_sub_field('feature_title'); ?></h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    <?php the_sub_field('feature_description'); ?>
+                                                </div>
+                                            </div>
+                                        </div>
 
-	<?php get_template_part('inc/content_lg'); ?>
+                                    <?php endwhile; ?>
+                                    </div>
+                                    <!-- Freature Row Ends Here -->
+
+
+                                    <!-- Colors Row Starts Here -->
+                                    <div class="row content block-brand" style="margin-top: 0px;">
+
+                                        <?php
+                                        $index = 0;
+                                        while( have_rows('brand_palette') ): the_row();
+                                        $index++;
+                                        ?>
+                                        <div class="col-md-3 col-lg-2">
+                                            <div class="palette-item">
+                                                <div class="thumb <?php the_sub_field('hexcolor'); ?>" style="border-radius: 8px; height: 75px;"></div>
+                                                <div class="text">
+                                                    <h6 class="mb-3"><?php the_sub_field('color_title'); ?></h6>
+                                                    <p class="text"> <?php the_sub_field('hexcolor'); ?> </p>
+                                                    <p class="text"> <?php echo nl2br(get_sub_field('other_text')); ?> </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php endwhile; ?>
+
+                                    </div>
+                                    <!-- Colors Row Ends Here -->
+
+                                    <!-- Typography Starts Here -->
+                                    <div class="row content">
+                                        <?php
+                                        $index = 0;
+                                        while( have_rows('brand_typography') ): the_row();
+                                        $index++; ?>
+                                        <div class="col-lg-4">
+                                            <div class="typography-item">
+                                                <span class="lg" style="font-family:<?php the_sub_field('font_name'); ?>">
+                                                    <h4><?php the_sub_field('font_name'); ?></h4>
+                                                </span>
+                                                <div class="text-gray">
+                                                    <p><?php the_sub_field('font_description'); ?></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php endwhile; ?>
+                                    </div>
+                                    <!-- Typography Ends Here -->
+
+                                    <!-- Brand Logos Starts Here -->
+                                    <div class="container">
+                                        <div class="row content block-brand" style="margin-top: 0px;">
+                                            <?php while( have_rows('brand_logos') ): the_row();?>
+                                                <div class="col-md-3">
+                                                    <div class="brandasset-item">
+                                                        <div class="image">
+                                                            <img src="<?php the_sub_field('brand_logo_image'); ?>" alt class="img-fluid">
+                                                        </div>
+                                                        <div class="richtext">
+                                                            <h4 class="mb-3"><?php the_sub_field('brand_logo_title'); ?></h4>
+                                                        </div>
+                                                        <div class="text">
+                                                            <?php while( have_rows('brand_logo_links') ): the_row();?>
+                                                            <a href="<?php the_sub_field('brand_logo_file'); ?>" download>
+                                                                <i class="icon-el download"></i> <?php the_sub_field('brand_logo_title'); ?>
+                                                            </a>
+                                                            <?php endwhile; ?>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <?php endwhile; ?>
+                                        </div>
+                                    </div>
+                                    <!-- Brand Logos Ends Here -->
+
+                                </div>
+                                <!-- Content Section Row Ends Here -->
+                            
+
+                            <?php endwhile; ?>
+
+                        </div>
+                    </div>
+                    <?php endwhile; ?>
+                </div>
+            </div>
+        </section>
+
+    </div>
 </div>
+
 <?php get_footer(); ?>
