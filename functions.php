@@ -106,7 +106,7 @@ function theme_scripts()
         
         wp_register_script('dash', get_template_directory_uri() . '/assets/dash.js',[],'1.70',true);
         wp_enqueue_script('dash');
-        wp_register_script('vue-buyspend', get_template_directory_uri() . '/assets/vue-buyspend.js',[],'1.21',true);
+        wp_register_script('vue-buyspend', get_template_directory_uri() . '/assets/vue-buyspend.js',[],'1.22',true);
         wp_enqueue_script('vue-buyspend');
         wp_register_script('vue-proposals', get_template_directory_uri() . '/assets/vue-proposals.js',[],false,true);
         wp_enqueue_script('vue-proposals');
@@ -149,7 +149,7 @@ function theme_styles()
     
     // Remove time() and replace with static version number after strophy finishes fixing CSS
 
-    wp_register_style('dashcss', get_template_directory_uri() . '/assets/dash.css', array(), '1.77', 'all');
+    wp_register_style('dashcss', get_template_directory_uri() . '/assets/dash.css', array(), '1.78', 'all');
     wp_enqueue_style('dashcss');
 
 }
