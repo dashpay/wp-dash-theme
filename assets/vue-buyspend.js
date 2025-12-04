@@ -2,184 +2,149 @@ Vue.component('dash-buyspend', {
   props: ['type','vendors'],
   data: function(){
     return {
-      // currency and method show for Buy
-      // category show for Spend
-      currencies:[''],
-      methods:[''],
-      categories:[''],
-      currencyFilter: {},
-
-      // init the current to whatever is first (or 'all'?)
-      currency_c:'',
-      method_c:'',
-      category_c:'',
-      sortedBy:'',
-
-      items: [],
-      items_all: [],
-
-      tabFilter: 'exchange',
-
-      // 'capApi':'https://www.coincap.io/front/',
-      'buyApi':'https://exchapi.dashevo.org/exchange/'
+      currencies: [],
+      methods:    [],
+      categories: [],
+      currency_c: '',
+      method_c:   '',
+      category_c: '',
+      sortedBy:   '',
+      items:      [],
+      items_all:  [],
+      tabFilter:  'exchange',
+      buyApi:     'https://exchapi.dashevo.org/exchange/'
     }
   },
   mounted: function(){
     var that = this;
 
-    // custom select style
-    $('select').selectric().on('selectric-change', function(event, element, selectric) {
-      that[$(element).attr('name') ] = $(element).val();
-    });
+    if (typeof jQuery !== 'undefined' && jQuery.fn && jQuery.fn.selectric){
+      jQuery('select').selectric().on('selectric-change', function(event, element, selectric) {
+        that[jQuery(element).attr('name')] = jQuery(element).val();
+      });
+    }
 
-    if (this.vendors.length){
-      this.items_all = JSON.parse(this.vendors);
-      if (this.type=='buy'){
-        for (var exchange in that.items_all) {
-          for (var currencies in that.items_all[exchange].currency) {
-            var currency = that.items_all[exchange].currency[currencies];
-            if (that.currencies.indexOf(currency)<0) {
-              that.currencies.push(currency);
-            }
-          }
+    if (this.vendors){
+      var raw = this.vendors;
+      try {
+        if (typeof raw === 'string'){
+          raw = raw.replace(/&quot;/g,'"').replace(/&#34;/g,'"');
+          this.items_all = JSON.parse(raw);
+        } else {
+          this.items_all = raw;
         }
-        that.filter();
+      } catch(e){
+        console.error('Failed to parse vendors JSON', e);
+        this.items_all = [];
+      }
+    }
 
-        // get the prices from API, later
-        $.ajax({
-          url: that.buyApi,
-          error: function(jqXHR, textStatus, errorThrown) {
-            console.log(jqXHR);
-            console.log(textStatus);
-            console.log('errorThrown:', errorThrown);
+    if (!this.items_all.length) {
+      this.filter();
+      return;
+    }
+
+    if (this.type === 'buy'){
+      this.items_all.forEach(function(ex){
+        if (Array.isArray(ex.currency)){
+          ex.currency.forEach(function(cur){
+            if (cur && that.currencies.indexOf(cur) < 0) that.currencies.push(cur);
+          });
+        }
+      });
+      that.currencies = that.sortArray(that.currencies);
+      that.filter();
+
+      if (typeof jQuery !== 'undefined' && jQuery.ajax){
+        jQuery.ajax({ url: that.buyApi }).done(function(prices){
+          if (Array.isArray(prices)){
+            prices.forEach(function(price){
+              that.items_all.forEach(function(exch){
+                if (exch.name === price.exchange){
+                  exch.price  = price.price;
+                  exch.volume = price.volume;
+                }
+              });
+            });
+            that.filter();
           }
-        }).done(function(prices) {
-          prices.forEach(function(price){
-            that.items_all.forEach(function(exch){
-              if ( exch.name==price.exchange ){
-                exch['price'] = price.price;
-                exch['volume'] = price.volume;
-              }
-            })
-          })
-          that.filter();
         });
       }
-      else {
-        this.items_all.forEach(function(el){
-          if ( that.type=='spend'){
-            // setup product category filter
-            if ( that.categories.indexOf(el.vendor_category)<0 ){
-              that.categories.push(el.vendor_category)
-            }
-            that.category_c = that.categories[0]
-          }
-
-          if ( that.type=='fulllist' ){
-            // setup manual currency filter
-              var currencies = el.vendor_currencies.split(",");
-              currencies.forEach(function(cur){
-                if ( that.currencies.indexOf(cur)<0 ){
-                  that.currencies.push(cur)
-                }
-              })
-              that.currency_c = that.currencies[0]
-          }
-        })
-      this.filter();
-      }
-
-      that.methods = that.sortArray(that.methods);
-      that.currency = that.sortArray(that.currencies);
+    }
+    else if (this.type === 'spend'){
+      this.items_all.forEach(function(el){
+        var cat = (el.vendor_category || '').trim();
+        if (cat && that.categories.indexOf(cat) < 0) that.categories.push(cat);
+      });
       that.categories = that.sortArray(that.categories);
+      that.category_c = '';
+      that.filter();
+    }
+    else if (this.type === 'fulllist'){
+      this.items_all.forEach(function(el){
+        if (el.vendor_currencies){
+          el.vendor_currencies.split(',').map(function(s){return s.trim();}).forEach(function(cur){
+            if (cur && that.currencies.indexOf(cur) < 0) that.currencies.push(cur);
+          });
+        }
+      });
+      that.currencies = that.sortArray(that.currencies);
+      that.currency_c = '';
+      that.filter();
+    } else {
+      that.filter();
     }
   },
   watch : {
-    currency_c: function(){
-      this.filter();
-    },
-    method_c: function(){
-      this.filter();
-    },
-    category_c: function(){
-      this.filter();
-    },
-  },
-  computed: {
+    currency_c(){ this.filter(); },
+    method_c(){   this.filter(); },
+    category_c(){ this.filter(); }
   },
   methods: {
     filter: function(){
       var that = this;
-      that.items = [];
-      if ( that.currency_c=="" && that.method_c=="" && that.category_c==""){
-        that.items = that.items_all;
+
+      if (this.type === 'spend'){
+        this.items = this.items_all.filter(function(el){
+          if (!that.category_c) return true;
+          return (el.vendor_category || '').trim() === that.category_c;
+        });
+        return;
       }
-      else {
-        this.items_all.forEach(function(el){
 
-          var methods = [];
-          var currencies = [];
+      // BUY / FULLLIST
+      this.items = [];
+      this.items_all.forEach(function(el){
+        var add = false;
+        var methods    = Array.isArray(el.methods)  ? el.methods  : [];
+        var currencies = Array.isArray(el.currency) ? el.currency : [];
 
-          if ( that.type== 'buy' ){
-            var methods = el.methods;
-            var currencies = el.currency;
-          }
-          if ( that.type== 'fulllist' ){
-            var currencies = el.vendor_currencies.split(",");
-          }
-          var add = false;
+        if (that.type === 'fulllist' && el.vendor_currencies){
+          currencies = el.vendor_currencies.split(',').map(function(s){ return s.trim(); });
+        }
 
-          // currency and method match
-          if ( that.currency_c.length && that.method_c.length ){ 
-            if ( currencies.indexOf(that.currency_c)>=0 && methods.indexOf(that.method_c)>=0 ){
-              add = true;
-            }
-          }
-          else if ( that.currency_c.length && currencies.indexOf(that.currency_c)>=0){ 
-            add=true;
-          }
-          else if ( that.method_c.length && methods.indexOf(that.method_c)>=0){ 
-            add=true;
-          }
+        if (!that.currency_c && !that.method_c && !that.category_c) add = true;
 
-          // category only
-          if ( that.category_c.length && el.vendor_category==that.category_c){ 
-            add=true;
-          }
+        if (that.currency_c && currencies.indexOf(that.currency_c) >= 0) add = true;
+        if (that.method_c   && methods.indexOf(that.method_c)     >= 0) add = true;
 
-          if ( add ){
-            that.items.push(el);
-          }
-        })
-      }
+        if (add) that.items.push(el);
+      });
     },
     sortArray: function(array){
-      var s = array.sort(function(a, b){
-          if(a < b) { return -1; }
-          if(a > b) { return 1; }
+      return array
+        .filter(function(v){ return v !== null && v !== undefined && String(v).trim() !== ''; })
+        .sort(function(a, b){
+          a = String(a).toLowerCase(); b = String(b).toLowerCase();
+          if (a < b) return -1;
+          if (a > b) return 1;
           return 0;
-      })
-      return s;
-    },
-    sortListBy: function(sortBy){
-      if (sortBy === 'bti') {
-        var r = this.items.sort((a, b) => (a[sortBy] > b[sortBy]) ? -1 : 1);
-      }
-      else {
-        var r = this.items.sort((a, b) => (a[sortBy] > b[sortBy]) ? 1 : -1);
-      }
-      this.sortedBy = sortBy;
-      this.items = r;
-    },
-    isSorted: function(heading) {
-      return {
-        sorted: heading === this.sortedBy
-      }
+        });
     }
   }
-})
-if ( $('dash-buyspend').length ){
-  new Vue({
-    el: 'dash-buyspend'
-  });
+});
+
+if (document.querySelector('dash-buyspend')) {
+  new Vue({ el: 'dash-buyspend' });
 }
+
