@@ -4822,7 +4822,7 @@ background: #f5f6f7 !important;
   margin: 0;
   border-radius: 40px;
   align-items: flex-start;
-  gap: 15px
+  gap: 15px;
 }
 
 #evo-section-three .card-deck .card .callout-image {
