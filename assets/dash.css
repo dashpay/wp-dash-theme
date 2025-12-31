@@ -5073,7 +5073,7 @@ padding: 0 50px;
 #evo-section-one,
 #evo-section-three,
 #evo-section-four {
-  max-width: 90%;
+  max-width: 1240px;
   margin: auto;
 }
 
@@ -5482,7 +5482,7 @@ padding: 0 50px;
 }
 
 #app-section-three {
-  background: #F7F9FA;
+  background: #F7F9FA !important;
   padding: 80px 100px 0;
   border-radius: 40px;
   align-items: flex-start !important;
