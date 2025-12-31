@@ -4884,7 +4884,6 @@ padding: 0 50px;
 
 /** APP PAGE **/
 #app-section-one.desktop .container.block-pad-v {
-  background-image: url(https://media.dash.org/wp-content/uploads/main-banner-img-1-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 1240px;
@@ -4897,6 +4896,14 @@ padding: 0 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+#app-section-one.desktop .container.block-pad-v {
+  background-image: url(https://media.dash.org/wp-content/uploads/main-banner-img-1-1.jpg);
+}
+
+#app-section-one.desktop.img-buttons .container.block-pad-v {
+  background-image: url(https://media.dash.org/wp-content/uploads/dash-pay-image-1-min.jpg);
 }
 
 #app-section-one.desktop {
@@ -4937,7 +4944,7 @@ padding: 0 50px;
 }
 
 #app-section-one h3 strong {
-  font-size: 40px;
+  font-size: 50px;
   font-style: normal;
   font-weight: 800;
   line-height: 48px;
@@ -4946,6 +4953,7 @@ padding: 0 50px;
 
 #app-section-one h4 {
   font-size: 17px;
+  margin-bottom: 0;
   font-style: normal;
   font-weight: 600;
   line-height: 22px;
@@ -5056,9 +5064,12 @@ padding: 0 50px;
 }
 
 #app-section-two,
+#app-section-three,
 #app-section-four,
 #app-section-six,
 #app-section-seven,
+#app-section-nine,
+#app-section-video,
 #evo-section-one,
 #evo-section-three,
 #evo-section-four {
@@ -5086,7 +5097,7 @@ padding: 0 50px;
 #app-section-eight .callouts-title h3 strong,
 #evo-section-two .callouts-title h3 strong,
 #evo-section-three .callouts-title h3 strong {
-  font-size: 34px;
+  font-size: 40px;
   font-weight: 800;
   line-height: 42px;
   color: #191C1F;
@@ -5123,7 +5134,7 @@ padding: 0 50px;
   font-size: 17px;
   color: #6b7280;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 22px;
 }
 
 #app-section-eight .card-body.px-2 {
@@ -5151,12 +5162,16 @@ padding: 0 50px;
   padding-top: 0 !important;
 }
 
-#app-section-nine .container.block-pad-v {
-  max-width: 1240px;
-  background: #000;
-  border-radius: 44px;
+#app-section-nine {
+  background: #000 !important;
+  border-radius: 40px;
   padding: 80px 10px 80px 100px;
   overflow: hidden;
+}
+
+#app-section-nine .container.block-pad-v {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #app-section-nine video {
@@ -5201,6 +5216,15 @@ padding: 0 50px;
   gap: 30px;
 }
 
+#app-section-video .video-block {
+  border-radius:40px;
+  overflow:hidden;
+  width:1200px;
+  height:700px;
+  background:#fff;
+  position:relative;
+}
+
 #app-section-two .card-deck .card, 
 #app-section-video .card-deck .card, 
 #evo-section-two .card-deck .card {
@@ -5238,8 +5262,9 @@ padding: 0 50px;
 }
 
 #app-section-video .container.block-pad-v {
-  padding-top: 28px;
+  padding-top: 20px;
   padding-bottom: 0;
+  max-width: 1200px;
 }
 
 #app-section-two .callout-image, 
@@ -5343,7 +5368,7 @@ padding: 0 50px;
 #app-section-four .container.block-pad-v {
   max-width: 1240px;
   background: #008DE4;
-  border-radius: 44px;
+  border-radius: 40px;
   padding: 50px 100px 0 0;
   margin-top: 30px;
   overflow: hidden;
@@ -5354,6 +5379,11 @@ padding: 0 50px;
 }
 
 #app-section-four.app-dashspend-accept .col-lg-6.col-right.order-lg-2 {
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+
+#app-section-four .col-lg-6.col-right.order-lg-2 {
   flex: 0 0 40%;
   max-width: 40%;
 }
@@ -5402,14 +5432,28 @@ padding: 0 50px;
   flex: 0 0 60%;
 }
 
-#app-section-four .richtext h3 strong,
 #app-section-nine .richtext h3 strong {
+  font-size: 34px;
+}
+
+#app-section-four .richtext h3 strong {
   font-size: 40px;
+}
+
+#app-section-nine .richtext h3 strong {
   line-height: 48px;
   font-style: normal;
   font-weight: 800;
   margin-bottom: 8px;
   color: #fff;
+}
+
+#app-section-four p {
+  font-size: 20px;
+}
+
+#app-section-nine p {
+  font-size: 17px;
 }
 
 #app-section-four p,
@@ -5437,14 +5481,21 @@ padding: 0 50px;
   clip-path: inset(0 2px 0 2px);
 }
 
-#app-section-three .container.block-pad-v {
-  border-radius: 44px;
-  max-width: 1240px;
+#app-section-three {
   background: #F7F9FA;
   padding: 80px 100px 0;
-  border-radius: 44px;
+  border-radius: 40px;
   align-items: flex-start !important;
-  justify-content: space-between;
+}
+
+#app-section-three.dashspend-section-one {
+  padding: 100px !important;
+  margin-top: 30px;
+}
+
+#app-section-three .container.block-pad-v {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #app-section-three h3, #app-section-video h3 {
@@ -5453,11 +5504,18 @@ padding: 0 50px;
   color: #191C1F;
 }
 
+#app-section-video p {
+  margin-bottom: 0;
+}
+
+#app-section-three p {
+  margin-bottom: 10px;
+}
+
 #app-section-three p, #app-section-video p {
   font-size: 20px;
   font-weight: 600;
   line-height: 26px;
-  margin-bottom: 10px;
   opacity: 0.75;
 }
 
@@ -5467,7 +5525,11 @@ padding: 0 50px;
 }
 
 #app-section-three .row.align-items-center {
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+
+#app-section-three .col-lg-6.col-right.order-lg-2 {
+  flex: 0 0 40%;
 }
 
 #app-section-three .col-lg-6 {
@@ -5673,11 +5735,6 @@ section#app-section-five:after {
 
 #app-section-three.dashspend-section-one .col-lg-6 {
   height: auto;
-}
-
-#app-section-three.dashspend-section-one .container.block-pad-v {
-  padding: 100px;
-  margin-top: 30px;
 }
 
 #app-section-video {
