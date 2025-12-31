@@ -5064,9 +5064,12 @@ padding: 0 50px;
 }
 
 #app-section-two,
+#app-section-three,
 #app-section-four,
 #app-section-six,
 #app-section-seven,
+#app-section-nine,
+#app-section-video,
 #evo-section-one,
 #evo-section-three,
 #evo-section-four {
@@ -5159,12 +5162,16 @@ padding: 0 50px;
   padding-top: 0 !important;
 }
 
-#app-section-nine .container.block-pad-v {
-  max-width: 1240px;
-  background: #000;
-  border-radius: 44px;
+#app-section-nine {
+  background: #000 !important;
+  border-radius: 40px;
   padding: 80px 10px 80px 100px;
   overflow: hidden;
+}
+
+#app-section-nine .container.block-pad-v {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #app-section-nine video {
@@ -5209,6 +5216,15 @@ padding: 0 50px;
   gap: 30px;
 }
 
+#app-section-video .video-block {
+  border-radius:40px;
+  overflow:hidden;
+  width:1200px;
+  height:700px;
+  background:#fff;
+  position:relative;
+}
+
 #app-section-two .card-deck .card, 
 #app-section-video .card-deck .card, 
 #evo-section-two .card-deck .card {
@@ -5248,6 +5264,7 @@ padding: 0 50px;
 #app-section-video .container.block-pad-v {
   padding-top: 20px;
   padding-bottom: 0;
+  max-width: 1200px;
 }
 
 #app-section-two .callout-image, 
@@ -5351,7 +5368,7 @@ padding: 0 50px;
 #app-section-four .container.block-pad-v {
   max-width: 1240px;
   background: #008DE4;
-  border-radius: 44px;
+  border-radius: 40px;
   padding: 50px 100px 0 0;
   margin-top: 30px;
   overflow: hidden;
@@ -5464,14 +5481,21 @@ padding: 0 50px;
   clip-path: inset(0 2px 0 2px);
 }
 
-#app-section-three .container.block-pad-v {
-  border-radius: 44px;
-  max-width: 1240px;
+#app-section-three {
   background: #F7F9FA;
   padding: 80px 100px 0;
-  border-radius: 44px;
+  border-radius: 40px;
   align-items: flex-start !important;
-  justify-content: space-between;
+}
+
+#app-section-three.dashspend-section-one {
+  padding: 100px !important;
+  margin-top: 30px;
+}
+
+#app-section-three .container.block-pad-v {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #app-section-three h3, #app-section-video h3 {
@@ -5711,11 +5735,6 @@ section#app-section-five:after {
 
 #app-section-three.dashspend-section-one .col-lg-6 {
   height: auto;
-}
-
-#app-section-three.dashspend-section-one .container.block-pad-v {
-  padding: 100px;
-  margin-top: 30px;
 }
 
 #app-section-video {
