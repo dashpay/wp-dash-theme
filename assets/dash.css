@@ -5122,8 +5122,7 @@ opacity: 0.75;
 #app-section-video,
 #evo-section-one,
 #evo-section-three,
-#evo-section-four,
-#app-section-two .container.block-pad-v {
+#evo-section-four {
   max-width: 1240px;
   margin: auto;
 }
@@ -5549,7 +5548,7 @@ opacity: 0.75;
 }
 
 #app-section-three.dashspend-section-one {
-  padding: 100px !important;
+  padding: 100px;
   margin-top: 30px;
 }
 
@@ -5837,6 +5836,18 @@ section#app-section-five:after {
 #app-section-two .container.block-pad-v {
     max-width: 90%;
   }
+  #app-section-two,
+#app-section-three,
+#app-section-four,
+#app-section-six,
+#app-section-seven,
+#app-section-nine,
+#app-section-video,
+#evo-section-one,
+#evo-section-three,
+#evo-section-four {
+  max-width: 90%;
+}
 }
 
 @media (max-width: 990px) {
@@ -5870,7 +5881,13 @@ section#app-section-five:after {
     padding: 40px 0 0 0;
   }
 
-  #app-section-three .container.block-pad-v, #app-section-three.dashspend-section-one .container.block-pad-v {
+  #app-section-three .col-lg-6.col-right.order-lg-2 {
+    flex: 0 0 100%;
+}
+
+
+
+  #app-section-three, #app-section-three {
     max-width: 90%;
     padding: 10px 30px 0;
     overflow: hidden;
