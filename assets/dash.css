@@ -2282,7 +2282,7 @@ ul.buy-tabs li.active {
   max-width: 1028px;
   min-height: 265px;
   border-radius: 40px;
-  margin: 15px auto 50px;
+  margin: 25px auto 50px;
   padding: 0 100px;
   display: flex;
   flex-direction: row;
@@ -2501,8 +2501,15 @@ a.download-modal-trigger {
 }
 
 .download-item .image {
-  max-height: 40px;
+  max-height: 62px;
   margin-bottom: 10px;
+  border-radius: 19px;
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.01), 0 3px 5px 0 rgba(0, 0, 0, 0.03), 0 2px 3px 0 rgba(0, 0, 0, 0.05), 0 0 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.download-item .col-3 {
+  flex: 0 0 32%;
+  max-width: 32%;
 }
 
 .download-item .btn {
@@ -4763,6 +4770,35 @@ footer .support p {
 }
 
 /** EVO PAGE **/
+#evo-section-one .container.block-pad-v, 
+#evo-section-two .container.block-pad-v, 
+#evo-section-three .container.block-pad-v,
+#evo-section-four .container.block-pad-v {
+  max-width: 1240px;
+}
+
+#evo-section-two .callouts-title h3 strong,
+#evo-section-three .callouts-title h3 strong,
+#evo-section-four h3 strong {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 42px;
+}
+
+#evo-section-two .callouts-title h3 strong,
+#evo-section-three .callouts-title h3 strong {
+  color: #191C1F;
+}
+
+#evo-section-four h3 strong {
+  color: #fff;
+}
+
+#evo-section-four .callouts-title {
+  max-width: 560px;
+  margin: 0 auto 60px;
+}
+
 #evo-section-one .container.block-pad-v {
   position: relative;
   text-align: center;
@@ -4776,9 +4812,10 @@ footer .support p {
   justify-content: flex-start;
   align-items: center;
   border-radius: 40px;
+  margin-top: 30px;
 }
 
-#evo-section-one h3 strong, #evo-section-four h3 strong {
+#evo-section-one h3 strong {
 font-size: 40px;
 font-style: normal;
 font-weight: 800;
@@ -4875,12 +4912,19 @@ opacity: 0.75;
 }
 
 #evo-section-four .card-deck {
-padding: 0 50px;
+  gap: 30px;
+  padding: 0 50px 30px;
 }
 
 #evo-section-four .container-xs {
   margin: auto;
 }
+
+#evo-section-four .pt-md-5.pt-3.buttons {
+  display: flex;
+  justify-content: center;
+}
+
 
 /** APP PAGE **/
 #app-section-one.desktop .container.block-pad-v {
@@ -4916,7 +4960,6 @@ padding: 0 50px;
 
 #app-section-one.mobile .container.block-pad-v {
   display: flex;
-  background-image: url(https://media.dash.org/wp-content/uploads/wrap.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 90%;
@@ -4930,6 +4973,13 @@ padding: 0 50px;
   justify-content: end;
 }
 
+#app-section-one.mobile .container.block-pad-v {
+  background-image: url(https://media.dash.org/wp-content/uploads/wrap.jpg);
+}
+
+#app-section-one.mobile.img-buttons .container.block-pad-v {
+  background-image: url(https://media.dash.org/wp-content/uploads/dashspend-hero-image.png);
+}
 
 #app-section-one .callouts-title {
   text-align: left;
@@ -4947,7 +4997,7 @@ padding: 0 50px;
   font-size: 50px;
   font-style: normal;
   font-weight: 800;
-  line-height: 48px;
+  line-height: 58px;
   color: #191C1F;
 }
 
@@ -5002,7 +5052,7 @@ padding: 0 50px;
   border: 0 !important;
   border-radius: 0; 
   background: transparent !important;
-  width: 160px;  
+  width: 135px;  
   height: 48px;   
   background-repeat: no-repeat !important;
   background-position: center;
@@ -5086,20 +5136,20 @@ padding: 0 50px;
 #app-section-two .callouts-title,
 #app-section-six .callouts-title,
 #app-section-eight .callouts-title,
-#evo-section-three .callouts-title,
-#evo-section-four .callouts-title {
-  max-width: 500px;
+#evo-section-three .callouts-title {
+  max-width: 560px;
   margin: 40px auto 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 #app-section-two .callouts-title h3 strong,
 #app-section-six .callouts-title h3 strong,
-#app-section-eight .callouts-title h3 strong,
-#evo-section-two .callouts-title h3 strong,
-#evo-section-three .callouts-title h3 strong {
+#app-section-eight .callouts-title h3 strong {
   font-size: 40px;
   font-weight: 800;
-  line-height: 42px;
+  line-height: 48px;
   color: #191C1F;
 }
 
@@ -5186,9 +5236,7 @@ padding: 0 50px;
 
 #app-section-two .card-deck, 
 #evo-section-two .card-deck, 
-#evo-section-three .card-deck,
-#evo-section-four .card-deck,
-#evo-section-four .card-deck {
+#evo-section-three .card-deck {
   gap: 30px;
 }
 
@@ -5207,8 +5255,8 @@ padding: 0 50px;
 }
 
 #app-section-video .card-deck .card {
-  flex: 31.33% !important;
-  padding: 40px 0px 0 !important;
+  flex: 23% !important;
+  padding: 20px 0px 0 !important;
   overflow: hidden;
 }
 
@@ -5219,10 +5267,16 @@ padding: 0 50px;
 #app-section-video .video-block {
   border-radius:40px;
   overflow:hidden;
-  width:1200px;
-  height:700px;
+  width:257px;
+  height:570px;
   background:#fff;
   position:relative;
+  padding: 0; 
+  margin-bottom: -45px;
+}
+
+#app-section-video .card {
+  max-height: 650px;
 }
 
 #app-section-two .card-deck .card, 
@@ -5234,7 +5288,11 @@ padding: 0 50px;
   margin: 0;
   border-radius: 40px;
   align-items: flex-start;
-  gap: 15px;
+}
+
+#app-section-three p a {
+  color: #5d5d60;
+  text-decoration: underline;
 }
 
 #app-section-two .card-img-top, 
@@ -5253,7 +5311,7 @@ padding: 0 50px;
 
 #app-section-video .card-body.px-2 {
   text-align: left;
-  margin: 0 40px;
+  margin: 0 10px;
   padding: 0 !important;
 }
 
@@ -5264,7 +5322,7 @@ padding: 0 50px;
 #app-section-video .container.block-pad-v {
   padding-top: 20px;
   padding-bottom: 0;
-  max-width: 1200px;
+  max-width: 1240px;
 }
 
 #app-section-two .callout-image, 
@@ -5411,7 +5469,7 @@ padding: 0 50px;
   padding-top: 20px !important;
 }
 
-#app-section-four a.btn {
+#app-section-four.app-dashspend-accept a.btn {
   color: #fff;
   border: 1px solid #fff;
   background: transparent;
@@ -5438,6 +5496,7 @@ padding: 0 50px;
 
 #app-section-four .richtext h3 strong {
   font-size: 40px;
+  color: #fff;
 }
 
 #app-section-nine .richtext h3 strong {
@@ -5762,8 +5821,19 @@ section#app-section-five:after {
   background: rgba(120, 196, 245, 0.15);
 }
 
-@media (max-width: 1380px) {
-  #app-section-one.desktop .container.block-pad-v {
+@media (max-width: 1300px) {
+  #app-section-two,
+#app-section-three,
+#app-section-four,
+#app-section-six,
+#app-section-seven,
+#app-section-nine,
+#app-section-video,
+#evo-section-one,
+#evo-section-three,
+#evo-section-four,
+#app-section-one.desktop .container.block-pad-v,
+#app-section-two .container.block-pad-v {
     max-width: 90%;
   }
   #app-section-two,
@@ -5779,7 +5849,6 @@ section#app-section-five:after {
   max-width: 90%;
 }
 }
-
 
 @media (max-width: 990px) {
 
@@ -5928,6 +5997,10 @@ section#app-section-five:after {
     width: 100%;
 }
 
+#evo-section-four .pt-md-5.pt-3.buttons {
+  flex-direction: column;
+}
+
   #app-section-one.desktop {
     display: none;
   }
@@ -5966,6 +6039,13 @@ section#app-section-five:after {
     width: 600px;
   }
 
+  #app-section-video .card {
+    max-height: fit-content;
+}
+#app-section-video .video-block {
+  width: 328px;
+  margin-bottom: -25px;
+}
   #app-section-three .col-lg-6.d-lg-block.d-none {
     width: 100%;
     max-width: 100%;

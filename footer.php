@@ -121,7 +121,7 @@
 		</div>
 	</div>
 	<div class="footer-terms">
-	        <div class="copyright">©2025 Dash. All rights reserved</div>
+	        <div class="copyright">©2026 Dash. All rights reserved</div>
 		<div class="terms">
 			<?php 
 			$posts = get_field('navigation_privacy',$homeid);
