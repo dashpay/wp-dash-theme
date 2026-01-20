@@ -1562,11 +1562,12 @@ a.btn-google img {
 
 /* NEW NO BANNER HOME*/
 .two-block-section {
-  width: 100%;
+  width: 90%;
   display: flex;
   max-width: 1240px;
   margin: auto;
   justify-content: space-between;
+  gap: 15px;
 }
 
 .two-block-section h3 {
@@ -1674,7 +1675,7 @@ a.btn-google img {
   background: linear-gradient(180deg, rgba(0, 141, 228, 0.00) 0%, #008DE4 100%);
   z-index: 11111;
   position: absolute;
-  bottom: 193px;
+  bottom: 190px;
 }
 
 /*
@@ -5343,6 +5344,11 @@ opacity: 0.75;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 4px;
+}
+
+#app-section-video h3, #app-section-video p {
+  text-align: center;
+  padding: 0 10px;
 }
 
 #app-section-two p.card-text, 
