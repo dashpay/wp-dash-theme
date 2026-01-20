@@ -317,7 +317,7 @@ function html5blankgravatar ($avatar_defaults)
 // Load css file only for Home Page
 function load_home_styles() {
     if ( is_front_page() ) {
-        wp_enqueue_style( 'home-css', get_template_directory_uri() . '/assets/home.css', array(), '1.71', 'all' );
+        wp_enqueue_style( 'home-css', get_template_directory_uri() . '/assets/home.css', array(), '1.72', 'all' );
     }
 }
 add_action( 'wp_enqueue_scripts', 'load_home_styles' );
