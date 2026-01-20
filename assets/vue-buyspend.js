@@ -44,6 +44,7 @@ Vue.component('dash-buyspend', {
       return;
     }
 
+    // BUY PAGE
     if (this.type === 'buy'){
       this.items_all.forEach(function(ex){
         if (Array.isArray(ex.currency)){
@@ -71,15 +72,25 @@ Vue.component('dash-buyspend', {
         });
       }
     }
+
+    // SPEND PAGE (multiple categories per vendor supported)
     else if (this.type === 'spend'){
       this.items_all.forEach(function(el){
-        var cat = (el.vendor_category || '').trim();
-        if (cat && that.categories.indexOf(cat) < 0) that.categories.push(cat);
+        var catStr = (el.vendor_category || '').trim();
+        if (!catStr) return;
+
+        catStr.split(',').forEach(function(rawCat){
+          var cat = rawCat.trim();
+          if (cat && that.categories.indexOf(cat) < 0) {
+            that.categories.push(cat);
+          }
+        });
       });
       that.categories = that.sortArray(that.categories);
       that.category_c = '';
       that.filter();
     }
+
     else if (this.type === 'fulllist'){
       this.items_all.forEach(function(el){
         if (el.vendor_currencies){
@@ -91,7 +102,9 @@ Vue.component('dash-buyspend', {
       that.currencies = that.sortArray(that.currencies);
       that.currency_c = '';
       that.filter();
-    } else {
+    }
+
+    else {
       that.filter();
     }
   },
@@ -104,10 +117,16 @@ Vue.component('dash-buyspend', {
     filter: function(){
       var that = this;
 
+      // SPEND FILTERING (supports multiple categories)
       if (this.type === 'spend'){
         this.items = this.items_all.filter(function(el){
           if (!that.category_c) return true;
-          return (el.vendor_category || '').trim() === that.category_c;
+
+          var catStr = (el.vendor_category || '').trim();
+          if (!catStr) return false;
+
+          var cats = catStr.split(',').map(function(s){ return s.trim(); });
+          return cats.indexOf(that.category_c) >= 0;
         });
         return;
       }
@@ -147,4 +166,3 @@ Vue.component('dash-buyspend', {
 if (document.querySelector('dash-buyspend')) {
   new Vue({ el: 'dash-buyspend' });
 }
-

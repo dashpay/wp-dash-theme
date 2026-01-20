@@ -82,6 +82,12 @@
 #logos-partners {
   padding: 60px 0 80px;
   max-width: 1240px;
+  width: 90%;
+  margin: auto;
+}
+#icons-block {
+  max-width: 1240px;
+  width: 90%;
   margin: auto;
 }
 #icons-block .col-lg-3 {
@@ -212,11 +218,18 @@
   margin: 150px 0 150px;
 }
 #testimonial-block .callouts-title {
-  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 70%;
+  margin: 0 auto 60px;
+  text-align: left;
 }
 #testimonial-block a {
   color: #6e747a;
   border-bottom: 2px solid #6e747a;
+}
+#testimonial-block .icon-block a {
+  border-bottom: none;
 }
 #testimonial-block h3 {
   font-size: 40px;
@@ -256,7 +269,7 @@
 #dashpay .container.block-pad-v {
   background: #f7f9fa;
   border-radius: 20px;
-  width: 100%;
+  width: 90%;
   max-width: 1240px;
   padding: 0 100px;
   margin-bottom: 51px;
@@ -446,6 +459,11 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+@media (max-width: 900px) {
+  #testimonial-block .callouts-title {
+    max-width: 90%;
+  }
+}
 @media (max-width: 700px) {
   /*#home .caption-container .banner-btn {
     margin-top: 0;
@@ -496,6 +514,16 @@
     max-width: 97%;
     padding: 0 27px;
     margin: auto;
+  }
+  #icons-block img {
+    width: 47px;
+  }
+  #testimonial-block .callouts-title {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
 }
 @media (max-width: 600px) {
@@ -644,9 +672,6 @@
   .container.block-pad-v {
     padding-top: 0;
     padding-bottom: 0;
-  }
-  #icons-block img {
-    width: 47px;
   }
   #icons-block .icon {
     width: 115px;
