@@ -149,7 +149,7 @@ function theme_styles()
     
     // Remove time() and replace with static version number after strophy finishes fixing CSS
 
-    wp_register_style('dashcss', get_template_directory_uri() . '/assets/dash.css', array(), '1.83', 'all');
+    wp_register_style('dashcss', get_template_directory_uri() . '/assets/dash.css', array(), '1.84', 'all');
     wp_enqueue_style('dashcss');
 
 }
@@ -317,7 +317,7 @@ function html5blankgravatar ($avatar_defaults)
 // Load css file only for Home Page
 function load_home_styles() {
     if ( is_front_page() ) {
-        wp_enqueue_style( 'home-css', get_template_directory_uri() . '/assets/home.css', array(), '1.72', 'all' );
+        wp_enqueue_style( 'home-css', get_template_directory_uri() . '/assets/home.css', array(), '1.73', 'all' );
     }
 }
 add_action( 'wp_enqueue_scripts', 'load_home_styles' );

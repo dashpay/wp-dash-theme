@@ -1688,6 +1688,19 @@ a.btn-google img {
   height: auto;
 }
 
+.spend-dash-img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spend-dash-img-wrapper img {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: -6px;
+}
+
 #buy-block .col-lg-6 {
   flex: 0 0 63%;
   max-width: 63%;
@@ -5998,6 +6011,10 @@ section#app-section-five:after {
 }
 
 @media (max-width: 550px) {
+
+  #app-section-three.dashspend-section-one {
+    padding: 0 30px;
+  }
  
   #evo-section-four a.btn.btn-ghost.blue {
     width: 100%;
