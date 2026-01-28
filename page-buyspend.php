@@ -72,7 +72,7 @@ get_header(); ?>
                 <div class="container py-5" v-if="type=='spend'">
                     <div class="row text-center">
                         <div class="col-6 col-md-4 col-lg-2 mb-4" v-for="item in items">
-                            <a :href="item.vendor_website" target="_blank" class="d-block text-decoration-none text-dark">
+                            <a :href="item.vendor_website" target="_blank" rel="noopener" class="d-block text-decoration-none text-dark">
                                 <img :src="item.vendor_logo" alt="" class="img-fluid mb-2" style="max-height:40px; object-fit:contain;">
                                 <div class="font-weight-bold small">{{ item.vendor_name }}</div>
                                 <div class="text-muted small">{{ item.vendor_category }}</div>
@@ -103,7 +103,8 @@ get_header(); ?>
                                                 $btn_class = (get_sub_field('style') == 'solid') ? 'btn-blue' : 'btn-ghost blue'; ?>
                                                 <a href="<?php the_sub_field('url'); ?>"
                                                    class="btn <?php echo $btn_class; ?>"
-                                                   target="_blank">
+                                                   target="_blank"
+                                                   rel="noopener">
                                                    <?php the_sub_field('text'); ?>
                                                 </a>
                                             <?php endwhile; ?>
@@ -145,7 +146,15 @@ get_header(); ?>
                         <div class="col-lg-2">Deposit time</div>
                         <div class="col-lg-2">Trading pairs</div>
                     </div>
-                    <div class="buyspend-item row py-3 align-items-center border-bottom" v-for="item in items" v-if="item.type === tabFilter">
+
+                    <a
+                        class="buyspend-item row py-3 align-items-center border-bottom text-decoration-none text-dark"
+                        v-for="item in items"
+                        v-if="item.type === tabFilter"
+                        :href="item.url"
+                        target="_blank"
+                        rel="noopener"
+                    >
                         <div class="col-lg-3 d-flex align-items-center gap-2">
                             <img :src="item.image" :alt="item.name" class="img-fluid" style="max-width:32px;">
                             <span class="font-weight-bold">{{ item.name }}</span>
@@ -163,12 +172,12 @@ get_header(); ?>
                                 {{ cur }}<span v-if="index !== item.currency.length - 1"> / </span>
                             </span>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <?php if (get_field( "view_more_link") != ""){?>
                 <div class="container py-5">
-                    <a href="<?php echo get_field( "view_more_link" ); ?>" target="_blank" class="btn btn-blue"><?php _e( 'View more', 'html5blank' ); ?></a>
+                    <a href="<?php echo get_field( "view_more_link" ); ?>" target="_blank" rel="noopener" class="btn btn-blue"><?php _e( 'View more', 'html5blank' ); ?></a>
                 </div>
                 <?php } ?>
             </div>
