@@ -220,7 +220,7 @@
 #testimonial-block .callouts-title {
   display: flex;
   justify-content: space-between;
-  max-width: 70%;
+  max-width: 1100px;
   margin: 0 auto 60px;
   text-align: left;
 }
@@ -458,6 +458,11 @@
 #home .block .block-pad-v {
   padding-top: 0;
   padding-bottom: 0;
+}
+@media (max-width: 1100px) {
+  #testimonial-block .callouts-title {
+    max-width: 90%;
+  }
 }
 @media (max-width: 900px) {
   #testimonial-block .callouts-title {
