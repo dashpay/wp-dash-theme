@@ -8492,3 +8492,36 @@ footer .footer-top {
     width: 150px;
   }
 }
+
+/* ============================================
+   Header fix: ensure desktop layout works
+   regardless of Bootstrap utility classes
+   ============================================ */
+@media (min-width: 992px) {
+  /* Hide hamburger menu on desktop */
+  .header .d-lg-none {
+    display: none !important;
+  }
+
+  /* Ensure proper column sizing for header */
+  .header .col-lg-2 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+
+  .header .col-lg-10 {
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+  }
+
+  /* Hide mobile-only Home links in dropdowns */
+  #navbar-main .navbar-item .dropdown .link.first.d-lg-none {
+    display: none !important;
+  }
+
+  /* Ensure header row uses flexbox layout */
+  .header .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
