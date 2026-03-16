@@ -20,6 +20,7 @@ while( have_rows('content_sections') ): the_row();
 	// cta_with_background_image: CTA with Background Image
 	// slider_images : Slider Logos
 	// slider_testimonials : Slider Testimonials
+	// hero_cards : Hero Cards (two side-by-side cards with media)
 
 	$count++;
 
@@ -107,6 +108,9 @@ while( have_rows('content_sections') ): the_row();
 				break;
 			case 'speed':
 				include( locate_template('inc/blocks/speed.php') );
+				break;
+			case 'hero_cards':
+				include( locate_template('inc/blocks/hero-cards.php') );
 				break;
 		}
 		?>
