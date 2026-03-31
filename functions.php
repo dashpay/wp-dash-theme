@@ -97,21 +97,11 @@ function theme_scripts()
         wp_register_script('selectric', get_template_directory_uri() . '/assets/libs/jquery.selectric.js',[],false,true);
         wp_enqueue_script('selectric'); 
 
-        // change to vue.min.js for prod to get rid of debugger
-        //wp_register_script('vue','https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js',[],false,true);
-        wp_register_script('vue','https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js',[],false,true);
-        wp_enqueue_script('vue'); 
         wp_register_script('trustpilot','https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js',[],false,true);
-        wp_enqueue_script('trustpilot'); 
-        
-        wp_register_script('dash', get_template_directory_uri() . '/assets/dash.js',[],'1.70',true);
+        wp_enqueue_script('trustpilot');
+
+        wp_register_script('dash', get_template_directory_uri() . '/assets/dash.js',[],'1.71',true);
         wp_enqueue_script('dash');
-        wp_register_script('vue-buyspend', get_template_directory_uri() . '/assets/vue-buyspend.js',[],'1.23',true);
-        wp_enqueue_script('vue-buyspend');
-        wp_register_script('vue-proposals', get_template_directory_uri() . '/assets/vue-proposals.js',[],false,true);
-        wp_enqueue_script('vue-proposals');
-        wp_register_script('vue-team', get_template_directory_uri() . '/assets/vue-team.js',[],false,true);
-        wp_enqueue_script('vue-team');
         if (is_page_template( 'page-downloads.php' ||  'page-lg.php' )) {
             wp_register_script('platform', get_template_directory_uri() . '/assets/libs/platform.js',[],false,false);
             wp_enqueue_script('platform');

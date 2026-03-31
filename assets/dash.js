@@ -247,6 +247,53 @@ $(document).ready(function(){
 	if ( $('.download-modal-trigger').length ){
 		Content.downloadModal();
 	}
+
+	// Buy page tab filtering
+	$('#buyTabs').on('click', 'li', function(e) {
+		e.preventDefault();
+		var filter = $(this).attr('data-filter');
+		$('#buyTabs li').removeClass('active');
+		$(this).addClass('active');
+		$('#buyVendors .buyspend-item').each(function() {
+			$(this).toggle($(this).attr('data-type') === filter);
+		});
+	});
+	if ($('#buyVendors').length) {
+		$('#buyVendors .buyspend-item').each(function() {
+			$(this).toggle($(this).attr('data-type') === 'exchange');
+		});
+	}
+
+	// Team page tag filtering
+	if ($('#teamFilter').length) {
+		$('#teamFilter').selectric().on('selectric-change', function() {
+			var filter = $(this).val().toUpperCase();
+			$('.team-member-item').each(function() {
+				if (filter === '') {
+					$(this).show();
+				} else {
+					var tags = ($(this).attr('data-tags') || '').split(',').map(function(t) { return t.trim(); });
+					$(this).toggle(tags.indexOf(filter) !== -1);
+				}
+			});
+		});
+	}
+
+	// Spend page category filtering
+	$('#spendTabs').on('click', 'li', function(e) {
+		e.preventDefault();
+		var filter = $(this).attr('data-filter');
+		$('#spendTabs li').removeClass('active');
+		$(this).addClass('active');
+		$('#spendVendors .spend-vendor-item').each(function() {
+			if (filter === '') {
+				$(this).show();
+			} else {
+				var cats = ($(this).attr('data-category') || '').split(',').map(function(c) { return c.trim(); });
+				$(this).toggle(cats.indexOf(filter) !== -1);
+			}
+		});
+	});
 })
 
 $(window).load(function(){
