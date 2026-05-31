@@ -217,6 +217,20 @@ p {
     text-align: center;
 }
 
+.dash-text-right {
+    text-align: right;
+}
+
+.dash-text-left {
+    text-align: left;
+}
+
+.dash-img-fluid {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .dash-surface {
     background: var(--dash-bg-soft);
     border: 1px solid var(--dash-border-soft);
@@ -299,14 +313,348 @@ p {
     flex: 1 1 calc(50% - 24px);
 }
 
+/* DASH TWO COL TITLE */
+
+.dash-two-col__title {
+    margin-bottom: 48px;
+}
+
+.dash-two-col__title h3 {
+    margin-bottom: 8px;
+}
+
+.dash-two-col__title h4 {
+    color: var(--dash-text-tertiary);
+    font-weight: var(--dash-weight-semibold);
+}
+
+/* DASH ICON LIST (used in 2col content) */
+
+.dash-icon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 16px;
+}
+
+.dash-icon-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.dash-icon-block img {
+    flex-shrink: 0;
+}
+
+.dash-icon-block h6 {
+    font-weight: var(--dash-weight-semibold);
+    margin: 0;
+}
+
+/* DASH LINK LIST (used in 2col content) */
+
+.dash-link-list {
+    font-size: 14px;
+    padding-top: 16px;
+}
+
+.dash-link-list a {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dash-color-blue);
+    text-decoration: none;
+}
+
+.dash-link-list a:hover {
+    text-decoration: underline;
+}
+
+.dash-link-list .dash-icon-inline {
+    margin-right: 10px;
+}
+
+/* DASH TERMINAL BLOCK */
+
+.dash-terminal {
+    position: relative;
+    width: 100%;
+    background: var(--dash-color-white);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dash-terminal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #f7f6f7 0%, #c1c1c1 100%);
+    padding: 0 15px 0 30px;
+}
+
+.dash-terminal__dots {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dash-terminal__dot {
+    background: #787878;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dash-terminal__actions {
+    text-align: right;
+}
+
+.dash-terminal__body {
+    padding: 30px;
+    font-size: 14px;
+    line-height: 1.2em;
+    min-height: 390px;
+    overflow: auto;
+    direction: ltr;
+    text-align: left;
+}
+
+.dash-terminal__body * {
+    font-family: monospace;
+    word-break: break-word;
+}
+
+.dash-terminal__body p {
+    margin-bottom: 5px;
+}
+
+.dash-terminal__copy {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.dash-terminal__copy-btn {
+    border: 0;
+    box-shadow: none !important;
+}
+
+.dash-terminal__copy-btn:focus,
+.dash-terminal__copy-btn:active {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* DASH 2COL GRID — VENDOR SUBTYPE */
+
+.dash-vendor-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dash-vendor-card {
+    width: 100%;
+    text-align: left;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid var(--dash-border-soft);
+    text-decoration: none;
+    color: var(--dash-text-primary);
+    transition: 0.2s ease;
+    margin-bottom: 0.6rem;
+}
+
+.dash-vendor-card__icon {
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.dash-vendor-card__icon img {
+    width: 30px;
+    height: auto;
+}
+
+.dash-vendor-card__info {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.dash-vendor-card__title {
+    font-size: 18px;
+    font-weight: var(--dash-weight-semibold);
+    display: block;
+}
+
+.dash-vendor-card__link {
+    color: var(--dash-color-gray-200);
+    font-size: 12px;
+    display: block;
+}
+
+.dash-vendor-card__action {
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.dash-vendor-card:hover {
+    color: var(--dash-color-white);
+    background: var(--dash-color-blue);
+    border-color: var(--dash-color-blue);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dash-vendor-card:hover .dash-vendor-card__link {
+    color: var(--dash-color-white-15);
+}
+
+/* DASH 2COL GRID — SOCIAL SUBTYPE */
+
+.dash-social-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    text-align: center;
+}
+
+.dash-social-card {
+    flex: 1 1 calc(25% - 16px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px 15px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--dash-text-primary);
+    transition: 0.2s ease;
+    font-size: 14px;
+}
+
+.dash-social-card__image {
+    display: flex;
+    height: 80px;
+    align-items: center;
+}
+
+.dash-social-card__image img {
+    display: block;
+    width: 6em;
+    height: auto;
+    margin: 5px auto 8px;
+}
+
+.dash-social-card__title {
+    opacity: 0.6;
+    display: block;
+    padding: 0.3rem 0;
+}
+
+.dash-social-card:hover {
+    background: rgba(39, 142, 224, 0.5);
+}
+
+.dash-social-card:hover .dash-social-card__title {
+    color: var(--dash-color-white);
+    opacity: 1;
+}
+
+/* DASH 2COL GRID — DEFAULT (IMAGE GRID) SUBTYPE */
+
+.dash-image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.dash-image-card {
+    flex: 1 1 calc(33.333% - 16px);
+    margin-bottom: 30px;
+}
+
+.dash-image-card__image {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dash-image-card__image img,
+.dash-image-card__image svg {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.dash-image-card__title {
+    width: 140px;
+    margin: 0 auto;
+    line-height: 1.5em;
+}
+
+/* DASH 2COL GRID — FEATURE SUBTYPE */
+
+.dash-feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    text-align: center;
+}
+
+.dash-feature-card {
+    flex: 1 1 calc(50% - 16px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px 15px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--dash-text-primary);
+    transition: 0.2s ease;
+    font-size: 14px;
+}
+
+.dash-feature-card__image {
+    display: flex;
+    height: 80px;
+    align-items: center;
+}
+
+.dash-feature-card__image img {
+    display: block;
+    width: 6em;
+    height: auto;
+    margin: 5px auto 8px;
+}
+
+.dash-feature-card__title {
+    opacity: 0.6;
+    display: block;
+    padding: 0.3rem 0;
+}
+
+.dash-feature-card:hover {
+    background: rgba(39, 142, 224, 0.5);
+    color: var(--dash-color-white);
+}
+
+.dash-feature-card:hover .dash-feature-card__title {
+    color: var(--dash-color-white);
+    opacity: 1;
+}
+
 .dash-terminal-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.dash-terminal-actions {
-    text-align: right;
 }
 
 .dash-hide-mobile {
@@ -483,6 +831,40 @@ p {
     height: auto;
 }
 
+/* DASH APP STORE BUTTON */
+
+.dash-btn-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: 15px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--dash-text-primary);
+    transition: 0.2s ease;
+    width: 100%;
+    cursor: pointer;
+}
+
+.dash-btn-app img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.dash-btn-app span {
+    display: block;
+}
+
+.dash-btn-app:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: var(--dash-color-white);
+    text-decoration: none;
+}
+
 @media (max-width: 991px) {
 
     .dash-two-col {
@@ -550,6 +932,22 @@ p {
     .dash-app-callout__content,
     .dash-app-callout__media {
         flex-basis: 100%;
+    }
+
+    .dash-social-card {
+        flex: 1 1 calc(50% - 16px);
+    }
+
+    .dash-feature-card {
+        flex: 1 1 calc(50% - 16px);
+    }
+
+    .dash-image-card {
+        flex: 1 1 calc(50% - 16px);
+    }
+
+    .dash-two-col__title {
+        margin-bottom: 32px;
     }
 }
 
@@ -630,6 +1028,19 @@ p {
     .dash-app-links {
         display: none;
     }
+
+    .dash-social-card,
+    .dash-feature-card {
+        flex: 1 1 100%;
+    }
+
+    .dash-image-card {
+        flex: 1 1 calc(50% - 16px);
+    }
+
+    .dash-vendor-card__title {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 575px) {
@@ -642,6 +1053,10 @@ p {
 
     .dash-callout-card {
         flex-basis: 100%;
+    }
+
+    .dash-image-card {
+        flex: 1 1 100%;
     }
 
 }
