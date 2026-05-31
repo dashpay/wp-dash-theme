@@ -1,0 +1,357 @@
+:root {
+    --dash-font-heading: "Inter", sans-serif;
+    --dash-font-body: "Inter", sans-serif;
+
+    --dash-weight-regular: 400;
+    --dash-weight-medium: 500;
+    --dash-weight-semibold: 600;
+    --dash-weight-bold: 700;
+    --dash-weight-extra-bold: 800;
+
+    --dash-color-gray-1000: #191c1f;
+    --dash-color-gray-900: #272c30;
+    --dash-color-gray-800: #30353b;
+    --dash-color-gray-700: #40464d;
+    --dash-color-gray-600: #525a61;
+    --dash-color-gray-500: #6e747a;
+    --dash-color-gray-400: #8f9294;
+    --dash-color-gray-300: #a8abad;
+    --dash-color-gray-200: #c3c5c7;
+    --dash-color-gray-100: #dedfe0;
+    --dash-color-gray-50: #f0f1f2;
+    --dash-color-gray-20: #f7f9fa;
+
+    --dash-color-blue: #008de4;
+    --dash-color-blue-10: rgba(0, 141, 228, 0.1);
+    --dash-color-blue-5: rgba(0, 141, 228, 0.05);
+
+    --dash-color-white: #ffffff;
+    --dash-color-white-15: rgba(255, 255, 255, 0.15);
+
+    --dash-color-red: #ed2939;
+    --dash-color-green: #3eb489;
+
+    --dash-text-primary: var(--dash-color-gray-1000);
+    --dash-text-secondary: var(--dash-color-gray-700);
+    --dash-text-tertiary: var(--dash-color-gray-500);
+    --dash-text-white: var(--dash-color-white);
+    --dash-text-error: var(--dash-color-red);
+
+    --dash-bg-primary: var(--dash-color-white);
+    --dash-bg-soft: var(--dash-color-gray-20);
+
+    --dash-border-soft: rgba(143, 146, 148, 0.25);
+
+    --dash-radius-none: 0;
+    --dash-radius-full: 999px;
+
+    --dash-container: 1240px;
+    --dash-container-sm: 730px;
+    --dash-container-padding: 30px;
+    --dash-grid-gap: 32px;
+}
+
+/* DASH TYPOGRAPHY SYSTEM */
+
+body {
+    font-family: var(--dash-font-body);
+    color: var(--dash-text-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--dash-font-heading);
+    font-weight: var(--dash-weight-extra-bold);
+    color: var(--dash-text-primary);
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 58px;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 48px;
+}
+
+h3 {
+    font-size: 34px;
+    line-height: 42px;
+}
+
+h4 {
+    font-size: 28px;
+    line-height: 34px;
+}
+
+h5 {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+h6 {
+    font-size: 17px;
+    line-height: 22px;
+}
+
+p {
+    font-family: var(--dash-font-body);
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: var(--dash-weight-regular);
+    color: var(--dash-text-secondary);
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.dash-text-xl {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+
+.dash-text-l {
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+.dash-text-m {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+.dash-text-s {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 6px;
+}
+
+.dash-text-xs {
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.dash-text-primary {
+    color: var(--dash-text-primary);
+}
+
+.dash-text-secondary {
+    color: var(--dash-text-secondary);
+}
+
+.dash-text-tertiary {
+    color: var(--dash-text-tertiary);
+}
+
+.dash-text-white {
+    color: var(--dash-text-white);
+}
+
+/* DASH LAYOUT SYSTEM */
+
+.dash-container {
+    width: min(100% - var(--dash-container-padding), var(--dash-container));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dash-container-sm {
+    width: min(100% - var(--dash-container-padding), var(--dash-container-sm));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dash-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.dash-section-sm {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.dash-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--dash-grid-gap);
+}
+
+.dash-grid-2>* {
+    flex: 1 1 calc(50% - var(--dash-grid-gap));
+}
+
+.dash-grid-3>* {
+    flex: 1 1 calc(33.333% - var(--dash-grid-gap));
+}
+
+.dash-grid-4>* {
+    flex: 1 1 calc(25% - var(--dash-grid-gap));
+}
+
+.dash-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.dash-stack-sm {
+    gap: 16px;
+}
+
+.dash-stack-lg {
+    gap: 40px;
+}
+
+.dash-center {
+    text-align: center;
+}
+
+.dash-surface {
+    background: var(--dash-bg-soft);
+    border: 1px solid var(--dash-border-soft);
+}
+
+/* DASH BUTTON SYSTEM */
+
+.dash-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    font-family: var(--dash-font-body);
+    font-weight: var(--dash-weight-semibold);
+    border-radius: var(--dash-radius-full);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+    box-sizing: border-box;
+}
+
+.dash-btn:hover,
+.dash-btn:focus {
+    text-decoration: none;
+}
+
+.dash-btn-lg {
+    min-height: 54px;
+    padding: 16px 28px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.dash-btn-md {
+    min-height: 40px;
+    padding: 10px 18px;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.dash-btn-blue {
+    background: var(--dash-color-blue);
+    border: 1px solid var(--dash-color-blue);
+    color: var(--dash-color-white);
+}
+
+.dash-btn-white {
+    background: var(--dash-color-white);
+    border: 1px solid var(--dash-color-white);
+    color: var(--dash-text-primary);
+}
+
+.dash-btn-outline-white {
+    background: transparent;
+    border: 1px solid var(--dash-color-white);
+    color: var(--dash-color-white);
+}
+
+.dash-btn-outline-black {
+    background: transparent;
+    border: 1px solid var(--dash-text-primary);
+    color: var(--dash-text-primary);
+}
+
+/* DASH MOBILE TOKENS */
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 34px;
+        line-height: 38px;
+    }
+
+    h2 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    h3 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    h4 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    h5 {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    h6 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    p {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .dash-text-xl {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    .dash-text-l {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .dash-text-m {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .dash-text-s {
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .dash-text-xs {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .dash-section {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .dash-grid-2>*,
+    .dash-grid-3>*,
+    .dash-grid-4>* {
+        flex-basis: 100%;
+    }
+}
