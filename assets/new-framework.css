@@ -222,6 +222,97 @@ p {
     border: 1px solid var(--dash-border-soft);
 }
 
+/* DASH 2 COLUMN BLOCK */
+
+.dash-two-col {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+
+}
+
+.dash-two-col__content,
+.dash-two-col__media {
+    min-width: 0;
+}
+
+.dash-two-col--equal .dash-two-col__content,
+.dash-two-col--equal .dash-two-col__media {
+    flex: 1 1 50%;
+}
+
+.dash-two-col--wide-media .dash-two-col__content {
+    flex: 1 1 33.333%;
+}
+
+.dash-two-col--wide-media .dash-two-col__media {
+    flex: 1 1 66.666%;
+}
+
+.dash-two-col--wide-content .dash-two-col__content {
+    flex: 1 1 58.333%;
+}
+
+.dash-two-col--wide-content .dash-two-col__media {
+    flex: 1 1 41.666%;
+}
+
+.dash-two-col--swap .dash-two-col__content {
+    order: 2;
+}
+
+.dash-two-col--swap .dash-two-col__media {
+    order: 1;
+}
+
+.dash-two-col--app .dash-two-col__content {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.dash-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 48px;
+}
+
+.dash-grid-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.dash-grid-list__item {
+    min-width: 0;
+}
+
+.dash-grid-list__item--quarter {
+    flex: 1 1 calc(25% - 24px);
+}
+
+.dash-grid-list__item--third {
+    flex: 1 1 calc(33.333% - 24px);
+}
+
+.dash-grid-list__item--half {
+    flex: 1 1 calc(50% - 24px);
+}
+
+.dash-terminal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dash-terminal-actions {
+    text-align: right;
+}
+
+.dash-hide-mobile {
+    display: block;
+}
+
 /* DASH BUTTON SYSTEM */
 
 .dash-btn {
@@ -279,6 +370,134 @@ p {
     background: transparent;
     border: 1px solid var(--dash-text-primary);
     color: var(--dash-text-primary);
+}
+
+/* DASH CALLOUTS BLOCK */
+
+.dash-callouts__title {
+    text-align: center;
+}
+
+.dash-callouts__desktop-image {
+    display: block;
+}
+
+.dash-callouts__desktop-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.dash-callouts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.dash-callout-card {
+    display: flex;
+    flex: 1 1 calc(33.333% - 32px);
+    flex-direction: column;
+    min-width: 0;
+    text-align: center;
+    background: transparent;
+    border: 0;
+}
+
+.dash-callout-card__image img,
+.dash-callout-card__mobile-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.dash-callout-card__mobile-image {
+    display: none;
+}
+
+.dash-callout-card__body {
+    flex: 1 1 auto;
+    padding: 0 8px;
+}
+
+.dash-callout-card__title {
+    margin-bottom: 12px;
+}
+
+.dash-callout-card__text {
+    margin-bottom: 0;
+}
+
+.dash-callout-card__footer {
+    padding-top: 24px;
+}
+
+.dash-callouts__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 48px;
+
+}
+
+@media (max-width: 991px) {
+
+    .dash-two-col {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 32px;
+    }
+
+    .dash-two-col--swap .dash-two-col__content,
+    .dash-two-col--swap .dash-two-col__media {
+        order: initial;
+    }
+
+    .dash-two-col__content,
+    .dash-two-col__media,
+    .dash-two-col--equal .dash-two-col__content,
+    .dash-two-col--equal .dash-two-col__media,
+    .dash-two-col--wide-media .dash-two-col__content,
+    .dash-two-col--wide-media .dash-two-col__media,
+    .dash-two-col--wide-content .dash-two-col__content,
+    .dash-two-col--wide-content .dash-two-col__media {
+        flex-basis: 100%;
+    }
+
+    .dash-grid-list__item--quarter,
+    .dash-grid-list__item--third,
+    .dash-grid-list__item--half {
+        flex-basis: calc(50% - 24px);
+    }
+
+    .dash-button-group {
+        padding-top: 24px;
+    }
+
+    .dash-hide-mobile {
+        display: none;
+    }
+
+    .dash-callouts__desktop-image {
+        display: none;
+    }
+
+    .dash-callouts-grid {
+        gap: 24px;
+    }
+
+    .dash-callout-card {
+        flex-basis: calc(50% - 24px);
+    }
+
+    .dash-callout-card__mobile-image {
+        display: block;
+    }
+
+    .dash-callouts__buttons {
+        padding-top: 24px;
+    }
 }
 
 /* DASH MOBILE TOKENS */
@@ -354,4 +573,18 @@ p {
     .dash-grid-4>* {
         flex-basis: 100%;
     }
+}
+
+@media (max-width: 575px) {
+
+    .dash-grid-list__item--quarter,
+    .dash-grid-list__item--third,
+    .dash-grid-list__item--half {
+        flex-basis: 100%;
+    }
+
+    .dash-callout-card {
+        flex-basis: 100%;
+    }
+
 }
