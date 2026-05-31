@@ -441,6 +441,48 @@ p {
 
 }
 
+/* DASH APP CALLOUT BLOCK */
+
+.dash-app-callout {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.dash-app-callout__content,
+.dash-app-callout__media {
+    flex: 1 1 50%;
+    min-width: 0;
+}
+
+.dash-app-links {
+    display: flex;
+    gap: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.dash-app-links__item {
+    flex: 1 1 33.333%;
+    min-width: 0;
+}
+
+.dash-app-link {
+    width: 100%;
+}
+
+.dash-app-link img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.dash-app-callout__image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 @media (max-width: 991px) {
 
     .dash-two-col {
@@ -497,6 +539,17 @@ p {
 
     .dash-callouts__buttons {
         padding-top: 24px;
+    }
+
+    .dash-app-callout {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 32px;
+    }
+
+    .dash-app-callout__content,
+    .dash-app-callout__media {
+        flex-basis: 100%;
     }
 }
 
@@ -572,6 +625,10 @@ p {
     .dash-grid-3>*,
     .dash-grid-4>* {
         flex-basis: 100%;
+    }
+
+    .dash-app-links {
+        display: none;
     }
 }
 
