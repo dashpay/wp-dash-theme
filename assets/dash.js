@@ -414,6 +414,68 @@ $(document).ready(function() {
 	
 
 
+
+
+		  jQuery(document).ready(function ($) {
+
+			// Only run on the merchant kit page
+			if (!$('body').hasClass('new-merchant-kit')) return;
+		  
+			var sections = [
+			  'accordion1',
+			  'app-section-two',
+			  'app-section-sets',
+			  'app-section-download',
+			  'app-section-pos',
+			  'app-section-merchant'
+			];
+		  
+			var $navItems = $('.glossary-sidebar li');
+		  
+			var HEADER_OFFSET = 95;
+		  
+			function getActiveIndex() {
+			  var scrollTop = $(window).scrollTop();
+			  var activeIndex = 0;
+		  
+			  for (var i = 0; i < sections.length; i++) {
+				var el = document.getElementById(sections[i]);
+				if (!el) continue;
+				var sectionTop = el.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET;
+				if (scrollTop >= sectionTop) {
+				  activeIndex = i;
+				}
+			  }
+		  
+			  return activeIndex;
+			}
+		  
+			function updateNav() {
+			  var index = getActiveIndex();
+			  $navItems.removeClass('active');
+			  $navItems.eq(index).addClass('active');
+			}
+
+			var scrollTimer = null;
+			$(window).on('scroll.businessspy', function () {
+			  if (scrollTimer) return;
+			  scrollTimer = setTimeout(function () {
+				updateNav();
+				scrollTimer = null;
+			  }, 50);
+			});
+		  
+			updateNav();
+		  
+			$navItems.eq(0).find('a').on('click', function (e) {
+			  e.preventDefault();
+			  $('html, body').animate({ scrollTop: 0 }, 400);
+			  $navItems.removeClass('active');
+			  $navItems.eq(0).addClass('active');
+			});
+		  
+		  });
+
 /* NEWSLETTER FORM SCRIPT SENDGRID 
 const myForm = document.getElementById('dash-nl');
 	const alertContainer = document.getElementById('warningDiv')
